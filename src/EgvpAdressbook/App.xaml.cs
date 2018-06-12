@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OvgRlp.Tools.EgvpAdressbook.ViewModels;
+using OvgRlp.Tools.EgvpAdressbook.Views;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +15,14 @@ namespace EgvpAdressbook
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            var shell = new MainWindow();
+            var viewModel = new MainWindowViewModel();
+            shell.DataContext = viewModel;
+            shell.Show();
+        }
     }
 }

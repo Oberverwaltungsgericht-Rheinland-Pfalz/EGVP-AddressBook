@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace EgvpAdressbook
+namespace OvgRlp.Tools.EgvpAdressbook.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
