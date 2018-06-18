@@ -23,7 +23,7 @@ namespace OvgRlp.Tools.EgvpAdressbook.ViewModels
     {
       get
       {
-        return "Egvp Adressabfrage (v. " + Services.CommonHelper.AssemblyVersion() + ")";
+        return "Egvp Adressabfrage (v. " + OvgRlp.Core.Common.AssemblyHelper.AssemblyVersion(System.Reflection.Assembly.GetExecutingAssembly()) + ")";
       }
     }
 
