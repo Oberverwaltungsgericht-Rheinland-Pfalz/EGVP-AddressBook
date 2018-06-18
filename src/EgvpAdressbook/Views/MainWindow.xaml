@@ -5,6 +5,7 @@
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:UIEvents="clr-namespace:OvgRlp.Core.UI.Events;assembly=OvgRlp.Core"
         xmlns:local="clr-namespace:EgvpAdressbook"
         Icon="/Icons/AdressBook_50x50.png"
         mc:Ignorable="d"
@@ -135,6 +136,7 @@
                 <TextBox
                     Grid.Column="2" Grid.Row="0"
                     Style="{StaticResource ResourceKey=HeaderEntryValueStyle}"
+                    UIEvents:EventSelectAllAttachment.SelectAllOnTextboxKeyboardFocus="True"
                     Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
                 <TextBlock
@@ -152,6 +154,7 @@
                 <TextBox
                     Grid.Column="2" Grid.Row="1"
                     Style="{StaticResource ResourceKey=HeaderEntryValueStyle}"
+                    UIEvents:EventSelectAllAttachment.SelectAllOnTextboxKeyboardFocus="True"
                     Text="{Binding Street, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
                 <TextBlock
@@ -169,6 +172,7 @@
                 <TextBox
                     Grid.Column="3" Grid.Row="2"
                     Style="{StaticResource ResourceKey=HeaderEntryValueStyle}"
+                    UIEvents:EventSelectAllAttachment.SelectAllOnTextboxKeyboardFocus="True"
                     Text="{Binding Postcode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
                 <TextBlock
@@ -186,6 +190,7 @@
                 <TextBox
                     Grid.Column="3" Grid.Row="3"
                     Style="{StaticResource ResourceKey=HeaderEntryValueStyle}"
+                    UIEvents:EventSelectAllAttachment.SelectAllOnTextboxKeyboardFocus="True"
                     Text="{Binding City, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
                 <TextBlock
@@ -203,6 +208,7 @@
                 <TextBox
                     Grid.Column="2" Grid.Row="4"
                     Style="{StaticResource ResourceKey=HeaderEntryValueStyle}"
+                    UIEvents:EventSelectAllAttachment.SelectAllOnTextboxKeyboardFocus="True"
                     Text="{Binding UserId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             </Grid>
 
