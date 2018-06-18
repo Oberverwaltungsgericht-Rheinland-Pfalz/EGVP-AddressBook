@@ -22,5 +22,14 @@ namespace OvgRlp.Tools.EgvpAdressbook.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("safe-sp1-1422886512247-015767265")]
+        public string EgvpEnterpriseUserId {
+            get {
+                return ((string)(this["EgvpEnterpriseUserId"]));
+            }
+        }
     }
 }
