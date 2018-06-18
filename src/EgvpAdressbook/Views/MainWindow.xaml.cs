@@ -15,14 +15,23 @@ using System.Windows.Shapes;
 
 namespace OvgRlp.Tools.EgvpAdressbook.Views
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+  /// <summary>
+  /// Interaction logic for MainWindow.xaml
+  /// </summary>
+  public partial class MainWindow : Window
+  {
+    public MainWindow()
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
     }
+
+    /// <summary>
+    /// Called when the window is closed
+    /// </summary>
+    private void Window_Closed(object sender, EventArgs e)
+    {
+      // save the property settings
+      Properties.Settings.Default.Save();
+    }
+  }
 }
