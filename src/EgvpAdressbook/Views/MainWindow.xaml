@@ -247,6 +247,7 @@
                 </i:Interaction.Triggers>
                 <ListView.View>
                     <GridView>
+                        <GridViewColumn Header="Typ" DisplayMemberBinding="{Binding Type}" />
                         <GridViewColumn Header="Organisation" DisplayMemberBinding="{Binding Organization}" />
                         <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" />
                         <GridViewColumn Header="Straße" DisplayMemberBinding="{Binding StreetAndNumber}" />
