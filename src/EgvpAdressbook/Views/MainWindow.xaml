@@ -11,7 +11,6 @@
         mc:Ignorable="d"
 
         xmlns:Properties="clr-namespace:OvgRlp.Tools.EgvpAdressbook.Properties"
-        WindowStartupLocation="CenterScreen"
         Height="{Binding WindowHeight, Source={x:Static Properties:Settings.Default}, Mode=TwoWay}"
         Width="{Binding WindowWidth, Source={x:Static Properties:Settings.Default}, Mode=TwoWay}"
         Left="{Binding WindowLeft, Source={x:Static Properties:Settings.Default}, Mode=TwoWay}"
@@ -76,6 +75,7 @@
             <Setter Property="BorderBrush" Value="Black" />
             <Setter Property="BorderThickness" Value="1" />
             <Setter Property="Background" Value="#80000000" />
+            <Setter Property="Margin" Value="13,23,13,13" />
         </Style>
 
         <Style TargetType="TextBlock" x:Key="BusyTextBlockStyle">

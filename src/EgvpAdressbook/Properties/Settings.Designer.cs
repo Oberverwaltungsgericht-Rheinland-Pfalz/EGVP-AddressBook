@@ -25,7 +25,7 @@ namespace OvgRlp.Tools.EgvpAdressbook.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
         public double WindowTop {
             get {
                 return ((double)(this["WindowTop"]));
@@ -37,7 +37,7 @@ namespace OvgRlp.Tools.EgvpAdressbook.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("280")]
         public double WindowLeft {
             get {
                 return ((double)(this["WindowLeft"]));
