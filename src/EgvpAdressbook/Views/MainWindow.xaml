@@ -128,6 +128,7 @@
                     Grid.Column="1" Grid.Row="0"
                     Style="{StaticResource ResourceKey=HeaderCboSelectionValueStyle}"
                     ItemsSource="{Binding Path=NameSearchModeEntries}"
+                    IsEnabled="False"
                     DisplayMemberPath="Name"
                     SelectedValuePath="Type"
                     SelectedValue="{Binding Path=NameSearchModeType}" />
@@ -144,6 +145,7 @@
                     Grid.Column="1" Grid.Row="1"
                     Style="{StaticResource ResourceKey=HeaderCboSelectionValueStyle}"
                     ItemsSource="{Binding Path=StreetSearchModeEntries}"
+                    IsEnabled="False"
                     DisplayMemberPath="Name"
                     SelectedValuePath="Type"
                     SelectedValue="{Binding Path=StreetSearchModeType}" />
@@ -160,6 +162,7 @@
                     Grid.Column="1" Grid.Row="2"
                     Style="{StaticResource ResourceKey=HeaderCboSelectionValueStyle}"
                     ItemsSource="{Binding Path=PostcodeSearchModeEntries}"
+                    IsEnabled="False"
                     DisplayMemberPath="Name"
                     SelectedValuePath="Type"
                     SelectedValue="{Binding Path=PostcodeSearchModeType}" />
@@ -176,6 +179,7 @@
                     Grid.Column="1" Grid.Row="3"
                     Style="{StaticResource ResourceKey=HeaderCboSelectionValueStyle}"
                     ItemsSource="{Binding Path=CitySearchModeEntries}"
+                    IsEnabled="False"
                     DisplayMemberPath="Name"
                     SelectedValuePath="Type"
                     SelectedValue="{Binding Path=CitySearchModeType}" />
@@ -192,6 +196,7 @@
                     Grid.Column="1" Grid.Row="4"
                     Style="{StaticResource ResourceKey=HeaderCboSelectionValueStyle}"
                     ItemsSource="{Binding Path=UserIdSearchModeEntries}"
+                    IsEnabled="False"
                     DisplayMemberPath="Name"
                     SelectedValuePath="Type"
                     SelectedValue="{Binding Path=UserIdSearchModeType}" />
