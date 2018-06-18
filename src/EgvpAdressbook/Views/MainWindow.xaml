@@ -118,7 +118,6 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <TextBlock
@@ -140,80 +139,64 @@
                 <TextBlock
                     Grid.Column="0" Grid.Row="1"
                     Style="{StaticResource ResourceKey=HeaderEntryLabelStyle}"
-                    Text="Vorname:" />
+                    Text="Straße:" />
                 <ComboBox
                     Grid.Column="1" Grid.Row="1"
-                    Style="{StaticResource ResourceKey=HeaderCboSelectionValueStyle}"
-                    ItemsSource="{Binding Path=SubNameSearchModeEntries}"
-                    DisplayMemberPath="Name"
-                    SelectedValuePath="Type"
-                    SelectedValue="{Binding Path=SubNameSearchModeType}" />
-                <TextBox
-                    Grid.Column="2" Grid.Row="1"
-                    Style="{StaticResource ResourceKey=HeaderEntryValueStyle}"
-                    Text="{Binding SubName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-
-                <TextBlock
-                    Grid.Column="0" Grid.Row="2"
-                    Style="{StaticResource ResourceKey=HeaderEntryLabelStyle}"
-                    Text="Strasse:" />
-                <ComboBox
-                    Grid.Column="1" Grid.Row="2"
                     Style="{StaticResource ResourceKey=HeaderCboSelectionValueStyle}"
                     ItemsSource="{Binding Path=StreetSearchModeEntries}"
                     DisplayMemberPath="Name"
                     SelectedValuePath="Type"
                     SelectedValue="{Binding Path=StreetSearchModeType}" />
                 <TextBox
-                    Grid.Column="2" Grid.Row="2"
+                    Grid.Column="2" Grid.Row="1"
                     Style="{StaticResource ResourceKey=HeaderEntryValueStyle}"
                     Text="{Binding Street, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
                 <TextBlock
-                    Grid.Column="0" Grid.Row="3"
+                    Grid.Column="0" Grid.Row="2"
                     Style="{StaticResource ResourceKey=HeaderEntryLabelStyle}"
                     Text="Postleitzahl:" />
                 <ComboBox
-                    Grid.Column="1" Grid.Row="3"
+                    Grid.Column="1" Grid.Row="2"
                     Style="{StaticResource ResourceKey=HeaderCboSelectionValueStyle}"
                     ItemsSource="{Binding Path=PostcodeSearchModeEntries}"
                     DisplayMemberPath="Name"
                     SelectedValuePath="Type"
                     SelectedValue="{Binding Path=PostcodeSearchModeType}" />
                 <TextBox
-                    Grid.Column="3" Grid.Row="3"
+                    Grid.Column="3" Grid.Row="2"
                     Style="{StaticResource ResourceKey=HeaderEntryValueStyle}"
                     Text="{Binding Postcode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
                 <TextBlock
-                    Grid.Column="0" Grid.Row="4"
+                    Grid.Column="0" Grid.Row="3"
                     Style="{StaticResource ResourceKey=HeaderEntryLabelStyle}"
                     Text="Ort:" />
                 <ComboBox
-                    Grid.Column="1" Grid.Row="4"
+                    Grid.Column="1" Grid.Row="3"
                     Style="{StaticResource ResourceKey=HeaderCboSelectionValueStyle}"
                     ItemsSource="{Binding Path=CitySearchModeEntries}"
                     DisplayMemberPath="Name"
                     SelectedValuePath="Type"
                     SelectedValue="{Binding Path=CitySearchModeType}" />
                 <TextBox
-                    Grid.Column="3" Grid.Row="4"
+                    Grid.Column="3" Grid.Row="3"
                     Style="{StaticResource ResourceKey=HeaderEntryValueStyle}"
                     Text="{Binding City, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
                 <TextBlock
-                    Grid.Column="0" Grid.Row="5"
+                    Grid.Column="0" Grid.Row="4"
                     Style="{StaticResource ResourceKey=HeaderEntryLabelStyle}"
                     Text="Nutzer-Id:" />
                 <ComboBox
-                    Grid.Column="1" Grid.Row="5"
+                    Grid.Column="1" Grid.Row="4"
                     Style="{StaticResource ResourceKey=HeaderCboSelectionValueStyle}"
                     ItemsSource="{Binding Path=UserIdSearchModeEntries}"
                     DisplayMemberPath="Name"
                     SelectedValuePath="Type"
                     SelectedValue="{Binding Path=UserIdSearchModeType}" />
                 <TextBox
-                    Grid.Column="2" Grid.Row="5"
+                    Grid.Column="2" Grid.Row="4"
                     Style="{StaticResource ResourceKey=HeaderEntryValueStyle}"
                     Text="{Binding UserId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             </Grid>

@@ -67,14 +67,6 @@ namespace OvgRlp.Tools.EgvpAdressbook.ViewModels
             set { SetProperty(ref _name, value); }
         }
 
-        private string _subName;
-
-        public string SubName
-        {
-            get { return _subName; }
-            set { SetProperty(ref _subName, value); }
-        }
-
         private string _street;
 
         public string Street
@@ -128,21 +120,6 @@ namespace OvgRlp.Tools.EgvpAdressbook.ViewModels
         {
             get { return _nameSearchModeType; }
             set { SetProperty(ref _nameSearchModeType, value); }
-        }
-
-        private readonly CollectionView _subNameSearchModeEntries;
-
-        public CollectionView SubNameSearchModeEntries
-        {
-            get { return _subNameSearchModeEntries; }
-        }
-
-        private SearchModeType _subNameSearchModeType;
-
-        public SearchModeType SubNameSearchModeType
-        {
-            get { return _subNameSearchModeType; }
-            set { SetProperty(ref _subNameSearchModeType, value); }
         }
 
         private readonly CollectionView _streetSearchModeEntries;
@@ -239,7 +216,6 @@ namespace OvgRlp.Tools.EgvpAdressbook.ViewModels
             SelectedDelegateCommand = new DelegateCommand(CopyToClipboard);
 
             this._nameSearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
-            this._subNameSearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
             this._streetSearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
             this._postcodeSearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
             this._citySearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
