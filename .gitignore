@@ -59,7 +59,6 @@ dlldata.c
 *.pidb
 *.svclog
 *.scc
-.vs/
 
 # Chutzpah Test files
 _Chutzpah*
@@ -160,7 +159,7 @@ ClientBin/
 *.publishsettings
 node_modules/
 bower_components/
-**/.vs/**/storage.ide
+**/.vs/**/storage.ide
 
 # RIA/Silverlight projects
 Generated_Code/
@@ -198,4 +197,7 @@ FakesAssemblies/
 [Tt]est*/[Tt]emp/
 [Tt]est*/[Tt]mp/
 ![Rr]elease/**/bin/
-![Rr]elease/
+![Rr]elease/
+
+Visual Studio Codemap usw.
+.vs/
