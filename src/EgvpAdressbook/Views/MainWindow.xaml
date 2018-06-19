@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:gif="http://wpfanimatedgif.codeplex.com"
-        xmlns:UIEvents="clr-namespace:OvgRlp.Core.UI.Events;assembly=OvgRlp.Core"
+        xmlns:UIEvents="clr-namespace:OvgRlp.Core.UI.Events;assembly=OvgRlp.Core.UI"
+        xmlns:ovgrlpConntrols="clr-namespace:OvgRlp.Core.UI.Controls;assembly=OvgRlp.Core.UI"
         xmlns:local="clr-namespace:EgvpAdressbook"
         Icon="/Icons/AdressBook_50x50.png"
         mc:Ignorable="d"
@@ -65,24 +65,8 @@
             <Setter Property="Margin" Value="2" />
         </Style>
 
-        <Style TargetType="Image" x:Key="BusyIconStyle">
-            <Setter Property="HorizontalAlignment" Value="Center" />
-            <Setter Property="VerticalAlignment" Value="Center" />
-            <Setter Property="Width" Value="100" />
-        </Style>
-
-        <Style TargetType="Border" x:Key="BusyBorderStyle">
-            <Setter Property="BorderBrush" Value="Black" />
-            <Setter Property="BorderThickness" Value="1" />
-            <Setter Property="Background" Value="#80000000" />
+        <Style TargetType="ovgrlpConntrols:BusyAnimation"  x:Key="BusyAnimationStyle">
             <Setter Property="Margin" Value="13,23,13,13" />
-        </Style>
-
-        <Style TargetType="TextBlock" x:Key="BusyTextBlockStyle">
-            <Setter Property="HorizontalAlignment" Value="Center" />
-            <Setter Property="VerticalAlignment" Value="Center" />
-            <Setter Property="FontSize" Value="20" />
-            <Setter Property="Foreground" Value="#7EFFFFFF" />
         </Style>
 
         <Style TargetType="GroupBox">
@@ -270,19 +254,12 @@
                 Text="{Binding Infotext, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
         </Grid>
 
-        <Border
-            Style="{StaticResource ResourceKey=BusyBorderStyle}"
+        <ovgrlpConntrols:BusyAnimation
             Grid.Row="1" Grid.RowSpan="1"
             Grid.Column="0" Grid.ColumnSpan="2"
-            Visibility="{Binding IsLodingAnimationVisible}">
-            <Grid>
-                <Image gif:ImageBehavior.AnimatedSource="/Icons/spinner.gif"
-                       Style="{StaticResource ResourceKey=BusyIconStyle}" />
-                <TextBlock
-                    Style="{StaticResource ResourceKey=BusyTextBlockStyle}"
-                    Text="Suche wird ausgeführt...">
-                </TextBlock>
-            </Grid>
-        </Border>
+            Style="{StaticResource ResourceKey=BusyAnimationStyle}"
+            IsControlVisible="{Binding IsBusy}"
+            Text="Suche wird ausgeführt...">
+        </ovgrlpConntrols:BusyAnimation>
     </Grid>
 </Window>

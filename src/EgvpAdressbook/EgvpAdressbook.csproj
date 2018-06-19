@@ -37,8 +37,11 @@
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
-    <Reference Include="OvgRlp.Core, Version=1.0.0.1825, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\OvgRlp_Core.1.0.0.1825\lib\net461\OvgRlp.Core.dll</HintPath>
+    <Reference Include="OvgRlp.Core, Version=1.1.0.1825, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OvgRlp_Core.1.1.0.1825\lib\net461\OvgRlp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="OvgRlp.Core.UI, Version=1.1.0.1825, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OvgRlp_Core_UI.1.1.0.1825\lib\net461\OvgRlp.Core.UI.dll</HintPath>
     </Reference>
     <Reference Include="Prism, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Core.6.3.0\lib\net45\Prism.dll</HintPath>
@@ -244,9 +247,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Icons\spinner.gif" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\AdressBook_50x50.png" />

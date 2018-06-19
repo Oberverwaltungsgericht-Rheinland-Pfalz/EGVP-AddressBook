@@ -32,23 +32,7 @@ namespace OvgRlp.Tools.EgvpAdressbook.ViewModels
     public bool IsBusy
     {
       get { return _isBusy; }
-      set
-      {
-        if (!value)
-          IsLodingAnimationVisible = System.Windows.Visibility.Collapsed;
-        if (value)
-          IsLodingAnimationVisible = System.Windows.Visibility.Visible;
-
-        SetProperty(ref _isBusy, value);
-      }
-    }
-
-    private System.Windows.Visibility _isLodingAnimationVisible;
-
-    public System.Windows.Visibility IsLodingAnimationVisible
-    {
-      get { return _isLodingAnimationVisible; }
-      set { SetProperty(ref _isLodingAnimationVisible, value); }
+      set { SetProperty(ref _isBusy, value); }
     }
 
     private string _infotext;
