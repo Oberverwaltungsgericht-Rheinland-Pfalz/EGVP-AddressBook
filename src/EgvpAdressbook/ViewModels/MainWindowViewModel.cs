@@ -220,10 +220,17 @@ namespace OvgRlp.Tools.EgvpAdressbook.ViewModels
 
     public void CopyToClipboard()
     {
-      if (null != SelectedAdress)
+      try
       {
-        System.Windows.Clipboard.SetText(SelectedAdress.UserId);
-        System.Windows.MessageBox.Show("Egvp Adresse wurde in die Zwischenablage kopiert!");   //TODO: andere (WPF-verträglichere) Lösung finden
+        if (null != SelectedAdress)
+        {
+          System.Windows.Clipboard.SetText(SelectedAdress.UserId);
+          System.Windows.MessageBox.Show("Egvp Adresse wurde in die Zwischenablage kopiert!");   //TODO: andere (WPF-verträglichere) Lösung finden
+        }
+      }
+      catch (Exception ex)
+      {
+        System.Windows.MessageBox.Show("Fehler beim Kopieren in die Zwischenablage: " + ex.Message);
       }
     }
 
