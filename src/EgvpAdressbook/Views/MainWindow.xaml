@@ -234,6 +234,7 @@
                         <GridViewColumn Header="Typ" DisplayMemberBinding="{Binding Type}" />
                         <GridViewColumn Header="Organisation" DisplayMemberBinding="{Binding Organization}" />
                         <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="Vorname" DisplayMemberBinding="{Binding FirstName}" />
                         <GridViewColumn Header="Straße" DisplayMemberBinding="{Binding StreetAndNumber}" />
                         <GridViewColumn Header="Postleitzahl" DisplayMemberBinding="{Binding PostCode}" />
                         <GridViewColumn Header="Ort" DisplayMemberBinding="{Binding City}" />
