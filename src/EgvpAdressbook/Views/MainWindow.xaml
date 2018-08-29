@@ -208,7 +208,8 @@
                 <Button
                     Grid.Column="0"
                     Command="{Binding Path=SearchDelegateCommand}"
-                    Style="{StaticResource ResourceKey=IconButtonStyle}">
+                    Style="{StaticResource ResourceKey=IconButtonStyle}"
+                    IsDefault="True">
                     <StackPanel>
                         <Image Source="/Icons/FindUser_50x50.png" VerticalAlignment="Center" HorizontalAlignment="Center" />
                     </StackPanel>
