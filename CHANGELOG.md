@@ -1,5 +1,14 @@
 
-<a name="1.2.0.1832"></a>
+
+<a name="1.3.0.1836"></a>
+
+### 1.3.0.1836 (03.09.2018)
+
+#### &Auml;nderungen
+
+* Bei Betätigung der Enter Taste Suchereignis auslösen
+* Um die Sichtbarkeit in der Task-Leiste zu wahren wurde die Icon Farbe geändert
+* Suchfeld Organisation wurde als Suchkriterium zur Verfügung gestellt
 
 ### 1.2.0.1832 (08.08.2018)
 
