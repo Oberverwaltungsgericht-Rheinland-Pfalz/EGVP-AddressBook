@@ -43,6 +43,14 @@ namespace OvgRlp.Tools.EgvpAdressbook.ViewModels
       set { SetProperty(ref _infotext, value); }
     }
 
+    private string _organization;
+
+    public string Organization
+    {
+      get { return _organization; }
+      set { SetProperty(ref _organization, value); }
+    }
+
     private string _name;
 
     public string Name
@@ -89,6 +97,21 @@ namespace OvgRlp.Tools.EgvpAdressbook.ViewModels
     {
       get { return _selectedAdress; }
       set { SetProperty(ref _selectedAdress, value); }
+    }
+
+    private readonly CollectionView _organizationSearchModeEntries;
+
+    public CollectionView OrganizationSearchModeEntries
+    {
+      get { return _organizationSearchModeEntries; }
+    }
+
+    private SearchModeType _organizationSearchModeType;
+
+    public SearchModeType OrganizationSearchModeType
+    {
+      get { return _organizationSearchModeType; }
+      set { SetProperty(ref _organizationSearchModeType, value); }
     }
 
     private readonly CollectionView _nameSearchModeEntries;
@@ -199,6 +222,7 @@ namespace OvgRlp.Tools.EgvpAdressbook.ViewModels
       SearchDelegateCommand = new DelegateCommand(Search, CanSearch);
       SelectedDelegateCommand = new DelegateCommand(CopyToClipboard);
 
+      this._organizationSearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
       this._nameSearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
       this._streetSearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
       this._postcodeSearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
@@ -258,6 +282,8 @@ namespace OvgRlp.Tools.EgvpAdressbook.ViewModels
 
         requ.userID = Properties.Settings.Default.EgvpEnterpriseUserId;
         requ.searchCriteria = new EgvpEnterpriseSoap.BusinessCardType();
+        if (!string.IsNullOrEmpty(this.Organization))
+          requ.searchCriteria.organization = new BCItem() { Value = this.Organization, searchMode = this.OrganizationSearchModeType };
         if (!string.IsNullOrEmpty(this.Name))
           requ.searchCriteria.name = new BCItem() { Value = this.Name, searchMode = this.NameSearchModeType };
         if (!string.IsNullOrEmpty(this.Street))

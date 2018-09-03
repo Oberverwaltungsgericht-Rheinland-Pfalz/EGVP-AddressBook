@@ -7,28 +7,28 @@ using System.Threading.Tasks;
 
 namespace OvgRlp.Tools.EgvpAdressbook.Models
 {
-    public class SearchModeEntry
+  public class SearchModeEntry
+  {
+    public string Name { get; set; }
+    public SearchModeType Type { get; set; }
+
+    public SearchModeEntry(string name, SearchModeType type)
     {
-        public string Name { get; set; }
-        public SearchModeType Type { get; set; }
-
-        public SearchModeEntry(string name, SearchModeType type)
-        {
-            Name = name;
-            Type = type;
-        }
-
-        public override string ToString()
-        {
-            return Name;
-        }
-
-        public static List<SearchModeEntry> GetAllSearchModes()
-        {
-            var entries = new List<SearchModeEntry>();
-            entries.Add(new SearchModeEntry("ist gleich", SearchModeType.EXACT));
-            entries.Add(new SearchModeEntry("enthält", SearchModeType.CONTAINS));
-            return entries;
-        }
+      Name = name;
+      Type = type;
     }
+
+    public override string ToString()
+    {
+      return Name;
+    }
+
+    public static List<SearchModeEntry> GetAllSearchModes()
+    {
+      var entries = new List<SearchModeEntry>();
+      entries.Add(new SearchModeEntry("ist gleich", SearchModeType.EXACT));
+      entries.Add(new SearchModeEntry("enthält", SearchModeType.CONTAINS));
+      return entries;
+    }
+  }
 }
