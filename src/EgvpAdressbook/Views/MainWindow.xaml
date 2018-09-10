@@ -279,6 +279,8 @@
                         <GridViewColumn Header="Ort" DisplayMemberBinding="{Binding City}" />
                         <GridViewColumn Header="Bundesland" DisplayMemberBinding="{Binding FederalState}" />
                         <GridViewColumn Header="Nutzer-Id" DisplayMemberBinding="{Binding UserId}" />
+                        <GridViewColumn Header="Telefon" DisplayMemberBinding="{Binding Phone}" />
+                        <GridViewColumn Header="Fax" DisplayMemberBinding="{Binding Fax}" />
                     </GridView>
                 </ListView.View>
             </ListView>

@@ -18,6 +18,8 @@ namespace OvgRlp.Tools.EgvpAdressbook.Models
     public string FederalState { get; set; }
     public string UserId { get; set; }
     public string Type { get; set; }
+    public string Phone { get; set; }
+    public string Fax { get; set; }
 
     public static EgvpAdressEntry FromBusinessCardType(BusinessCardType postbox)
     {
@@ -45,6 +47,10 @@ namespace OvgRlp.Tools.EgvpAdressbook.Models
         entry.UserId = postbox.userID.Value;
       if (null != postbox.filterID && !string.IsNullOrEmpty(postbox.filterID.Value))
         entry.Type = postbox.filterID.Value;
+      if (null != postbox.phone && !string.IsNullOrEmpty(postbox.phone.Value))
+        entry.Phone = postbox.phone.Value;
+      if (null != postbox.fax && !string.IsNullOrEmpty(postbox.fax.Value))
+        entry.Fax = postbox.fax.Value;
 
       return entry;
     }
