@@ -1,6 +1,13 @@
 
 
-<a name="1.3.0.1836"></a>
+<a name="1.4.0.1836"></a>
+
+### 1.4.0.1836 (10.09.2018)
+
+#### &Auml;nderungen
+
+* Telefon und Fax in der Trefferliste mit anzeigen
+* Vorname als Suchkriterium anbieten
 
 ### 1.3.0.1836 (03.09.2018)
 
