@@ -280,7 +280,7 @@
                         <GridViewColumn Header="Bundesland" DisplayMemberBinding="{Binding FederalState}" />
                         <GridViewColumn Header="Nutzer-Id" DisplayMemberBinding="{Binding UserId}" />
                         <GridViewColumn Header="Telefon" DisplayMemberBinding="{Binding Phone}" />
-                        <GridViewColumn Header="Fax" DisplayMemberBinding="{Binding Fax}" />
+                        <GridViewColumn Header="EMail" DisplayMemberBinding="{Binding Email}" />
                     </GridView>
                 </ListView.View>
             </ListView>
