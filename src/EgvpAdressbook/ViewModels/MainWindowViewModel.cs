@@ -59,6 +59,14 @@ namespace OvgRlp.Tools.EgvpAdressbook.ViewModels
       set { SetProperty(ref _name, value); }
     }
 
+    private string _firstname;
+
+    public string Firstname
+    {
+      get { return _firstname; }
+      set { SetProperty(ref _firstname, value); }
+    }
+
     private string _street;
 
     public string Street
@@ -127,6 +135,21 @@ namespace OvgRlp.Tools.EgvpAdressbook.ViewModels
     {
       get { return _nameSearchModeType; }
       set { SetProperty(ref _nameSearchModeType, value); }
+    }
+
+    private readonly CollectionView _firstnameSearchModeEntries;
+
+    public CollectionView FirstnameSearchModeEntries
+    {
+      get { return _firstnameSearchModeEntries; }
+    }
+
+    private SearchModeType _firstnameSearchModeType;
+
+    public SearchModeType FirstnameSearchModeType
+    {
+      get { return _firstnameSearchModeType; }
+      set { SetProperty(ref _firstnameSearchModeType, value); }
     }
 
     private readonly CollectionView _streetSearchModeEntries;
@@ -224,6 +247,7 @@ namespace OvgRlp.Tools.EgvpAdressbook.ViewModels
 
       this._organizationSearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
       this._nameSearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
+      this._firstnameSearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
       this._streetSearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
       this._postcodeSearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
       this._citySearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
@@ -286,6 +310,8 @@ namespace OvgRlp.Tools.EgvpAdressbook.ViewModels
           requ.searchCriteria.organization = new BCItem() { Value = this.Organization, searchMode = this.OrganizationSearchModeType };
         if (!string.IsNullOrEmpty(this.Name))
           requ.searchCriteria.name = new BCItem() { Value = this.Name, searchMode = this.NameSearchModeType };
+        if (!string.IsNullOrEmpty(this.Firstname))
+          requ.searchCriteria.christianName = new BCItem() { Value = this.Firstname, searchMode = this.FirstnameSearchModeType };
         if (!string.IsNullOrEmpty(this.Street))
           requ.searchCriteria.street = new BCItem() { Value = this.Street, searchMode = this.StreetSearchModeType };
         if (!string.IsNullOrEmpty(this.Postcode))
