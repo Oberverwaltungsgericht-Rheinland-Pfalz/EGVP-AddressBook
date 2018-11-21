@@ -6,8 +6,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Data;
 using System.Windows.Media;
 
@@ -272,9 +274,15 @@ namespace OvgRlp.Tools.EgvpAdressbook.ViewModels
       {
         if (null != SelectedAdress)
         {
-          System.Windows.Clipboard.SetText(SelectedAdress.UserId);
+          try { Clipboard.SetText(SelectedAdress.UserId); }
+          catch { Clipboard.SetDataObject(SelectedAdress.UserId); }
           System.Windows.MessageBox.Show("Egvp Adresse wurde in die Zwischenablage kopiert!");   //TODO: andere (WPF-verträglichere) Lösung finden
         }
+      }
+      catch (COMException ex) when (ex.ErrorCode == -2147221040)
+      {
+        /* Win32-Api Error CLIPBRD_E_CANT_OPEN ignorieren, Text wird trotzdem in die Zwischenablage kopiert */
+        System.Windows.MessageBox.Show("Egvp Adresse wurde in die Zwischenablage kopiert!");
       }
       catch (Exception ex)
       {
