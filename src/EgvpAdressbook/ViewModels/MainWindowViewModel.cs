@@ -1,5 +1,6 @@
 ﻿using OvgRlp.Tools.EgvpAdressbook.EgvpEnterpriseSoap;
 using OvgRlp.Tools.EgvpAdressbook.Models;
+using OvgRlp.Tools.EgvpAdressbook.Views;
 using Prism.Commands;
 using System;
 using System.Collections.Generic;
@@ -235,6 +236,7 @@ namespace OvgRlp.Tools.EgvpAdressbook.ViewModels
 
     #region delegates
 
+    public DelegateCommand AboutClickDelegateCommand { get; private set; }
     public DelegateCommand SearchDelegateCommand { get; private set; }
     public DelegateCommand SelectedDelegateCommand { get; private set; }
 
@@ -246,6 +248,7 @@ namespace OvgRlp.Tools.EgvpAdressbook.ViewModels
 
       SearchDelegateCommand = new DelegateCommand(Search, CanSearch);
       SelectedDelegateCommand = new DelegateCommand(CopyToClipboard);
+      AboutClickDelegateCommand = new DelegateCommand(ShowAboutWindow);
 
       this._organizationSearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
       this._nameSearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
@@ -288,6 +291,12 @@ namespace OvgRlp.Tools.EgvpAdressbook.ViewModels
       {
         System.Windows.MessageBox.Show("Fehler beim Kopieren in die Zwischenablage: " + ex.Message);
       }
+    }
+
+    public void ShowAboutWindow()
+    {
+      var shell = new AboutWindow();
+      shell.ShowDialog();
     }
 
     private async void Search()

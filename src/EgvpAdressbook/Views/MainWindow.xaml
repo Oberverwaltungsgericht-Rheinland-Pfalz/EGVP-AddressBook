@@ -51,6 +51,14 @@
             <Setter Property="VerticalAlignment" Value="Center" />
         </Style>
 
+        <Style TargetType="Image" x:Key="InfoIconStyle">
+            <Setter Property="Margin" Value="3" />
+            <Setter Property="Height" Value="25" />
+            <Setter Property="Width" Value="25" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+        </Style>
+
         <Style TargetType="Grid" x:Key="HeaderGridStyle">
             <Setter Property="Margin" Value="3" />
         </Style>
@@ -243,8 +251,25 @@
 
             <StackPanel
                 Grid.Column="1" Orientation="Horizontal">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Image
+                        Grid.Row="0"
+                        Style="{StaticResource ResourceKey=InfoIconStyle}"
+                        Source="/Icons/about_48x48.png"
+                        VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="36,3,3,0" Width="Auto" Cursor="Hand">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseLeftButtonDown">
+                                <i:InvokeCommandAction Command="{Binding AboutClickDelegateCommand}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Image>
                     <Button
-                    Grid.Column="0"
+                        Grid.Row="1"
                         Command="{Binding Path=SearchDelegateCommand}"
                         Style="{StaticResource ResourceKey=IconButtonStyle}"
                         IsDefault="True">
@@ -252,6 +277,7 @@
                             <Image Source="/Icons/FindUser_50x50.png" VerticalAlignment="Center" HorizontalAlignment="Center" />
                         </StackPanel>
                     </Button>
+                </Grid>
             </StackPanel>
         </Grid>
 
