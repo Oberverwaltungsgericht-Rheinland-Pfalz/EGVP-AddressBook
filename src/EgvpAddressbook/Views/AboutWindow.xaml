@@ -8,8 +8,8 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Über Egvp Adressbuch"
-        Height="250" Width="450"
         Icon="/Icons/AddressBook_48x48.png">
+        Height="320" Width="520">
 
     <Window.Resources>
 
@@ -35,9 +35,8 @@
         <ovgrlpConntrols:AboutInformation
             Grid.Row="0"
             Style="{StaticResource ResourceKey=InformationControlStyle}"
-            AppIconPath="/Icons/AddressBook_48x48.png"
-            ProgramName="EgvpAddressbook"
-            ProgramVersion="{Binding Path=ProgramVersion, ElementName=AboutWindowShell}"
+            ProgramName="{Binding Path=AppName, ElementName=AboutWindowShell}"
+            ProgramVersion="{Binding Path=AppVersion, ElementName=AboutWindowShell}"
             Copyright="{Binding Path=Copyright, ElementName=AboutWindowShell}"
             UpdateInformations="{Binding Path=UpdateInformation, ElementName=AboutWindowShell}"
             UpdateLink="{Binding Path=UpdateLink, ElementName=AboutWindowShell}"
