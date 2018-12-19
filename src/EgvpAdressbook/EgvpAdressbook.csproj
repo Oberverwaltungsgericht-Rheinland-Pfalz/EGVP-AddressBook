@@ -249,13 +249,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Icons\AdressBook_50x50.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Icons\FindUser_50x50.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\AddressBook_48x48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
