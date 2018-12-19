@@ -8,7 +8,6 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Über Egvp Adressbuch"
-        Icon="/Icons/AddressBook_48x48.png">
         Height="320" Width="520">
 
     <Window.Resources>

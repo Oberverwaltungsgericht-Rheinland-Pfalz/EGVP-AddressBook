@@ -22,31 +22,30 @@ namespace OvgRlp.Tools.EgvpAddressbook.Views
   {
     private static EgvpPortTypeClient EgvpClient = new EgvpEnterpriseSoap.EgvpPortTypeClient();
 
-    public string ProgramVersion
-    {
-      get
-      {
-        return string.Format("EgvpAddressbook\tVersion {0}{1}EgvpEnterprise\tVersion {2}",
-                             OvgRlp.Core.Common.AssemblyHelper.AssemblyVersion(System.Reflection.Assembly.GetExecutingAssembly()),
-                             Environment.NewLine,
-                             "TODO: EVGP-Enterprise Version");
-      }
-    }
+    public AboutWindowParameter AboutParams = new AboutWindowParameter();
+
+    public string AppName
+    { get { return AboutParams.AppName; } }
+
+    public string AppVersion
+    { get { return AboutParams.AppVersion; } }
 
     public string Copyright
-    { get { return "Copyright © 2018" + Environment.NewLine + "Oberverwaltungsgericht Rheinland-Pfalz"; } }
+    { get { return AboutParams.Copyright; } }
 
     public string UpdateInformation
-    { get { return "neue Versionen finden Sie unter:" + Environment.NewLine + "(nur im Rheinland-Pfalz Netz verfügbar)"; } }
+    { get { return AboutParams.UpdateInformation; } }
 
     public string UpdateLink
-    { get { return "http://5500s-dev1/OVGRLP.tools/Egvp-Addressbook/tree/master/release"; } }
+    { get { return AboutParams.UpdateLink; } }
 
     public string UpdateLinkDescription
-    { get { return "OVGRLP - Versionskontrolle"; } }
+    { get { return AboutParams.UpdateLinkDescription; } }
 
-    public AboutWindow()
+    public AboutWindow(AboutWindowParameter par)
     {
+      AboutParams = par;
+      SetWindowIcon(par.AppIconPath);
       InitializeComponent();
     }
 
@@ -54,5 +53,26 @@ namespace OvgRlp.Tools.EgvpAddressbook.Views
     {
       Close();
     }
+
+    private void SetWindowIcon(string appIconPath)
+    {
+      try
+      {
+        Uri iconUri = new Uri("pack://application:,,," + appIconPath);
+        this.Icon = BitmapFrame.Create(iconUri);
+      }
+      catch { /*ohne Fehlerbehandlung*/}
+    }
+  }
+
+  public class AboutWindowParameter
+  {
+    public string AppName { get; set; }
+    public string AppVersion { get; set; }
+    public string AppIconPath { get; set; }
+    public string Copyright { get; set; }
+    public string UpdateInformation { get; set; }
+    public string UpdateLink { get; set; }
+    public string UpdateLinkDescription { get; set; }
   }
 }

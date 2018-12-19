@@ -295,7 +295,25 @@ namespace OvgRlp.Tools.EgvpAddressbook.ViewModels
 
     public void ShowAboutWindow()
     {
-      var shell = new AboutWindow();
+      string appVersion = string.Format("EgvpAddressbook\tVersion {0}{1}EgvpEnterprise\tVersion {2}",
+                             OvgRlp.Core.Common.AssemblyHelper.AssemblyVersion(System.Reflection.Assembly.GetExecutingAssembly()),
+                             Environment.NewLine,
+                             "TODO: EVGP-Enterprise Version");
+      string copyright = "Copyright © 2018";
+      if (DateTime.Today.Year > 2018)
+        copyright += "-" + DateTime.Today.Year.ToString();
+
+      var par = new AboutWindowParameter
+      {
+        AppName = "EgvpAddressbook",
+        AppVersion = appVersion,
+        AppIconPath = "/Icons/AddressBook_48x48.png",
+        Copyright = copyright + Environment.NewLine + "Oberverwaltungsgericht Rheinland-Pfalz",
+        UpdateInformation = "neue Versionen finden Sie unter:" + Environment.NewLine + "(nur im Rheinland-Pfalz Netz verfügbar)",
+        UpdateLink = "http://5500s-dev1/OVGRLP.tools/Egvp-Addressbook/tree/master/release",
+        UpdateLinkDescription = "OVGRLP - Versionskontrolle"
+      };
+      var shell = new AboutWindow(par);
       shell.ShowDialog();
     }
 
