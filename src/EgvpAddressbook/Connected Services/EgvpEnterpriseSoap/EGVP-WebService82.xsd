@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <schema xmlns:tns="urn:de:bos-bremen:egvp:ws" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" targetNamespace="urn:de:bos-bremen:egvp:ws" xmlns="http://www.w3.org/2001/XMLSchema">
+  <annotation>
+    <documentation>
+			Request the last state for a certain sent message or send request.
+		</documentation>
+  </annotation>
   <simpleType name="GetStateReturnCodeType">
     <restriction base="string">
       <enumeration value="OK">
@@ -109,11 +114,12 @@
   <simpleType name="JEntryTypeType">
     <annotation>
       <documentation>see "Fachkonzept EGVP".
-				WS_ASEND, OSCI_SENT, WS_ASENT, WS_UNSENDABLE, WS_CANCELLED,
+				AU_RETRY, WS_ASEND, OSCI_SENT, WS_ASENT, WS_UNSENDABLE, WS_CANCELLED,
 				OSCI_DELIVERED, OSCI_RECEIVED, WS_RECEIVED, WS_UNPROCESSABLE
 			</documentation>
     </annotation>
     <restriction base="string">
+      <enumeration value="AU_RETRY" />
       <enumeration value="WS_ASEND" />
       <enumeration value="OSCI_SENT" />
       <enumeration value="WS_ASENT" />

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:tns="urn:de:bos-bremen:egvp:ws" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" targetNamespace="urn:de:bos-bremen:egvp:ws" xmlns="http://www.w3.org/2001/XMLSchema">
+  <simpleType name="CreateReturnCodeType">
+    <restriction base="string">
+      <enumeration value="OK">
+        <annotation>
+          <documentation>Account successfully created.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="WEBSERVICE_DISABLED">
+        <annotation>
+          <documentation>The requested web service is disabled.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="INVALID_CERTIFICATE">
+        <annotation>
+          <documentation>The user certificate is invalid.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="FIELD_REQUIRED">
+        <annotation>
+          <documentation>Required field is missing.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="FIELD_NAME_INVALID">
+        <annotation>
+          <documentation>The name contains invalid characters.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="DIRECTORY_ERROR">
+        <annotation>
+          <documentation>Create account error from SAFE.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="DIRECTORY_CONNECT_ERROR">
+        <annotation>
+          <documentation>Can not connect to SAFE.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="GENERAL_SQL_ERROR">
+        <annotation>
+          <documentation>General error while accessing the database.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="GENERAL_ERROR">
+        <annotation>
+          <documentation>An unspecified error occurred.</documentation>
+        </annotation>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <element name="createAccountRequest">
+    <complexType>
+      <sequence>
+        <element name="Address" type="string">
+          <annotation>
+            <documentation>Anrede.required.</documentation>
+          </annotation>
+        </element>
+        <element name="ChristianName" type="string">
+          <annotation>
+            <documentation>Vorname.optional.</documentation>
+          </annotation>
+        </element>
+        <element name="Organisation" type="string">
+          <annotation>
+            <documentation>Organisation.required.</documentation>
+          </annotation>
+        </element>
+        <element name="OrganisationalUnit" type="string">
+          <annotation>
+            <documentation>Behoerdenbezeichnung.Optional.</documentation>
+          </annotation>
+        </element>
+        <element name="Name" type="string">
+          <annotation>
+            <documentation>Nachname.required.</documentation>
+          </annotation>
+        </element>
+        <element name="Street" type="string">
+          <annotation>
+            <documentation>Strasse.required.</documentation>
+          </annotation>
+        </element>
+        <element name="Number" type="string">
+          <annotation>
+            <documentation>Hausnummer.required.</documentation>
+          </annotation>
+        </element>
+        <element name="ZipCode" type="string">
+          <annotation>
+            <documentation>Plz.required.
+						</documentation>
+          </annotation>
+        </element>
+        <element name="City" type="string">
+          <annotation>
+            <documentation>Stadt.required.</documentation>
+          </annotation>
+        </element>
+        <element name="FederalState" type="string">
+          <annotation>
+            <documentation>Bundesland.Auswahl.
+						</documentation>
+          </annotation>
+        </element>
+        <element name="Country" type="string">
+          <annotation>
+            <documentation>LandDefault_DE.
+						</documentation>
+          </annotation>
+        </element>
+        <element name="Email" type="string">
+          <annotation>
+            <documentation>email.optional.
+						</documentation>
+          </annotation>
+        </element>
+        <element name="Phone" type="string">
+          <annotation>
+            <documentation>TelefonNummer.optional.
+						</documentation>
+          </annotation>
+        </element>
+        <element name="Cellphone" type="string">
+          <annotation>
+            <documentation>Handy.optional.
+						</documentation>
+          </annotation>
+        </element>
+        <element name="Fax" type="string">
+          <annotation>
+            <documentation>Faxnr.optional.
+						</documentation>
+          </annotation>
+        </element>
+        <element name="ExternalId" type="string">
+          <annotation>
+            <documentation>ExterneID.optional.
+						</documentation>
+          </annotation>
+        </element>
+        <element name="Title" type="string">
+          <annotation>
+            <documentation>title.optional.
+						</documentation>
+          </annotation>
+        </element>
+        <element xmime:expectedContentTypes="application/octet-stream" minOccurs="0" name="SignKey" type="base64Binary">
+          <annotation>
+            <documentation>Signaturzertifikat.optional.
+						</documentation>
+          </annotation>
+        </element>
+        <element name="Password" type="string">
+          <annotation>
+            <documentation>Passwort fürs Signaturzertifikat.optional.
+						</documentation>
+          </annotation>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="createAccountResponse">
+    <complexType>
+      <sequence>
+        <element name="returnCode" type="tns:CreateReturnCodeType">
+          <annotation>
+            <documentation>The result of the create account operation.</documentation>
+          </annotation>
+        </element>
+        <element name="returnCodeDetails" type="string">
+          <annotation>
+            <documentation>Details to the result of the create account operation.</documentation>
+          </annotation>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+</schema>

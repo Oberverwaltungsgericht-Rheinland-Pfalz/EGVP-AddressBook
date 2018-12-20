@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:tns="urn:de:bos-bremen:egvp:ws" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" targetNamespace="urn:de:bos-bremen:egvp:ws" xmlns="http://www.w3.org/2001/XMLSchema">
+  <simpleType name="DeleteReturnCodeType">
+    <restriction base="string">
+      <enumeration value="OK">
+        <annotation>
+          <documentation>Operation completed without error.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="WEBSERVICE_DISABLED">
+        <annotation>
+          <documentation>The requested web service is disabled.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="USERID_REQUIRED">
+        <annotation>
+          <documentation>The required SAFE-userID was not specified.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="NO_SUCH_ACCOUNT">
+        <annotation>
+          <documentation>Account (userID) does not exist in EGVP-E.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="DIRECTORY_NOT_AVAILABLE">
+        <annotation>
+          <documentation>Connection to user directory (e.g. SAFE) cannot be established.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="USER_NOT_FOUND_IN_DIRECTORY">
+        <annotation>
+          <documentation>Account (userID) does not exist in user directory (e.g. SAFE) anymore.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="DIRECTORY_ERROR">
+        <annotation>
+          <documentation>User directory (e.g. SAFE) answered with an error when trying to delete user.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="GENERAL_SQL_ERROR">
+        <annotation>
+          <documentation>General error while accessing the database.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="GENERAL_ERROR">
+        <annotation>
+          <documentation>An unspecified error occurred.</documentation>
+        </annotation>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <element name="deleteAccountRequest">
+    <complexType>
+      <sequence>
+        <element name="userId" type="string">
+          <annotation>
+            <documentation>The message box, from which the message should be received.</documentation>
+          </annotation>
+        </element>
+        <element minOccurs="0" name="doDeleteFromQuarantine" type="boolean">
+          <annotation>
+            <documentation>
+							Set "true" to allow web-service to delete also the messages from or 
+							to given account which are waiting in quarantine.
+							Set to "false" (default) to let web-service return an error if there are still 
+							messages from or to given account which are waiting in quarantine.
+						</documentation>
+          </annotation>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="deleteAccountResponse">
+    <complexType>
+      <sequence>
+        <element name="returnCode" type="tns:DeleteReturnCodeType">
+          <annotation>
+            <documentation>The result of the delete account operation.</documentation>
+          </annotation>
+        </element>
+        <element minOccurs="0" name="returnCodeDetails" type="string">
+          <annotation>
+            <documentation>Details to the result of the delete account operation.</documentation>
+          </annotation>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+</schema>

@@ -303,7 +303,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.ViewModels
       if (DateTime.Today.Year > 2018)
         copyright += "-" + DateTime.Today.Year.ToString();
 
-      var par = new AboutWindowParameter
+      var par = new OvgRlp.Core.UI.Shells.AboutWindowParameter
       {
         AppName = "EgvpAddressbook",
         AppVersion = appVersion,
@@ -313,7 +313,8 @@ namespace OvgRlp.Tools.EgvpAddressbook.ViewModels
         UpdateLink = "http://5500s-dev1/OVGRLP.tools/Egvp-Addressbook/tree/master/release",
         UpdateLinkDescription = "OVGRLP - Versionskontrolle"
       };
-      var shell = new AboutWindow(par);
+
+      var shell = new OvgRlp.Core.UI.Shells.AboutWindow(par);
       shell.ShowDialog();
     }
 

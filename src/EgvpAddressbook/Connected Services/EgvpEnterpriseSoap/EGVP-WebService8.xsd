@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:tns="urn:de:bos-bremen:egvp:ws" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" targetNamespace="urn:de:bos-bremen:egvp:ws" xmlns="http://www.w3.org/2001/XMLSchema">
+  <annotation>
+    <documentation>
+			Request the current EGVP-Enterprise Version.
+		</documentation>
+  </annotation>
+  <element name="getVersionRequest">
+    <annotation>
+      <documentation>Simple request object without parameters.
+			</documentation>
+    </annotation>
+    <complexType>
+      <sequence />
+    </complexType>
+  </element>
+  <simpleType name="GetVersionReturnCodeType">
+    <restriction base="string">
+      <enumeration value="OK">
+        <annotation>
+          <documentation>Operation completed without error.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="GENERAL_SQL_ERROR">
+        <annotation>
+          <documentation>General error while accessing the database.
+					</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="GENERAL_ERROR">
+        <annotation>
+          <documentation>An unspecified error occurred.</documentation>
+        </annotation>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <element name="getVersionResponse">
+    <complexType>
+      <sequence>
+        <element minOccurs="1" maxOccurs="1" name="version" type="string">
+          <annotation>
+            <documentation>The current version.</documentation>
+          </annotation>
+        </element>
+        <element name="returnCode" type="tns:GetVersionReturnCodeType">
+          <annotation>
+            <documentation>The result of the operation.</documentation>
+          </annotation>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+</schema>

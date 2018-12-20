@@ -5,10 +5,6 @@ VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgvpAddressbook", "EgvpAddressbook\EgvpAddressbook.csproj", "{2843BDD4-20D7-4BA5-AF04-CD32F43E67C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OvgRlp.Core.UI", "..\..\..\libs\OvgRlp.Core\src\OvgRlp.Core.UI\OvgRlp.Core.UI.csproj", "{BC1E6FC6-AD27-4E90-A0C3-6D34F1CA9AD7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OvgRlp.Core", "..\..\..\libs\OvgRlp.Core\src\OvgRlp.Core\OvgRlp.Core.csproj", "{81243544-1C5F-4C22-A946-63DA6BBDCBC3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{2843BDD4-20D7-4BA5-AF04-CD32F43E67C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2843BDD4-20D7-4BA5-AF04-CD32F43E67C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2843BDD4-20D7-4BA5-AF04-CD32F43E67C6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BC1E6FC6-AD27-4E90-A0C3-6D34F1CA9AD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BC1E6FC6-AD27-4E90-A0C3-6D34F1CA9AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BC1E6FC6-AD27-4E90-A0C3-6D34F1CA9AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BC1E6FC6-AD27-4E90-A0C3-6D34F1CA9AD7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{81243544-1C5F-4C22-A946-63DA6BBDCBC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{81243544-1C5F-4C22-A946-63DA6BBDCBC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{81243544-1C5F-4C22-A946-63DA6BBDCBC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{81243544-1C5F-4C22-A946-63DA6BBDCBC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:tns="urn:de:bos-bremen:egvp:ws" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" targetNamespace="urn:de:bos-bremen:egvp:ws" xmlns="http://www.w3.org/2001/XMLSchema">
+  <simpleType name="LoadReportReturnCodeType">
+    <restriction base="string">
+      <enumeration value="OK">
+        <annotation>
+          <documentation>Operation completed without error.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="ILLEGAL_TIMESPAN">
+        <annotation>
+          <documentation>The given time span is invalid (for example in future or the 'end' is before 'start').</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="GENERAL_SQL_ERROR">
+        <annotation>
+          <documentation>General error while accessing the database.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="GENERAL_ERROR">
+        <annotation>
+          <documentation>An unspecified error occurred.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="WEBSERVICE_DISABLED">
+        <annotation>
+          <documentation>The requested web service is disabled.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="JOB_DISABLED">
+        <annotation>
+          <documentation>The job of message synchronization is disabled. So no result can be returned.</documentation>
+        </annotation>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <element name="loadMessageReportRequest">
+    <complexType>
+      <sequence>
+        <element minOccurs="0" maxOccurs="1" name="period">
+          <annotation>
+            <documentation>With this data the result can be limited by a timeperiod (date of receivment).</documentation>
+          </annotation>
+          <complexType>
+            <sequence>
+              <element name="start" type="date">
+                <annotation>
+                  <documentation>All messages since this date (form "YYYY-MM-DD").</documentation>
+                </annotation>
+              </element>
+              <element name="end" type="date">
+                <annotation>
+                  <documentation>All messages until this date (form "YYYY-MM-DD").</documentation>
+                </annotation>
+              </element>
+            </sequence>
+          </complexType>
+        </element>
+        <element minOccurs="0" maxOccurs="1" default="false" name="onlyDelta" type="boolean">
+          <annotation>
+            <documentation>If 'true', return only the Delta of received messages (within optional given period).</documentation>
+          </annotation>
+        </element>
+        <element minOccurs="0" maxOccurs="1" name="userId" type="string">
+          <annotation>
+            <documentation>The message box, from which the message should be received.</documentation>
+          </annotation>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="loadMessageReportResponse">
+    <complexType>
+      <sequence>
+        <element xmime:expectedContentTypes="application/octet-stream" minOccurs="0" name="messageReportXml" type="base64Binary">
+          <annotation>
+            <documentation>The report of the received message encoded in Base64.</documentation>
+          </annotation>
+        </element>
+        <element name="returnCode" type="tns:LoadReportReturnCodeType">
+          <annotation>
+            <documentation>The result of the receive operation.</documentation>
+          </annotation>
+        </element>
+        <element minOccurs="0" name="returnCodeDetails" type="string">
+          <annotation>
+            <documentation>The result of the receive operation.</documentation>
+          </annotation>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+</schema>

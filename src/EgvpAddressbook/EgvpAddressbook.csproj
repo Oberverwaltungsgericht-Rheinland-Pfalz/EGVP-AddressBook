@@ -37,6 +37,12 @@
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
+    <Reference Include="OvgRlp.Core, Version=1.3.0.1851, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OvgRlp_Core.1.3.0.1851\lib\net461\OvgRlp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="OvgRlp.Core.UI, Version=1.3.0.1851, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OvgRlp_Core_UI.1.3.0.1851\lib\net461\OvgRlp.Core.UI.dll</HintPath>
+    </Reference>
     <Reference Include="Prism, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Core.6.3.0\lib\net45\Prism.dll</HintPath>
     </Reference>
@@ -71,10 +77,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Views\AboutWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -91,9 +93,6 @@
     <Compile Include="Models\EgvpAdressEntry.cs" />
     <Compile Include="Models\SearchModeEntry.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Compile Include="Views\AboutWindow.xaml.cs">
-      <DependentUpon>AboutWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -117,31 +116,52 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService.xsd">
+    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService8.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService1.xsd">
+    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService81.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService2.xsd">
+    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService810.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService3.xsd">
+    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService811.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService4.xsd">
+    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService812.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService5.xsd">
+    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService813.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService6.xsd">
+    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService814.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService7.xsd">
+    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService82.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\egvp.wsdl" />
+    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService83.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService84.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService85.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService86.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService87.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService88.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService89.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\egvp1.wsdl" />
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -166,10 +186,40 @@
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse.datasource">
@@ -182,6 +232,18 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse.datasource">
@@ -260,16 +322,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\AddressBook_48x48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\libs\OvgRlp.Core\src\OvgRlp.Core.UI\OvgRlp.Core.UI.csproj">
-      <Project>{bc1e6fc6-ad27-4e90-a0c3-6d34f1ca9ad7}</Project>
-      <Name>OvgRlp.Core.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\libs\OvgRlp.Core\src\OvgRlp.Core\OvgRlp.Core.csproj">
-      <Project>{81243544-1c5f-4c22-a946-63da6bbdcbc3}</Project>
-      <Name>OvgRlp.Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
