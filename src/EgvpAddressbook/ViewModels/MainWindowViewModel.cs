@@ -1,5 +1,6 @@
 ﻿using OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap;
 using OvgRlp.Tools.EgvpAddressbook.Models;
+using OvgRlp.Tools.EgvpAddressbook.Services;
 using OvgRlp.Tools.EgvpAddressbook.Views;
 using Prism.Commands;
 using System;
@@ -337,43 +338,27 @@ namespace OvgRlp.Tools.EgvpAddressbook.ViewModels
 
       try
       {
-        var requ = new searchReceiverRequest();
-        var resp = new searchReceiverResponse();
+        var egvpService = new EgvpEpService(EgvpClient);
 
-        requ.userID = Properties.Settings.Default.EgvpEnterpriseUserId;
-        requ.searchCriteria = new EgvpEnterpriseSoap.BusinessCardType();
-        if (!string.IsNullOrEmpty(this.Organization))
-          requ.searchCriteria.organization = new BCItem() { Value = this.Organization, searchMode = this.OrganizationSearchModeType };
-        if (!string.IsNullOrEmpty(this.Name))
-          requ.searchCriteria.name = new BCItem() { Value = this.Name, searchMode = this.NameSearchModeType };
-        if (!string.IsNullOrEmpty(this.Firstname))
-          requ.searchCriteria.christianName = new BCItem() { Value = this.Firstname, searchMode = this.FirstnameSearchModeType };
-        if (!string.IsNullOrEmpty(this.Street))
-          requ.searchCriteria.street = new BCItem() { Value = this.Street, searchMode = this.StreetSearchModeType };
-        if (!string.IsNullOrEmpty(this.Postcode))
-          requ.searchCriteria.zipCode = new BCItem() { Value = this.Postcode, searchMode = this.PostcodeSearchModeType };
-        if (!string.IsNullOrEmpty(this.City))
-          requ.searchCriteria.city = new BCItem() { Value = this.City, searchMode = this.CitySearchModeType };
-        if (!string.IsNullOrEmpty(this.UserId))
-          requ.searchCriteria.userID = new BCItem() { Value = this.UserId, searchMode = this.UserIdSearchModeType };
+        searchResults = egvpService.SearchInEgvpEnterprise(
+          name: new EgvpSearchItem(this.Name, this.NameSearchModeType),
+          firstname: new EgvpSearchItem(this.Firstname, this.FirstnameSearchModeType),
+          organization: new EgvpSearchItem(this.Organization, this.OrganizationSearchModeType),
+          street: new EgvpSearchItem(this.Street, this.StreetSearchModeType),
+          postcode: new EgvpSearchItem(this.Postcode, this.PostcodeSearchModeType),
+          city: new EgvpSearchItem(this.City, this.CitySearchModeType),
+          userId: new EgvpSearchItem(this.UserId, this.UserIdSearchModeType)
+          );
 
-        resp = EgvpClient.searchReceiver(requ);
-        if (resp.returnCode != SearchReturnCodeType.OK)
-          throw new Exception(resp.returnCode.ToString());
-        if (resp.count == 0)
+        if (searchResults.Count == 0)
         {
           this.InformationBackroundColor = Brushes.Yellow;
           this.Infotext = "Zu dieser Selektion konnte kein Postfach ermittelt werden!";
         }
         else
         {
-          foreach (var res in resp.receiverResults)
-          {
-            searchResults.Add(EgvpAdressEntry.FromBusinessCardType(res));
-          }
-
           this.InformationBackroundColor = Brushes.Transparent;
-          this.Infotext = "Anzahl Suchergebnisse: " + resp.count;
+          this.Infotext = "Anzahl Suchergebnisse: " + searchResults.Count;
         }
       }
       catch (Exception ex)

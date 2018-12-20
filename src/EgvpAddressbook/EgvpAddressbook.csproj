@@ -91,7 +91,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Models\EgvpAdressEntry.cs" />
+    <Compile Include="Models\EgvpSearchItem.cs" />
     <Compile Include="Models\SearchModeEntry.cs" />
+    <Compile Include="Services\EgvpEpService.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -314,9 +316,7 @@
   <ItemGroup>
     <Resource Include="Icons\FindUser_50x50.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Icons\about_48x48.png" />
   </ItemGroup>
