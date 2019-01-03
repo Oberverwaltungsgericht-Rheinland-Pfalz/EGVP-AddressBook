@@ -296,10 +296,11 @@ namespace OvgRlp.Tools.EgvpAddressbook.ViewModels
 
     public void ShowAboutWindow()
     {
-      string appVersion = string.Format("EgvpAddressbook\tVersion {0}{1}EgvpEnterprise\tVersion {2}",
+      var egvpService = new EgvpEpService(EgvpClient);
+      string appVersion = string.Format("EgvpAddressbook\t\tVersion {0}{1}EVGP-Enterprise\t\tVersion {2}",
                              OvgRlp.Core.Common.AssemblyHelper.AssemblyVersion(System.Reflection.Assembly.GetExecutingAssembly()),
                              Environment.NewLine,
-                             "TODO: EVGP-Enterprise Version");
+                             egvpService.GetEgvpEpVersion());
       string copyright = "Copyright © 2018";
       if (DateTime.Today.Year > 2018)
         copyright += "-" + DateTime.Today.Year.ToString();

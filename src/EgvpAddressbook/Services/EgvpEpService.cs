@@ -17,6 +17,23 @@ namespace OvgRlp.Tools.EgvpAddressbook.Services
       m_EgvpClient = egvpClient;
     }
 
+    public string GetEgvpEpVersion()
+    {
+      string version = string.Empty;
+
+      try
+      {
+        var requ = new getVersionRequest();
+        var resp = new getVersionResponse();
+
+        resp = m_EgvpClient.getVersion(requ);
+        version = resp.version;
+      }
+      catch { /* ohne Fehlerbehandlung */ }
+
+      return version;
+    }
+
     public List<EgvpAdressEntry> SearchInEgvpEnterprise(EgvpSearchItem name, EgvpSearchItem firstname, EgvpSearchItem organization,
                                                         EgvpSearchItem street, EgvpSearchItem postcode, EgvpSearchItem city,
                                                         EgvpSearchItem userId)
