@@ -1,8 +1,20 @@
 
 
-<a name="1.4.0.1836"></a>
+<a name="1.4.2.1847"></a>
 
-### 1.4.0.1836 (10.09.2018)
+### 1.4.2.1847 (21.11.2018)
+
+#### &Auml;nderungen
+
+* fix "CLIPBRD_E_CANT_OPEN" beim kopieren in die Zwischenablage
+
+### 1.4.1.1837 (10.09.2018)
+
+#### &Auml;nderungen
+
+* E-Mail statt Fax in der Trefferliste mit anzeigen
+
+### 1.4.0.1837 (10.09.2018)
 
 #### &Auml;nderungen
 
@@ -13,9 +25,14 @@
 
 #### &Auml;nderungen
 
-* Bei Betätigung der Enter Taste Suchereignis auslösen
 * Um die Sichtbarkeit in der Task-Leiste zu wahren wurde die Icon Farbe geändert
 * Suchfeld Organisation wurde als Suchkriterium zur Verfügung gestellt
+
+### 1.2.1.1835 (29.08.2018)
+
+#### &Auml;nderungen
+
+* Bei Betätigung der Enter Taste Suche auslösen
 
 ### 1.2.0.1832 (08.08.2018)
 
@@ -23,6 +40,11 @@
 
 * Vorname in der Trefferliste mit anzeigen
 
+### 1.1.1.1827 (05.07.2018)
+
+#### &Auml;nderungen
+
+* Fehlerbehandlung beim Kopieren in die Zwischenablage eingebaut
 
 ### 1.1.0.1825 (19.06.2018)
 
