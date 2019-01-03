@@ -311,8 +311,8 @@ namespace OvgRlp.Tools.EgvpAddressbook.ViewModels
         AppVersion = appVersion,
         AppIconPath = "/Icons/AddressBook_48x48.png",
         Copyright = copyright + Environment.NewLine + "Oberverwaltungsgericht Rheinland-Pfalz",
-        UpdateInformation = "neue Versionen finden Sie unter:" + Environment.NewLine + "(nur im Rheinland-Pfalz Netz verfügbar)",
-        UpdateLink = "http://5500s-dev1/OVGRLP.tools/Egvp-Addressbook/tree/master/release",
+        UpdateInformation = "Neue Versionen finden Sie unter:" + Environment.NewLine + "(nur im Rheinland-Pfalz Netz verfügbar)",
+        UpdateLink = "http://5500s-dev1.ovgvg.jmrlp.de/OVGRLP.tools/Egvp-AddressBook/tags",
         UpdateLinkDescription = "OVGRLP - Versionskontrolle"
       };
 
