@@ -1,6 +1,12 @@
+### 1.5.0.1901 (04.01.2019)
 
+#### &Auml;nderungen
 
-<a name="1.4.2.1847"></a>
+* App Icon ausgetauscht
+* Feinabstimmung der Größe und Anordnung
+* Egvp Enterprise Produktiv inkl. Suchpostfach als Default in Config vorgeben
+* About-Fenster inkl. Anzeige der EGVP Enterprise Version und Updatelink hinzugefügt
+* Refactoring: stabilität verbessert und Standardimplemtierungen in OvgRlp.Core / OvgRlp.Core.UI ausgelagert
 
 ### 1.4.2.1847 (21.11.2018)
 
