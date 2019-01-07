@@ -12,7 +12,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.7.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.8.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -85,7 +85,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("safe-sp1-1422886512247-015767265")]
+        [global::System.Configuration.DefaultSettingValueAttribute("DE.Justiz.94246194-2718-4397-99b9-52b6ff640bd4.81ca")]
         public string EgvpEnterpriseUserId {
             get {
                 return ((string)(this["EgvpEnterpriseUserId"]));
