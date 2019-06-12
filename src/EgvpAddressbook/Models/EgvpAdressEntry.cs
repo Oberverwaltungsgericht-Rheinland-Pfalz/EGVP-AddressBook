@@ -12,6 +12,8 @@ namespace OvgRlp.Tools.EgvpAddressbook.Models
     public string Name { get; set; }
     public string FirstName { get; set; }
     public string Organization { get; set; }
+
+    public string OrganizationUnit { get; set; }
     public string StreetAndNumber { get; set; }
     public string PostCode { get; set; }
     public string City { get; set; }
@@ -31,6 +33,8 @@ namespace OvgRlp.Tools.EgvpAddressbook.Models
         entry.FirstName = postbox.christianName.Value;
       if (null != postbox.organization && !string.IsNullOrEmpty(postbox.organization.Value))
         entry.Organization = postbox.organization.Value;
+      if (null != postbox.organizationalUnit && !string.IsNullOrEmpty(postbox.organizationalUnit.Value))
+        entry.OrganizationUnit = postbox.organizationalUnit.Value;
       if (null != postbox.street && !string.IsNullOrEmpty(postbox.street.Value))
       {
         entry.StreetAndNumber = postbox.street.Value;

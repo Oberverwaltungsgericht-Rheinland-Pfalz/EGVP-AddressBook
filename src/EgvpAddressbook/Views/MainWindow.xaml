@@ -300,6 +300,7 @@
                         <GridViewColumn Header="Organisation" DisplayMemberBinding="{Binding Organization}" />
                         <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" />
                         <GridViewColumn Header="Vorname" DisplayMemberBinding="{Binding FirstName}" />
+                        <GridViewColumn Header="Org.Einheit" DisplayMemberBinding="{Binding OrganizationUnit}" />
                         <GridViewColumn Header="Straße" DisplayMemberBinding="{Binding StreetAndNumber}" />
                         <GridViewColumn Header="Postleitzahl" DisplayMemberBinding="{Binding PostCode}" />
                         <GridViewColumn Header="Ort" DisplayMemberBinding="{Binding City}" />
