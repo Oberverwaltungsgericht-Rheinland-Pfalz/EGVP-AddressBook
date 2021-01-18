@@ -240,6 +240,9 @@ namespace OvgRlp.Tools.EgvpAddressbook.ViewModels
     public DelegateCommand AboutClickDelegateCommand { get; private set; }
     public DelegateCommand SearchDelegateCommand { get; private set; }
     public DelegateCommand CopyEgvpAdressDelegateCommand { get; private set; }
+    public DelegateCommand CopyMailAdressDelegateCommand { get; private set; }
+    public DelegateCommand CopyOsciMailAdressDelegateCommand { get; private set; }
+    public DelegateCommand CreateOsciMailDelegateCommand { get; private set; }
 
     #endregion delegates
 
@@ -250,6 +253,9 @@ namespace OvgRlp.Tools.EgvpAddressbook.ViewModels
       SearchDelegateCommand = new DelegateCommand(Search, CanSearch);
       AboutClickDelegateCommand = new DelegateCommand(ShowAboutWindow);
       CopyEgvpAdressDelegateCommand = new DelegateCommand(CopyEgvpAdress);
+      CopyMailAdressDelegateCommand = new DelegateCommand(CopyMailAdress);
+      CopyOsciMailAdressDelegateCommand = new DelegateCommand(CopyOsciMailAdress);
+      CreateOsciMailDelegateCommand = new DelegateCommand(CreateOsciMail);
 
       this._organizationSearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
       this._nameSearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
@@ -278,6 +284,18 @@ namespace OvgRlp.Tools.EgvpAddressbook.ViewModels
         CopyToClipboard(SelectedAdress.UserId, "Egvp Adresse");
     }
 
+    public void CopyMailAdress()
+    {
+      if (null != SelectedAdress)
+        CopyToClipboard(SelectedAdress.Email, "E-Mail Adresse");
+    }
+
+    public void CopyOsciMailAdress()
+    {
+      if (null != SelectedAdress)
+        CopyToClipboard(OsciMailService.GetOsciMail(SelectedAdress.UserId), "OSCI E-Mail");
+    }
+
     public void CopyToClipboard(string clipboardText, string whichText = "Info")
     {
       string infotext = whichText + " wurde in die Zwischenablage kopiert!";
@@ -299,6 +317,12 @@ namespace OvgRlp.Tools.EgvpAddressbook.ViewModels
       {
         System.Windows.MessageBox.Show("Fehler beim Kopieren in die Zwischenablage: " + ex.Message);
       }
+    }
+
+    public void CreateOsciMail()
+    {
+      if (null != SelectedAdress)
+        OsciMailService.createOsciMail(SelectedAdress.UserId);
     }
 
     public void ShowAboutWindow()
