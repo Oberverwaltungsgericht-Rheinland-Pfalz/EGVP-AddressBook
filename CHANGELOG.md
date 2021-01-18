@@ -2,7 +2,12 @@
 
 #### &Auml;nderungen
 
-* 
+* Kontextmenü hinzugefügt, per Rechtsklick auf eine Adresse öffnet sich dieses mit folgenden Möglichkeiten
+  * EGVP-Adresse in den Zwischenspeicher kopieren
+  * E-Mail Adresse in den Zwischenspeicher kopieren
+  * OSCI E-Mail Adresse in den Zwischenspeicher kopieren
+  * Neue OSCI E-Mail erstellen
+* Das Format der OSCI E-Mail Adresse kann in der Konfigurationsdatei unter "OsciMailFormat" hinterlegt werden
 
 ### 1.6.0.1924 (12.06.2019)
 
