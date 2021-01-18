@@ -1,3 +1,15 @@
+### 1.8.0.2103 (18.01.2021)
+
+#### &Auml;nderungen
+
+* 
+
+### 1.6.0.1924 (12.06.2019)
+
+#### &Auml;nderungen
+
+* In der Ergebnisliste wurde eine neue Spalte zur Anzeige der Organisationseinheit eingefügt.
+
 ### 1.5.0.1901 (04.01.2019)
 
 #### &Auml;nderungen
