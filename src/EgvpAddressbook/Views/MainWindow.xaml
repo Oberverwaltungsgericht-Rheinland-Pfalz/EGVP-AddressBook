@@ -291,7 +291,7 @@
                 SelectedValue="{Binding Path=SelectedAdress}">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="MouseDoubleClick">
-                        <i:InvokeCommandAction Command="{Binding SelectedDelegateCommand}" />
+                        <i:InvokeCommandAction Command="{Binding CopyEgvpAdressDelegateCommand}" />
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
                 <ListView.View>

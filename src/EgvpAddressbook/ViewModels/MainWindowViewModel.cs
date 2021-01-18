@@ -239,7 +239,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.ViewModels
 
     public DelegateCommand AboutClickDelegateCommand { get; private set; }
     public DelegateCommand SearchDelegateCommand { get; private set; }
-    public DelegateCommand SelectedDelegateCommand { get; private set; }
+    public DelegateCommand CopyEgvpAdressDelegateCommand { get; private set; }
 
     #endregion delegates
 
@@ -248,8 +248,8 @@ namespace OvgRlp.Tools.EgvpAddressbook.ViewModels
       this.IsBusy = false;
 
       SearchDelegateCommand = new DelegateCommand(Search, CanSearch);
-      SelectedDelegateCommand = new DelegateCommand(CopyToClipboard);
       AboutClickDelegateCommand = new DelegateCommand(ShowAboutWindow);
+      CopyEgvpAdressDelegateCommand = new DelegateCommand(CopyEgvpAdress);
 
       this._organizationSearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
       this._nameSearchModeEntries = new CollectionView(SearchModeEntry.GetAllSearchModes());
@@ -272,21 +272,28 @@ namespace OvgRlp.Tools.EgvpAddressbook.ViewModels
       return !IsBusy;
     }
 
-    public void CopyToClipboard()
+    public void CopyEgvpAdress()
     {
+      if (null != SelectedAdress)
+        CopyToClipboard(SelectedAdress.UserId, "Egvp Adresse");
+    }
+
+    public void CopyToClipboard(string clipboardText, string whichText = "Info")
+    {
+      string infotext = whichText + " wurde in die Zwischenablage kopiert!";
       try
       {
         if (null != SelectedAdress)
         {
-          try { Clipboard.SetText(SelectedAdress.UserId); }
-          catch { Clipboard.SetDataObject(SelectedAdress.UserId); }
-          System.Windows.MessageBox.Show("Egvp Adresse wurde in die Zwischenablage kopiert!");   //TODO: andere (WPF-verträglichere) Lösung finden
+          try { Clipboard.SetText(clipboardText); }
+          catch { Clipboard.SetDataObject(clipboardText); }
+          System.Windows.MessageBox.Show(infotext);   //TODO: andere (WPF-verträglichere) Lösung finden
         }
       }
       catch (COMException ex) when (ex.ErrorCode == -2147221040)
       {
         /* Win32-Api Error CLIPBRD_E_CANT_OPEN ignorieren, Text wird trotzdem in die Zwischenablage kopiert */
-        System.Windows.MessageBox.Show("Egvp Adresse wurde in die Zwischenablage kopiert!");
+        System.Windows.MessageBox.Show(infotext);
       }
       catch (Exception ex)
       {
