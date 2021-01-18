@@ -316,7 +316,12 @@
   <ItemGroup>
     <Resource Include="Icons\FindUser_50x50.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Icons\copyMail_48x48.png" />
+    <Resource Include="Icons\copyText_48x48.png" />
+    <Resource Include="Icons\copy_48x48.png" />
+    <Resource Include="Icons\newMail_48x48.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\about_48x48.png" />
   </ItemGroup>
