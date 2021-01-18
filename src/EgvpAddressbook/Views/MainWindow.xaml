@@ -291,7 +291,7 @@
                 SelectedValue="{Binding Path=SelectedAdress}">
                 <ListView.ContextMenu>
                     <ContextMenu>
-                        <MenuItem Header="Egvp-Adresse in den Zwischenspeicher kopieren"
+                        <MenuItem Header="EGVP-Adresse in den Zwischenspeicher kopieren"
                                   Command="{Binding CopyEgvpAdressDelegateCommand}">
                             <MenuItem.Icon>
                                 <Image Source="/Icons/copy_48x48.png" />
@@ -303,14 +303,14 @@
                                 <Image Source="/Icons/copyText_48x48.png" />
                             </MenuItem.Icon>
                         </MenuItem>
-                        <MenuItem Header="Osci E-Mail Adresse in den Zwischenspeicher kopieren"
+                        <MenuItem Header="OSCI E-Mail Adresse in den Zwischenspeicher kopieren"
                                   Command="{Binding CopyOsciMailAdressDelegateCommand}">
                             <MenuItem.Icon>
                                 <Image Source="/Icons/copyMail_48x48.png" />
                             </MenuItem.Icon>
                         </MenuItem>
                         <Separator />
-                        <MenuItem Header="Neue Osci E-Mail erstellen"
+                        <MenuItem Header="Neue OSCI E-Mail erstellen"
                                   Command="{Binding CreateOsciMailDelegateCommand}">
                             <MenuItem.Icon>
                                 <Image Source="/Icons/newMail_48x48.png" />

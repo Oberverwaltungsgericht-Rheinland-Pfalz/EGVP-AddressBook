@@ -27,7 +27,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.ViewModels
     {
       get
       {
-        return "Egvp Adressabfrage (v. " + OvgRlp.Core.Common.AssemblyHelper.AssemblyVersion(System.Reflection.Assembly.GetExecutingAssembly()) + ")";
+        return "EGVP Adressabfrage (v. " + OvgRlp.Core.Common.AssemblyHelper.AssemblyVersion(System.Reflection.Assembly.GetExecutingAssembly()) + ")";
       }
     }
 
@@ -281,7 +281,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.ViewModels
     public void CopyEgvpAdress()
     {
       if (null != SelectedAdress)
-        CopyToClipboard(SelectedAdress.UserId, "Egvp Adresse");
+        CopyToClipboard(SelectedAdress.UserId, "EGVP Adresse");
     }
 
     public void CopyMailAdress()
