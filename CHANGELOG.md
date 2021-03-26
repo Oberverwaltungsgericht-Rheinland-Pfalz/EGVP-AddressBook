@@ -1,3 +1,11 @@
+
+
+### 1.8.1.2112 (26.03.2021)
+
+#### &Auml;nderungen
+
+* Anpassung der Konfiguration an den neuen Egvp-Enterprise Webserver
+
 ### 1.8.0.2103 (18.01.2021)
 
 #### &Auml;nderungen
