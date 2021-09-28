@@ -23,5 +23,11 @@
     <Setting Name="OsciMailFormat" Type="System.String" Scope="Application">
       <Value Profile="(Default)">egvp_[EGVP-ID]@poststelle.rlp.de</Value>
     </Setting>
+    <Setting Name="UpdateLink" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UpdateLinkDescription" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

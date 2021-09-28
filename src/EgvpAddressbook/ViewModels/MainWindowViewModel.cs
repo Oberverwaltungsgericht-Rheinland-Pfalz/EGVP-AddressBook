@@ -342,10 +342,16 @@ namespace OvgRlp.Tools.EgvpAddressbook.ViewModels
         AppVersion = appVersion,
         AppIconPath = "/Icons/AddressBook_48x48.png",
         Copyright = copyright + Environment.NewLine + "Oberverwaltungsgericht Rheinland-Pfalz",
-        UpdateInformation = "Neue Versionen finden Sie unter:" + Environment.NewLine + "(nur im Rheinland-Pfalz Netz verfügbar)",
-        UpdateLink = "http://5500s-dev1.ovgvg.jmrlp.de/OVGRLP.tools/Egvp-AddressBook/tags",
-        UpdateLinkDescription = "OVGRLP - Versionskontrolle"
       };
+      if (!string.IsNullOrEmpty(Properties.Settings.Default.UpdateLink))
+      {
+        par.UpdateInformation = "Neue Versionen finden Sie unter:";
+        par.UpdateLink = Properties.Settings.Default.UpdateLink;
+
+        par.UpdateLinkDescription = Properties.Settings.Default.UpdateLinkDescription;
+        if (string.IsNullOrEmpty(par.UpdateLinkDescription))
+          par.UpdateLinkDescription = par.UpdateLink;
+      }
 
       var shell = new OvgRlp.Core.UI.Shells.AboutWindow(par);
       shell.ShowDialog();
