@@ -18,7 +18,7 @@
       <Value Profile="(Default)">Maximized</Value>
     </Setting>
     <Setting Name="EgvpEnterpriseUserId" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">DE.Justiz.94246194-2718-4397-99b9-52b6ff640bd4.81ca</Value>
+      <Value Profile="(Default)">[Postfach-ID]</Value>
     </Setting>
     <Setting Name="OsciMailFormat" Type="System.String" Scope="Application">
       <Value Profile="(Default)">egvp_[EGVP-ID]@poststelle.rlp.de</Value>

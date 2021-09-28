@@ -85,7 +85,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DE.Justiz.94246194-2718-4397-99b9-52b6ff640bd4.81ca")]
+        [global::System.Configuration.DefaultSettingValueAttribute("[Postfach-ID]")]
         public string EgvpEnterpriseUserId {
             get {
                 return ((string)(this["EgvpEnterpriseUserId"]));
