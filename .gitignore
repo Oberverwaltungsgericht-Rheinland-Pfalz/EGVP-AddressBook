@@ -201,3 +201,7 @@ FakesAssemblies/
 
 Visual Studio Codemap usw.
 .vs/
+
+# individual release/runtime specifications
+!src/packages/OvgRlp*
+!src/packages/OvgRlp*/*.nupkg
