@@ -203,5 +203,7 @@ Visual Studio Codemap usw.
 .vs/
 
 # individual release/runtime specifications
+src/EgvpAddressbook/App.Debug.config
+src/EgvpAddressbook/App.Release.config
 !src/packages/OvgRlp*
 !src/packages/OvgRlp*/*.nupkg
