@@ -12,7 +12,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("EgvpAddressbook")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCopyright("Copyright ©  2018 - 2021 Oberverwaltungsgericht Rheinland-Pfalz, EUPL-1.2")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
