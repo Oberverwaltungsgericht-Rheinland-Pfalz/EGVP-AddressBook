@@ -301,6 +301,8 @@ namespace OvgRlp.Tools.EgvpAddressbook.ViewModels
       string infotext = whichText + " wurde in die Zwischenablage kopiert!";
       try
       {
+        if (string.IsNullOrEmpty(clipboardText))
+          clipboardText = "";
         if (null != SelectedAdress)
         {
           try { Clipboard.SetText(clipboardText); }
