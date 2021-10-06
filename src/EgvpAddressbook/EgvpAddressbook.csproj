@@ -125,52 +125,7 @@
     <None Include="App.Release.config">
       <DependentUpon>App.config</DependentUpon>
     </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService8.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService81.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService810.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService811.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService812.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService813.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService814.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService82.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService83.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService84.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService85.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService86.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService87.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService88.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EGVP-WebService89.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\egvp1.wsdl" />
+    <None Include="Connected Services\EgvpEnterpriseSoap\EgvpService.wsdl" />
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -207,6 +162,12 @@
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessageResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -229,6 +190,24 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCountsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCountsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessageResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverviewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverviewResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse.datasource">
@@ -255,6 +234,12 @@
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessageResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -265,6 +250,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessageResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverResponse.datasource">
@@ -283,6 +274,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocumentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocumentsResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse.datasource">

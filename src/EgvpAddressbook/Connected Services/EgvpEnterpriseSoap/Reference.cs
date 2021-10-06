@@ -15,165 +15,248 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.ServiceModel.ServiceContractAttribute(Namespace="urn:de:bos-bremen:egvp:ws", ConfigurationName="EgvpEnterpriseSoap.EgvpPortType")]
     public interface EgvpPortType {
         
-        // CODEGEN: Generating message contract since the operation searchReceiver is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:searchReceiver", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverResponse1 searchReceiver(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverRequest1 request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:searchReceiver", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverResponse1> searchReceiverAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverRequest1 request);
-        
-        // CODEGEN: Generating message contract since the operation sendSynchroniousMessage is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:sendSynchroniousMessage", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1 sendSynchroniousMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest1 request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:sendSynchroniousMessage", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1> sendSynchroniousMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest1 request);
-        
-        // CODEGEN: Generating message contract since the operation sendAsynchroniousMessage is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:sendAsynchroniousMessage", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageResponse1 sendAsynchroniousMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageRequest1 request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:sendAsynchroniousMessage", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageResponse1> sendAsynchroniousMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageRequest1 request);
-        
         // CODEGEN: Generating message contract since the operation asynchroniousMessageSent is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:asynchroniousMessageSent", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentResponse1 asynchroniousMessageSent(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentRequest1 request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentResponse1 asynchroniousMessageSent(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSent request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:asynchroniousMessageSent", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentResponse1> asynchroniousMessageSentAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentRequest1 request);
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentResponse1> asynchroniousMessageSentAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSent request);
         
-        // CODEGEN: Generating message contract since the operation receiveMessage is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:receiveMessage", ReplyAction="*")]
+        // CODEGEN: Generating message contract since the operation retryQuarantineMessage is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:retryQuarantineMessage", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse1 receiveMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageRequest1 request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessageResponse1 retryQuarantineMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessage request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:receiveMessage", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse1> receiveMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageRequest1 request);
-        
-        // CODEGEN: Generating message contract since the operation loadMessageReport is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:loadMessageReport", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse1 loadMessageReport(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportRequest1 request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:loadMessageReport", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse1> loadMessageReportAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportRequest1 request);
-        
-        // CODEGEN: Generating message contract since the operation commitReceivedMessage is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:commitReceivedMessage", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageResponse1 commitReceivedMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageRequest1 request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:commitReceivedMessage", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageResponse1> commitReceivedMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageRequest1 request);
-        
-        // CODEGEN: Generating message contract since the operation commitSentMessage is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:commitSentMessage", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageResponse1 commitSentMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageRequest1 request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:commitSentMessage", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageResponse1> commitSentMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageRequest1 request);
-        
-        // CODEGEN: Generating message contract since the operation cancelSentMessage is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:cancelSentMessage", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageResponse1 cancelSentMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageRequest1 request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:cancelSentMessage", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageResponse1> cancelSentMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageRequest1 request);
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:retryQuarantineMessage", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessageResponse1> retryQuarantineMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessage request);
         
         // CODEGEN: Generating message contract since the operation verifyMessage is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:verifyMessage", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse1 verifyMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageRequest1 request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse1 verifyMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessage request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:verifyMessage", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse1> verifyMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageRequest1 request);
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse1> verifyMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessage request);
         
-        // CODEGEN: Generating message contract since the operation registerNotificationCallback is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:registerNotificationCallback", ReplyAction="*")]
+        // CODEGEN: Generating message contract since the operation getQuarantineCounts is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getQuarantineCounts", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackResponse1 registerNotificationCallback(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackRequest1 request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCountsResponse1 getQuarantineCounts(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCounts request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:registerNotificationCallback", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackResponse1> registerNotificationCallbackAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackRequest1 request);
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getQuarantineCounts", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCountsResponse1> getQuarantineCountsAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCounts request);
         
-        // CODEGEN: Generating message contract since the operation deregisterNotificationCallback is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:deregisterNotificationCallback", ReplyAction="*")]
+        // CODEGEN: Generating message contract since the operation getQuarantineMessage is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getQuarantineMessage", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse1 deregisterNotificationCallback(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackRequest1 request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessageResponse1 getQuarantineMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessage request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:deregisterNotificationCallback", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse1> deregisterNotificationCallbackAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackRequest1 request);
-        
-        // CODEGEN: Generating message contract since the operation getState is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getState", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse1 getState(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateRequest1 request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getState", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse1> getStateAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateRequest1 request);
-        
-        // CODEGEN: Generating message contract since the operation getAllStates is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getAllStates", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse1 getAllStates(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesRequest1 request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getAllStates", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse1> getAllStatesAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesRequest1 request);
-        
-        // CODEGEN: Generating message contract since the operation getUncommittedMessageIDs is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getUncommittedMessageIDs", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsResponse1 getUncommittedMessageIDs(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsRequest1 request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getUncommittedMessageIDs", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsResponse1> getUncommittedMessageIDsAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsRequest1 request);
-        
-        // CODEGEN: Generating message contract since the operation createAccount is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:createAccount", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountResponse1 createAccount(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountRequest1 request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:createAccount", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountResponse1> createAccountAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountRequest1 request);
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getQuarantineMessage", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessageResponse1> getQuarantineMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessage request);
         
         // CODEGEN: Generating message contract since the operation deleteAccount is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:deleteAccount", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountResponse1 deleteAccount(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountRequest1 request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountResponse1 deleteAccount(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccount request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:deleteAccount", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountResponse1> deleteAccountAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountRequest1 request);
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountResponse1> deleteAccountAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccount request);
         
         // CODEGEN: Generating message contract since the operation editAccount is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:editAccount", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountResponse1 editAccount(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountRequest1 request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountResponse1 editAccount(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccount request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:editAccount", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountResponse1> editAccountAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountRequest1 request);
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountResponse1> editAccountAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccount request);
         
-        // CODEGEN: Generating message contract since the operation getVersion is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getVersion", ReplyAction="*")]
+        // CODEGEN: Generating message contract since the operation createAccount is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:createAccount", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionResponse1 getVersion(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionRequest1 request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountResponse1 createAccount(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccount request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getVersion", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionResponse1> getVersionAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionRequest1 request);
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:createAccount", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountResponse1> createAccountAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccount request);
+        
+        // CODEGEN: Generating message contract since the operation markAsFetchQuarantineMessage is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:markAsFetchQuarantineMessage", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessageResponse1 markAsFetchQuarantineMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:markAsFetchQuarantineMessage", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessageResponse1> markAsFetchQuarantineMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessage request);
+        
+        // CODEGEN: Generating message contract since the operation registerNotificationCallback is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:registerNotificationCallback", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackResponse1 registerNotificationCallback(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallback request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:registerNotificationCallback", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackResponse1> registerNotificationCallbackAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallback request);
+        
+        // CODEGEN: Generating message contract since the operation cancelSentMessage is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:cancelSentMessage", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageResponse1 cancelSentMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:cancelSentMessage", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageResponse1> cancelSentMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessage request);
+        
+        // CODEGEN: Generating message contract since the operation getAllStates is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getAllStates", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse1 getAllStates(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStates request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getAllStates", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse1> getAllStatesAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStates request);
+        
+        // CODEGEN: Generating message contract since the operation receiveMessage is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:receiveMessage", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse1 receiveMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:receiveMessage", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse1> receiveMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessage request);
+        
+        // CODEGEN: Generating message contract since the operation searchReceiver is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:searchReceiver", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverResponse1 searchReceiver(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiver request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:searchReceiver", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverResponse1> searchReceiverAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiver request);
+        
+        // CODEGEN: Generating message contract since the operation commitSentMessage is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:commitSentMessage", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageResponse1 commitSentMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:commitSentMessage", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageResponse1> commitSentMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessage request);
+        
+        // CODEGEN: Generating message contract since the operation deregisterNotificationCallback is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:deregisterNotificationCallback", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse1 deregisterNotificationCallback(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallback request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:deregisterNotificationCallback", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse1> deregisterNotificationCallbackAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallback request);
         
         // CODEGEN: Generating message contract since the operation getAllAccounts is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getAllAccounts", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsResponse1 getAllAccounts(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsRequest1 request);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsResponse1 getAllAccounts(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccounts request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getAllAccounts", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsResponse1> getAllAccountsAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsRequest1 request);
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsResponse1> getAllAccountsAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccounts request);
+        
+        // CODEGEN: Generating message contract since the operation sendSynchroniousMessage is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:sendSynchroniousMessage", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1 sendSynchroniousMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:sendSynchroniousMessage", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1> sendSynchroniousMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessage request);
+        
+        // CODEGEN: Generating message contract since the operation verifyDocuments is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:verifyDocuments", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocumentsResponse1 verifyDocuments(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocuments request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:verifyDocuments", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocumentsResponse1> verifyDocumentsAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocuments request);
+        
+        // CODEGEN: Generating message contract since the operation getVersion is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getVersion", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionResponse1 getVersion(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersion request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getVersion", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionResponse1> getVersionAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersion request);
+        
+        // CODEGEN: Generating message contract since the operation loadMessageReport is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:loadMessageReport", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse1 loadMessageReport(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReport request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:loadMessageReport", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse1> loadMessageReportAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReport request);
+        
+        // CODEGEN: Generating message contract since the operation commitReceivedMessage is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:commitReceivedMessage", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageResponse1 commitReceivedMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:commitReceivedMessage", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageResponse1> commitReceivedMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessage request);
+        
+        // CODEGEN: Generating message contract since the operation getUncommittedMessageIDs is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getUncommittedMessageIDs", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsResponse1 getUncommittedMessageIDs(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDs request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getUncommittedMessageIDs", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsResponse1> getUncommittedMessageIDsAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDs request);
+        
+        // CODEGEN: Generating message contract since the operation getQuarantineOverview is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getQuarantineOverview", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverviewResponse1 getQuarantineOverview(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverview request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getQuarantineOverview", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverviewResponse1> getQuarantineOverviewAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverview request);
+        
+        // CODEGEN: Generating message contract since the operation sendAsynchroniousMessage is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:sendAsynchroniousMessage", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageResponse1 sendAsynchroniousMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:sendAsynchroniousMessage", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageResponse1> sendAsynchroniousMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessage request);
+        
+        // CODEGEN: Generating message contract since the operation deleteQuarantineMessage is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:deleteQuarantineMessage", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessageResponse1 deleteQuarantineMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:deleteQuarantineMessage", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessageResponse1> deleteQuarantineMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessage request);
+        
+        // CODEGEN: Generating message contract since the operation getState is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getState", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse1 getState(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getState request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getState", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse1> getStateAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getState request);
     }
     
     /// <remarks/>
@@ -182,11 +265,11 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class searchReceiverRequest : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class asynchroniousMessageSentRequest : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string userIDField;
         
-        private BusinessCardType searchCriteriaField;
+        private string customIDField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -202,13 +285,13 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public BusinessCardType searchCriteria {
+        public string customID {
             get {
-                return this.searchCriteriaField;
+                return this.customIDField;
             }
             set {
-                this.searchCriteriaField = value;
-                this.RaisePropertyChanged("searchCriteria");
+                this.customIDField = value;
+                this.RaisePropertyChanged("customID");
             }
         }
         
@@ -220,6 +303,934 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class QuarantineItem : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private System.DateTime quarantineDateField;
+        
+        private string messageIdField;
+        
+        private string poBoxField;
+        
+        private string senderIdField;
+        
+        private string receiverIdField;
+        
+        private string senderNameField;
+        
+        private string receiverNameField;
+        
+        private System.DateTime entranceDateField;
+        
+        private int retryCountField;
+        
+        private int retryPossibleField;
+        
+        private string exceptionCodeField;
+        
+        private bool contentDataField;
+        
+        private string contentTypeField;
+        
+        private string stackTraceField;
+        
+        private string servicesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=0)]
+        public System.DateTime quarantineDate {
+            get {
+                return this.quarantineDateField;
+            }
+            set {
+                this.quarantineDateField = value;
+                this.RaisePropertyChanged("quarantineDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string messageId {
+            get {
+                return this.messageIdField;
+            }
+            set {
+                this.messageIdField = value;
+                this.RaisePropertyChanged("messageId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string poBox {
+            get {
+                return this.poBoxField;
+            }
+            set {
+                this.poBoxField = value;
+                this.RaisePropertyChanged("poBox");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string senderId {
+            get {
+                return this.senderIdField;
+            }
+            set {
+                this.senderIdField = value;
+                this.RaisePropertyChanged("senderId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string receiverId {
+            get {
+                return this.receiverIdField;
+            }
+            set {
+                this.receiverIdField = value;
+                this.RaisePropertyChanged("receiverId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string senderName {
+            get {
+                return this.senderNameField;
+            }
+            set {
+                this.senderNameField = value;
+                this.RaisePropertyChanged("senderName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string receiverName {
+            get {
+                return this.receiverNameField;
+            }
+            set {
+                this.receiverNameField = value;
+                this.RaisePropertyChanged("receiverName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=7)]
+        public System.DateTime entranceDate {
+            get {
+                return this.entranceDateField;
+            }
+            set {
+                this.entranceDateField = value;
+                this.RaisePropertyChanged("entranceDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public int retryCount {
+            get {
+                return this.retryCountField;
+            }
+            set {
+                this.retryCountField = value;
+                this.RaisePropertyChanged("retryCount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public int retryPossible {
+            get {
+                return this.retryPossibleField;
+            }
+            set {
+                this.retryPossibleField = value;
+                this.RaisePropertyChanged("retryPossible");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public string exceptionCode {
+            get {
+                return this.exceptionCodeField;
+            }
+            set {
+                this.exceptionCodeField = value;
+                this.RaisePropertyChanged("exceptionCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public bool contentData {
+            get {
+                return this.contentDataField;
+            }
+            set {
+                this.contentDataField = value;
+                this.RaisePropertyChanged("contentData");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public string contentType {
+            get {
+                return this.contentTypeField;
+            }
+            set {
+                this.contentTypeField = value;
+                this.RaisePropertyChanged("contentType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        public string stackTrace {
+            get {
+                return this.stackTraceField;
+            }
+            set {
+                this.stackTraceField = value;
+                this.RaisePropertyChanged("stackTrace");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
+        public string services {
+            get {
+                return this.servicesField;
+            }
+            set {
+                this.servicesField = value;
+                this.RaisePropertyChanged("services");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class UncommittedMessageType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string messageIDField;
+        
+        private System.DateTime osciDateField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string messageID {
+            get {
+                return this.messageIDField;
+            }
+            set {
+                this.messageIDField = value;
+                this.RaisePropertyChanged("messageID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public System.DateTime osciDate {
+            get {
+                return this.osciDateField;
+            }
+            set {
+                this.osciDateField = value;
+                this.RaisePropertyChanged("osciDate");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class AttachmentType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private byte[] dataField;
+        
+        private string nameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=0)]
+        public byte[] data {
+            get {
+                return this.dataField;
+            }
+            set {
+                this.dataField = value;
+                this.RaisePropertyChanged("data");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("name");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class SendMessageRequestType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string userIDField;
+        
+        private MessageTypeType messageTypeField;
+        
+        private string receiverIDField;
+        
+        private ReceiverKeyType receiverKeyField;
+        
+        private string subjectField;
+        
+        private bool signMessageField;
+        
+        private bool signMessageFieldSpecified;
+        
+        private byte[] visualXMLField;
+        
+        private byte[] visualXSLField;
+        
+        private AttachmentType[] attachmentsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string userID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                this.userIDField = value;
+                this.RaisePropertyChanged("userID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public MessageTypeType messageType {
+            get {
+                return this.messageTypeField;
+            }
+            set {
+                this.messageTypeField = value;
+                this.RaisePropertyChanged("messageType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string receiverID {
+            get {
+                return this.receiverIDField;
+            }
+            set {
+                this.receiverIDField = value;
+                this.RaisePropertyChanged("receiverID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public ReceiverKeyType receiverKey {
+            get {
+                return this.receiverKeyField;
+            }
+            set {
+                this.receiverKeyField = value;
+                this.RaisePropertyChanged("receiverKey");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string subject {
+            get {
+                return this.subjectField;
+            }
+            set {
+                this.subjectField = value;
+                this.RaisePropertyChanged("subject");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public bool signMessage {
+            get {
+                return this.signMessageField;
+            }
+            set {
+                this.signMessageField = value;
+                this.RaisePropertyChanged("signMessage");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool signMessageSpecified {
+            get {
+                return this.signMessageFieldSpecified;
+            }
+            set {
+                this.signMessageFieldSpecified = value;
+                this.RaisePropertyChanged("signMessageSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=6)]
+        public byte[] visualXML {
+            get {
+                return this.visualXMLField;
+            }
+            set {
+                this.visualXMLField = value;
+                this.RaisePropertyChanged("visualXML");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=7)]
+        public byte[] visualXSL {
+            get {
+                return this.visualXSLField;
+            }
+            set {
+                this.visualXSLField = value;
+                this.RaisePropertyChanged("visualXSL");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("attachments", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=8)]
+        public AttachmentType[] attachments {
+            get {
+                return this.attachmentsField;
+            }
+            set {
+                this.attachmentsField = value;
+                this.RaisePropertyChanged("attachments");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum MessageTypeType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Allgemeine Nachricht")]
+        AllgemeineNachricht,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("HR-Beteiligter")]
+        HRBeteiligter,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("HR-Gericht")]
+        HRGericht,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mahn-Antrag")]
+        MahnAntrag,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mahn-Nachricht")]
+        MahnNachricht,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mahn-Abgabe")]
+        MahnAbgabe,
+        
+        /// <remarks/>
+        Testnachricht,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Ubest-Mahn")]
+        UbestMahn,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum ReceiverKeyType {
+        
+        /// <remarks/>
+        USER_ID,
+        
+        /// <remarks/>
+        ROLE,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class AccountInfoItem : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string accountIdField;
+        
+        private string stateField;
+        
+        private string expireDaysField;
+        
+        private string organisationField;
+        
+        private string organisationalUnitField;
+        
+        private string addressField;
+        
+        private string titleField;
+        
+        private string christianNameField;
+        
+        private string nameField;
+        
+        private string streetField;
+        
+        private string streetNumberField;
+        
+        private string zipCodeField;
+        
+        private string cityField;
+        
+        private string federalStateField;
+        
+        private string countryField;
+        
+        private string emailField;
+        
+        private string cellPhoneField;
+        
+        private string phoneField;
+        
+        private string faxField;
+        
+        private string externalIdField;
+        
+        private string roleField;
+        
+        private bool fetchServiceDisabledField;
+        
+        private bool fetchServiceDisabledFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string accountId {
+            get {
+                return this.accountIdField;
+            }
+            set {
+                this.accountIdField = value;
+                this.RaisePropertyChanged("accountId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string state {
+            get {
+                return this.stateField;
+            }
+            set {
+                this.stateField = value;
+                this.RaisePropertyChanged("state");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string expireDays {
+            get {
+                return this.expireDaysField;
+            }
+            set {
+                this.expireDaysField = value;
+                this.RaisePropertyChanged("expireDays");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string organisation {
+            get {
+                return this.organisationField;
+            }
+            set {
+                this.organisationField = value;
+                this.RaisePropertyChanged("organisation");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string organisationalUnit {
+            get {
+                return this.organisationalUnitField;
+            }
+            set {
+                this.organisationalUnitField = value;
+                this.RaisePropertyChanged("organisationalUnit");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string address {
+            get {
+                return this.addressField;
+            }
+            set {
+                this.addressField = value;
+                this.RaisePropertyChanged("address");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string title {
+            get {
+                return this.titleField;
+            }
+            set {
+                this.titleField = value;
+                this.RaisePropertyChanged("title");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string christianName {
+            get {
+                return this.christianNameField;
+            }
+            set {
+                this.christianNameField = value;
+                this.RaisePropertyChanged("christianName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string street {
+            get {
+                return this.streetField;
+            }
+            set {
+                this.streetField = value;
+                this.RaisePropertyChanged("street");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public string streetNumber {
+            get {
+                return this.streetNumberField;
+            }
+            set {
+                this.streetNumberField = value;
+                this.RaisePropertyChanged("streetNumber");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public string zipCode {
+            get {
+                return this.zipCodeField;
+            }
+            set {
+                this.zipCodeField = value;
+                this.RaisePropertyChanged("zipCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public string city {
+            get {
+                return this.cityField;
+            }
+            set {
+                this.cityField = value;
+                this.RaisePropertyChanged("city");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        public string federalState {
+            get {
+                return this.federalStateField;
+            }
+            set {
+                this.federalStateField = value;
+                this.RaisePropertyChanged("federalState");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
+        public string country {
+            get {
+                return this.countryField;
+            }
+            set {
+                this.countryField = value;
+                this.RaisePropertyChanged("country");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("email");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
+        public string cellPhone {
+            get {
+                return this.cellPhoneField;
+            }
+            set {
+                this.cellPhoneField = value;
+                this.RaisePropertyChanged("cellPhone");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
+        public string phone {
+            get {
+                return this.phoneField;
+            }
+            set {
+                this.phoneField = value;
+                this.RaisePropertyChanged("phone");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=18)]
+        public string fax {
+            get {
+                return this.faxField;
+            }
+            set {
+                this.faxField = value;
+                this.RaisePropertyChanged("fax");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=19)]
+        public string externalId {
+            get {
+                return this.externalIdField;
+            }
+            set {
+                this.externalIdField = value;
+                this.RaisePropertyChanged("externalId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=20)]
+        public string role {
+            get {
+                return this.roleField;
+            }
+            set {
+                this.roleField = value;
+                this.RaisePropertyChanged("role");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=21)]
+        public bool fetchServiceDisabled {
+            get {
+                return this.fetchServiceDisabledField;
+            }
+            set {
+                this.fetchServiceDisabledField = value;
+                this.RaisePropertyChanged("fetchServiceDisabled");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fetchServiceDisabledSpecified {
+            get {
+                return this.fetchServiceDisabledFieldSpecified;
+            }
+            set {
+                this.fetchServiceDisabledFieldSpecified = value;
+                this.RaisePropertyChanged("fetchServiceDisabledSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class BCItem : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private SearchModeType searchModeField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public SearchModeType searchMode {
+            get {
+                return this.searchModeField;
+            }
+            set {
+                this.searchModeField = value;
+                this.RaisePropertyChanged("searchMode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+                this.RaisePropertyChanged("Value");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum SearchModeType {
+        
+        /// <remarks/>
+        CONTAINS,
+        
+        /// <remarks/>
+        EXACT,
     }
     
     /// <remarks/>
@@ -512,751 +1523,6 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class BCItem : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private SearchModeType searchModeField;
-        
-        private string valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public SearchModeType searchMode {
-            get {
-                return this.searchModeField;
-            }
-            set {
-                this.searchModeField = value;
-                this.RaisePropertyChanged("searchMode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("Value");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum SearchModeType {
-        
-        /// <remarks/>
-        CONTAINS,
-        
-        /// <remarks/>
-        EXACT,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class AccountInfoItem : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string accountIdField;
-        
-        private AccountStateType stateField;
-        
-        private bool stateFieldSpecified;
-        
-        private string expireDaysField;
-        
-        private string organisationField;
-        
-        private string organisationalUnitField;
-        
-        private string addressField;
-        
-        private string titleField;
-        
-        private string christianNameField;
-        
-        private string nameField;
-        
-        private string streetField;
-        
-        private string streetNumberField;
-        
-        private string zipCodeField;
-        
-        private string cityField;
-        
-        private string federalStateField;
-        
-        private string countryField;
-        
-        private string emailField;
-        
-        private string cellPhoneField;
-        
-        private string phoneField;
-        
-        private string faxField;
-        
-        private string externalIdField;
-        
-        private string roleField;
-        
-        private bool fetchServiceDisabledField;
-        
-        private bool fetchServiceDisabledFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string accountId {
-            get {
-                return this.accountIdField;
-            }
-            set {
-                this.accountIdField = value;
-                this.RaisePropertyChanged("accountId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public AccountStateType state {
-            get {
-                return this.stateField;
-            }
-            set {
-                this.stateField = value;
-                this.RaisePropertyChanged("state");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool stateSpecified {
-            get {
-                return this.stateFieldSpecified;
-            }
-            set {
-                this.stateFieldSpecified = value;
-                this.RaisePropertyChanged("stateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string expireDays {
-            get {
-                return this.expireDaysField;
-            }
-            set {
-                this.expireDaysField = value;
-                this.RaisePropertyChanged("expireDays");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string organisation {
-            get {
-                return this.organisationField;
-            }
-            set {
-                this.organisationField = value;
-                this.RaisePropertyChanged("organisation");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string organisationalUnit {
-            get {
-                return this.organisationalUnitField;
-            }
-            set {
-                this.organisationalUnitField = value;
-                this.RaisePropertyChanged("organisationalUnit");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string address {
-            get {
-                return this.addressField;
-            }
-            set {
-                this.addressField = value;
-                this.RaisePropertyChanged("address");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string title {
-            get {
-                return this.titleField;
-            }
-            set {
-                this.titleField = value;
-                this.RaisePropertyChanged("title");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string christianName {
-            get {
-                return this.christianNameField;
-            }
-            set {
-                this.christianNameField = value;
-                this.RaisePropertyChanged("christianName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-                this.RaisePropertyChanged("name");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string street {
-            get {
-                return this.streetField;
-            }
-            set {
-                this.streetField = value;
-                this.RaisePropertyChanged("street");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public string streetNumber {
-            get {
-                return this.streetNumberField;
-            }
-            set {
-                this.streetNumberField = value;
-                this.RaisePropertyChanged("streetNumber");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public string zipCode {
-            get {
-                return this.zipCodeField;
-            }
-            set {
-                this.zipCodeField = value;
-                this.RaisePropertyChanged("zipCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
-        public string city {
-            get {
-                return this.cityField;
-            }
-            set {
-                this.cityField = value;
-                this.RaisePropertyChanged("city");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
-        public string federalState {
-            get {
-                return this.federalStateField;
-            }
-            set {
-                this.federalStateField = value;
-                this.RaisePropertyChanged("federalState");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
-        public string country {
-            get {
-                return this.countryField;
-            }
-            set {
-                this.countryField = value;
-                this.RaisePropertyChanged("country");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
-        public string email {
-            get {
-                return this.emailField;
-            }
-            set {
-                this.emailField = value;
-                this.RaisePropertyChanged("email");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
-        public string cellPhone {
-            get {
-                return this.cellPhoneField;
-            }
-            set {
-                this.cellPhoneField = value;
-                this.RaisePropertyChanged("cellPhone");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
-        public string phone {
-            get {
-                return this.phoneField;
-            }
-            set {
-                this.phoneField = value;
-                this.RaisePropertyChanged("phone");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=18)]
-        public string fax {
-            get {
-                return this.faxField;
-            }
-            set {
-                this.faxField = value;
-                this.RaisePropertyChanged("fax");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=19)]
-        public string externalId {
-            get {
-                return this.externalIdField;
-            }
-            set {
-                this.externalIdField = value;
-                this.RaisePropertyChanged("externalId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=20)]
-        public string role {
-            get {
-                return this.roleField;
-            }
-            set {
-                this.roleField = value;
-                this.RaisePropertyChanged("role");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=21)]
-        public bool fetchServiceDisabled {
-            get {
-                return this.fetchServiceDisabledField;
-            }
-            set {
-                this.fetchServiceDisabledField = value;
-                this.RaisePropertyChanged("fetchServiceDisabled");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fetchServiceDisabledSpecified {
-            get {
-                return this.fetchServiceDisabledFieldSpecified;
-            }
-            set {
-                this.fetchServiceDisabledFieldSpecified = value;
-                this.RaisePropertyChanged("fetchServiceDisabledSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum AccountStateType {
-        
-        /// <remarks/>
-        VALID,
-        
-        /// <remarks/>
-        BLOCKED,
-        
-        /// <remarks/>
-        ROLE_UNCONFIRMED,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class AccountBusinessCard : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string userIdField;
-        
-        private string addressField;
-        
-        private string titleField;
-        
-        private string nameField;
-        
-        private string christianNameField;
-        
-        private string organisationField;
-        
-        private string organisationalUnitField;
-        
-        private string streetField;
-        
-        private string streetNumberField;
-        
-        private string zipCodeField;
-        
-        private string cityField;
-        
-        private string federalStateField;
-        
-        private string countryField;
-        
-        private string emailField;
-        
-        private string cellphoneField;
-        
-        private string phoneField;
-        
-        private string faxField;
-        
-        private string externalIdField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string userId {
-            get {
-                return this.userIdField;
-            }
-            set {
-                this.userIdField = value;
-                this.RaisePropertyChanged("userId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string Address {
-            get {
-                return this.addressField;
-            }
-            set {
-                this.addressField = value;
-                this.RaisePropertyChanged("Address");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
-        public string Title {
-            get {
-                return this.titleField;
-            }
-            set {
-                this.titleField = value;
-                this.RaisePropertyChanged("Title");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string Name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-                this.RaisePropertyChanged("Name");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
-        public string ChristianName {
-            get {
-                return this.christianNameField;
-            }
-            set {
-                this.christianNameField = value;
-                this.RaisePropertyChanged("ChristianName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string Organisation {
-            get {
-                return this.organisationField;
-            }
-            set {
-                this.organisationField = value;
-                this.RaisePropertyChanged("Organisation");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=6)]
-        public string OrganisationalUnit {
-            get {
-                return this.organisationalUnitField;
-            }
-            set {
-                this.organisationalUnitField = value;
-                this.RaisePropertyChanged("OrganisationalUnit");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string Street {
-            get {
-                return this.streetField;
-            }
-            set {
-                this.streetField = value;
-                this.RaisePropertyChanged("Street");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string StreetNumber {
-            get {
-                return this.streetNumberField;
-            }
-            set {
-                this.streetNumberField = value;
-                this.RaisePropertyChanged("StreetNumber");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string ZipCode {
-            get {
-                return this.zipCodeField;
-            }
-            set {
-                this.zipCodeField = value;
-                this.RaisePropertyChanged("ZipCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public string City {
-            get {
-                return this.cityField;
-            }
-            set {
-                this.cityField = value;
-                this.RaisePropertyChanged("City");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public string FederalState {
-            get {
-                return this.federalStateField;
-            }
-            set {
-                this.federalStateField = value;
-                this.RaisePropertyChanged("FederalState");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
-        public string Country {
-            get {
-                return this.countryField;
-            }
-            set {
-                this.countryField = value;
-                this.RaisePropertyChanged("Country");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=13)]
-        public string Email {
-            get {
-                return this.emailField;
-            }
-            set {
-                this.emailField = value;
-                this.RaisePropertyChanged("Email");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=14)]
-        public string Cellphone {
-            get {
-                return this.cellphoneField;
-            }
-            set {
-                this.cellphoneField = value;
-                this.RaisePropertyChanged("Cellphone");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=15)]
-        public string Phone {
-            get {
-                return this.phoneField;
-            }
-            set {
-                this.phoneField = value;
-                this.RaisePropertyChanged("Phone");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=16)]
-        public string Fax {
-            get {
-                return this.faxField;
-            }
-            set {
-                this.faxField = value;
-                this.RaisePropertyChanged("Fax");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=17)]
-        public string ExternalId {
-            get {
-                return this.externalIdField;
-            }
-            set {
-                this.externalIdField = value;
-                this.RaisePropertyChanged("ExternalId");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class UncommittedMessageType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string messageIDField;
-        
-        private System.DateTime osciDateField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string messageID {
-            get {
-                return this.messageIDField;
-            }
-            set {
-                this.messageIDField = value;
-                this.RaisePropertyChanged("messageID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime osciDate {
-            get {
-                return this.osciDateField;
-            }
-            set {
-                this.osciDateField = value;
-                this.RaisePropertyChanged("osciDate");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public partial class StateItem : object, System.ComponentModel.INotifyPropertyChanged {
         
         private MessageStateType stateField;
@@ -1374,7 +1640,10 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     public enum MessageStateType {
         
         /// <remarks/>
-        AU_RETRY,
+        QU_RETRIED,
+        
+        /// <remarks/>
+        QU_DELETED,
         
         /// <remarks/>
         WS_ASEND,
@@ -1386,10 +1655,19 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         WS_CANCELLED,
         
         /// <remarks/>
+        AU_RETRY,
+        
+        /// <remarks/>
+        OSCI_PARTIAL,
+        
+        /// <remarks/>
         OSCI_SENT,
         
         /// <remarks/>
         WS_ASENT,
+        
+        /// <remarks/>
+        RECEIVE_IN_PROGRESS,
         
         /// <remarks/>
         OSCI_RECEIVED,
@@ -1401,7 +1679,352 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         WS_RECEIVED,
         
         /// <remarks/>
+        OSCI_AV_IN_PROGRESS,
+        
+        /// <remarks/>
+        OSCI_AV_OK,
+        
+        /// <remarks/>
+        OSCI_AV_INFECTED,
+        
+        /// <remarks/>
+        OSCI_AV_INDETERMINATE,
+        
+        /// <remarks/>
+        OSCI_AV_NO_RETRIAL,
+        
+        /// <remarks/>
         WS_UNPROCESSABLE,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class AccountBusinessCard : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string userIdField;
+        
+        private string addressField;
+        
+        private string titleField;
+        
+        private string nameField;
+        
+        private string christianNameField;
+        
+        private string organisationField;
+        
+        private string organisationalUnitField;
+        
+        private string streetField;
+        
+        private string streetNumberField;
+        
+        private string zipCodeField;
+        
+        private string cityField;
+        
+        private string federalStateField;
+        
+        private string countryField;
+        
+        private string emailField;
+        
+        private string cellphoneField;
+        
+        private string phoneField;
+        
+        private string faxField;
+        
+        private string externalIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string userId {
+            get {
+                return this.userIdField;
+            }
+            set {
+                this.userIdField = value;
+                this.RaisePropertyChanged("userId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string Address {
+            get {
+                return this.addressField;
+            }
+            set {
+                this.addressField = value;
+                this.RaisePropertyChanged("Address");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string Title {
+            get {
+                return this.titleField;
+            }
+            set {
+                this.titleField = value;
+                this.RaisePropertyChanged("Title");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string ChristianName {
+            get {
+                return this.christianNameField;
+            }
+            set {
+                this.christianNameField = value;
+                this.RaisePropertyChanged("ChristianName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string Organisation {
+            get {
+                return this.organisationField;
+            }
+            set {
+                this.organisationField = value;
+                this.RaisePropertyChanged("Organisation");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string OrganisationalUnit {
+            get {
+                return this.organisationalUnitField;
+            }
+            set {
+                this.organisationalUnitField = value;
+                this.RaisePropertyChanged("OrganisationalUnit");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string Street {
+            get {
+                return this.streetField;
+            }
+            set {
+                this.streetField = value;
+                this.RaisePropertyChanged("Street");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string StreetNumber {
+            get {
+                return this.streetNumberField;
+            }
+            set {
+                this.streetNumberField = value;
+                this.RaisePropertyChanged("StreetNumber");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string ZipCode {
+            get {
+                return this.zipCodeField;
+            }
+            set {
+                this.zipCodeField = value;
+                this.RaisePropertyChanged("ZipCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public string City {
+            get {
+                return this.cityField;
+            }
+            set {
+                this.cityField = value;
+                this.RaisePropertyChanged("City");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public string FederalState {
+            get {
+                return this.federalStateField;
+            }
+            set {
+                this.federalStateField = value;
+                this.RaisePropertyChanged("FederalState");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public string Country {
+            get {
+                return this.countryField;
+            }
+            set {
+                this.countryField = value;
+                this.RaisePropertyChanged("Country");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        public string Email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("Email");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
+        public string Cellphone {
+            get {
+                return this.cellphoneField;
+            }
+            set {
+                this.cellphoneField = value;
+                this.RaisePropertyChanged("Cellphone");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
+        public string Phone {
+            get {
+                return this.phoneField;
+            }
+            set {
+                this.phoneField = value;
+                this.RaisePropertyChanged("Phone");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
+        public string Fax {
+            get {
+                return this.faxField;
+            }
+            set {
+                this.faxField = value;
+                this.RaisePropertyChanged("Fax");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
+        public string ExternalId {
+            get {
+                return this.externalIdField;
+            }
+            set {
+                this.externalIdField = value;
+                this.RaisePropertyChanged("ExternalId");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class QuarantineCountsItem : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string accountIdField;
+        
+        private int countSentField;
+        
+        private int countReceivedField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string accountId {
+            get {
+                return this.accountIdField;
+            }
+            set {
+                this.accountIdField = value;
+                this.RaisePropertyChanged("accountId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int countSent {
+            get {
+                return this.countSentField;
+            }
+            set {
+                this.countSentField = value;
+                this.RaisePropertyChanged("countSent");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int countReceived {
+            get {
+                return this.countReceivedField;
+            }
+            set {
+                this.countReceivedField = value;
+                this.RaisePropertyChanged("countReceived");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     /// <remarks/>
@@ -1441,926 +2064,6 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class AttachmentType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private byte[] dataField;
-        
-        private string nameField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=0)]
-        public byte[] data {
-            get {
-                return this.dataField;
-            }
-            set {
-                this.dataField = value;
-                this.RaisePropertyChanged("data");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-                this.RaisePropertyChanged("name");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class searchReceiverResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int countField;
-        
-        private bool countFieldSpecified;
-        
-        private BusinessCardType[] receiverResultsField;
-        
-        private SearchReturnCodeType returnCodeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int count {
-            get {
-                return this.countField;
-            }
-            set {
-                this.countField = value;
-                this.RaisePropertyChanged("count");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool countSpecified {
-            get {
-                return this.countFieldSpecified;
-            }
-            set {
-                this.countFieldSpecified = value;
-                this.RaisePropertyChanged("countSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("receiverResults", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public BusinessCardType[] receiverResults {
-            get {
-                return this.receiverResultsField;
-            }
-            set {
-                this.receiverResultsField = value;
-                this.RaisePropertyChanged("receiverResults");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public SearchReturnCodeType returnCode {
-            get {
-                return this.returnCodeField;
-            }
-            set {
-                this.returnCodeField = value;
-                this.RaisePropertyChanged("returnCode");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum SearchReturnCodeType {
-        
-        /// <remarks/>
-        OK,
-        
-        /// <remarks/>
-        NO_SUCH_ACCOUNT,
-        
-        /// <remarks/>
-        NO_SEARCH_CRITERIA,
-        
-        /// <remarks/>
-        MIXED_SEARCH_CRITERIA,
-        
-        /// <remarks/>
-        USERID_REQUIRED,
-        
-        /// <remarks/>
-        TOO_MANY_RESULTS,
-        
-        /// <remarks/>
-        GENERAL_ERROR,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class searchReceiverRequest1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverRequest searchReceiverRequest;
-        
-        public searchReceiverRequest1() {
-        }
-        
-        public searchReceiverRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverRequest searchReceiverRequest) {
-            this.searchReceiverRequest = searchReceiverRequest;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class searchReceiverResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverResponse searchReceiverResponse;
-        
-        public searchReceiverResponse1() {
-        }
-        
-        public searchReceiverResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverResponse searchReceiverResponse) {
-            this.searchReceiverResponse = searchReceiverResponse;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class sendSynchroniousMessageRequest : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string userIDField;
-        
-        private MessageTypeType messageTypeField;
-        
-        private string receiverIDField;
-        
-        private ReceiverKeyType receiverKeyField;
-        
-        private string subjectField;
-        
-        private bool signMessageField;
-        
-        private byte[] visualXMLField;
-        
-        private byte[] visualXSLField;
-        
-        private AttachmentType[] attachmentsField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string userID {
-            get {
-                return this.userIDField;
-            }
-            set {
-                this.userIDField = value;
-                this.RaisePropertyChanged("userID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public MessageTypeType messageType {
-            get {
-                return this.messageTypeField;
-            }
-            set {
-                this.messageTypeField = value;
-                this.RaisePropertyChanged("messageType");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string receiverID {
-            get {
-                return this.receiverIDField;
-            }
-            set {
-                this.receiverIDField = value;
-                this.RaisePropertyChanged("receiverID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public ReceiverKeyType receiverKey {
-            get {
-                return this.receiverKeyField;
-            }
-            set {
-                this.receiverKeyField = value;
-                this.RaisePropertyChanged("receiverKey");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string subject {
-            get {
-                return this.subjectField;
-            }
-            set {
-                this.subjectField = value;
-                this.RaisePropertyChanged("subject");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public bool signMessage {
-            get {
-                return this.signMessageField;
-            }
-            set {
-                this.signMessageField = value;
-                this.RaisePropertyChanged("signMessage");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=6)]
-        public byte[] visualXML {
-            get {
-                return this.visualXMLField;
-            }
-            set {
-                this.visualXMLField = value;
-                this.RaisePropertyChanged("visualXML");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=7)]
-        public byte[] visualXSL {
-            get {
-                return this.visualXSLField;
-            }
-            set {
-                this.visualXSLField = value;
-                this.RaisePropertyChanged("visualXSL");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("attachments", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public AttachmentType[] attachments {
-            get {
-                return this.attachmentsField;
-            }
-            set {
-                this.attachmentsField = value;
-                this.RaisePropertyChanged("attachments");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum MessageTypeType {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Allgemeine Nachricht")]
-        AllgemeineNachricht,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("HR-Beteiligter")]
-        HRBeteiligter,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("HR-Gericht")]
-        HRGericht,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Mahn-Antrag")]
-        MahnAntrag,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Mahn-Nachricht")]
-        MahnNachricht,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Mahn-Abgabe")]
-        MahnAbgabe,
-        
-        /// <remarks/>
-        Testnachricht,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Ubest-Mahn")]
-        UbestMahn,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum ReceiverKeyType {
-        
-        /// <remarks/>
-        USER_ID,
-        
-        /// <remarks/>
-        ROLE,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class sendSynchroniousMessageResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string messageIDField;
-        
-        private byte[] messageZIPField;
-        
-        private SendReturnCodeType returnCodeField;
-        
-        private SendErrorCodeType errorDetailsField;
-        
-        private bool errorDetailsFieldSpecified;
-        
-        private string errorDescriptionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string messageID {
-            get {
-                return this.messageIDField;
-            }
-            set {
-                this.messageIDField = value;
-                this.RaisePropertyChanged("messageID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=1)]
-        public byte[] messageZIP {
-            get {
-                return this.messageZIPField;
-            }
-            set {
-                this.messageZIPField = value;
-                this.RaisePropertyChanged("messageZIP");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public SendReturnCodeType returnCode {
-            get {
-                return this.returnCodeField;
-            }
-            set {
-                this.returnCodeField = value;
-                this.RaisePropertyChanged("returnCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public SendErrorCodeType errorDetails {
-            get {
-                return this.errorDetailsField;
-            }
-            set {
-                this.errorDetailsField = value;
-                this.RaisePropertyChanged("errorDetails");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool errorDetailsSpecified {
-            get {
-                return this.errorDetailsFieldSpecified;
-            }
-            set {
-                this.errorDetailsFieldSpecified = value;
-                this.RaisePropertyChanged("errorDetailsSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string errorDescription {
-            get {
-                return this.errorDescriptionField;
-            }
-            set {
-                this.errorDescriptionField = value;
-                this.RaisePropertyChanged("errorDescription");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum SendReturnCodeType {
-        
-        /// <remarks/>
-        OK,
-        
-        /// <remarks/>
-        NO_SUCH_ACCOUNT,
-        
-        /// <remarks/>
-        NO_SUCH_MESSAGE,
-        
-        /// <remarks/>
-        PENDING,
-        
-        /// <remarks/>
-        USERID_REQUIRED,
-        
-        /// <remarks/>
-        RECEIVER_REQUIRED,
-        
-        /// <remarks/>
-        CUSTOMID_REQUIRED,
-        
-        /// <remarks/>
-        RECEIVER_NOT_FOUND,
-        
-        /// <remarks/>
-        UNSUPPORTED_RECEIVER_TYPE,
-        
-        /// <remarks/>
-        MESSAGE_TYPE_REQUIRED,
-        
-        /// <remarks/>
-        UNSUPPORTED_MESSAGE_TYPE,
-        
-        /// <remarks/>
-        SUBJECT_REQUIRED,
-        
-        /// <remarks/>
-        ATTACHMENT_NAME_NOT_FOUND,
-        
-        /// <remarks/>
-        TOO_MANY_ATTACHMENTS,
-        
-        /// <remarks/>
-        ATTACHMENTS_TOO_LARGE,
-        
-        /// <remarks/>
-        GENERAL_SQL_ERROR,
-        
-        /// <remarks/>
-        GENERAL_ERROR,
-        
-        /// <remarks/>
-        WEBSERVICE_DISABLED,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum SendErrorCodeType {
-        
-        /// <remarks/>
-        SEND_FAILED,
-        
-        /// <remarks/>
-        REGISTER_GENERAL_ERROR,
-        
-        /// <remarks/>
-        INTERNET_CONNECT,
-        
-        /// <remarks/>
-        HTTP_ERROR,
-        
-        /// <remarks/>
-        MESSAGE_TYPE_UNSUPPORTED,
-        
-        /// <remarks/>
-        ATTACHMENT_ERROR,
-        
-        /// <remarks/>
-        MESSAGE_SIGN_FAILED,
-        
-        /// <remarks/>
-        FILE_NOT_FOUND,
-        
-        /// <remarks/>
-        OSCI_MANAGER_WRONG_CERTIFICATE,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class sendSynchroniousMessageRequest1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest sendSynchroniousMessageRequest;
-        
-        public sendSynchroniousMessageRequest1() {
-        }
-        
-        public sendSynchroniousMessageRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest sendSynchroniousMessageRequest) {
-            this.sendSynchroniousMessageRequest = sendSynchroniousMessageRequest;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class sendSynchroniousMessageResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse sendSynchroniousMessageResponse;
-        
-        public sendSynchroniousMessageResponse1() {
-        }
-        
-        public sendSynchroniousMessageResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse sendSynchroniousMessageResponse) {
-            this.sendSynchroniousMessageResponse = sendSynchroniousMessageResponse;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class sendAsynchroniousMessageRequest : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string userIDField;
-        
-        private MessageTypeType messageTypeField;
-        
-        private string receiverIDField;
-        
-        private ReceiverKeyType receiverKeyField;
-        
-        private string subjectField;
-        
-        private bool signMessageField;
-        
-        private byte[] visualXMLField;
-        
-        private byte[] visualXSLField;
-        
-        private AttachmentType[] attachmentsField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string userID {
-            get {
-                return this.userIDField;
-            }
-            set {
-                this.userIDField = value;
-                this.RaisePropertyChanged("userID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public MessageTypeType messageType {
-            get {
-                return this.messageTypeField;
-            }
-            set {
-                this.messageTypeField = value;
-                this.RaisePropertyChanged("messageType");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string receiverID {
-            get {
-                return this.receiverIDField;
-            }
-            set {
-                this.receiverIDField = value;
-                this.RaisePropertyChanged("receiverID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public ReceiverKeyType receiverKey {
-            get {
-                return this.receiverKeyField;
-            }
-            set {
-                this.receiverKeyField = value;
-                this.RaisePropertyChanged("receiverKey");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string subject {
-            get {
-                return this.subjectField;
-            }
-            set {
-                this.subjectField = value;
-                this.RaisePropertyChanged("subject");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public bool signMessage {
-            get {
-                return this.signMessageField;
-            }
-            set {
-                this.signMessageField = value;
-                this.RaisePropertyChanged("signMessage");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=6)]
-        public byte[] visualXML {
-            get {
-                return this.visualXMLField;
-            }
-            set {
-                this.visualXMLField = value;
-                this.RaisePropertyChanged("visualXML");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=7)]
-        public byte[] visualXSL {
-            get {
-                return this.visualXSLField;
-            }
-            set {
-                this.visualXSLField = value;
-                this.RaisePropertyChanged("visualXSL");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("attachments", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public AttachmentType[] attachments {
-            get {
-                return this.attachmentsField;
-            }
-            set {
-                this.attachmentsField = value;
-                this.RaisePropertyChanged("attachments");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class sendAsynchroniousMessageResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string customIDField;
-        
-        private SendReturnCodeType returnCodeField;
-        
-        private SendErrorCodeType errorDetailsField;
-        
-        private bool errorDetailsFieldSpecified;
-        
-        private string errorDescriptionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string customID {
-            get {
-                return this.customIDField;
-            }
-            set {
-                this.customIDField = value;
-                this.RaisePropertyChanged("customID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public SendReturnCodeType returnCode {
-            get {
-                return this.returnCodeField;
-            }
-            set {
-                this.returnCodeField = value;
-                this.RaisePropertyChanged("returnCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public SendErrorCodeType errorDetails {
-            get {
-                return this.errorDetailsField;
-            }
-            set {
-                this.errorDetailsField = value;
-                this.RaisePropertyChanged("errorDetails");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool errorDetailsSpecified {
-            get {
-                return this.errorDetailsFieldSpecified;
-            }
-            set {
-                this.errorDetailsFieldSpecified = value;
-                this.RaisePropertyChanged("errorDetailsSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string errorDescription {
-            get {
-                return this.errorDescriptionField;
-            }
-            set {
-                this.errorDescriptionField = value;
-                this.RaisePropertyChanged("errorDescription");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class sendAsynchroniousMessageRequest1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageRequest sendAsynchroniousMessageRequest;
-        
-        public sendAsynchroniousMessageRequest1() {
-        }
-        
-        public sendAsynchroniousMessageRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageRequest sendAsynchroniousMessageRequest) {
-            this.sendAsynchroniousMessageRequest = sendAsynchroniousMessageRequest;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class sendAsynchroniousMessageResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageResponse sendAsynchroniousMessageResponse;
-        
-        public sendAsynchroniousMessageResponse1() {
-        }
-        
-        public sendAsynchroniousMessageResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageResponse sendAsynchroniousMessageResponse) {
-            this.sendAsynchroniousMessageResponse = sendAsynchroniousMessageResponse;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class asynchroniousMessageSentRequest : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string userIDField;
-        
-        private string customIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string userID {
-            get {
-                return this.userIDField;
-            }
-            set {
-                this.userIDField = value;
-                this.RaisePropertyChanged("userID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string customID {
-            get {
-                return this.customIDField;
-            }
-            set {
-                this.customIDField = value;
-                this.RaisePropertyChanged("customID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
     public partial class asynchroniousMessageSentResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
@@ -2368,11 +2071,9 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         
         private byte[] messageZIPField;
         
-        private SendReturnCodeType returnCodeField;
+        private string returnCodeField;
         
-        private PendingCauseCodeType pendingCauseField;
-        
-        private bool pendingCauseFieldSpecified;
+        private string pendingCauseField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -2400,7 +2101,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public SendReturnCodeType returnCode {
+        public string returnCode {
             get {
                 return this.returnCodeField;
             }
@@ -2412,7 +2113,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public PendingCauseCodeType pendingCause {
+        public string pendingCause {
             get {
                 return this.pendingCauseField;
             }
@@ -2422,18 +2123,6 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
             }
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool pendingCauseSpecified {
-            get {
-                return this.pendingCauseFieldSpecified;
-            }
-            set {
-                this.pendingCauseFieldSpecified = value;
-                this.RaisePropertyChanged("pendingCauseSpecified");
-            }
-        }
-        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -2444,41 +2133,19 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum PendingCauseCodeType {
-        
-        /// <remarks/>
-        CAUSE_UNKNOW,
-        
-        /// <remarks/>
-        WS_UNSENDABLE,
-        
-        /// <remarks/>
-        WS_CANCELLED,
-        
-        /// <remarks/>
-        WS_UNPROCESSABLE,
-        
-        /// <remarks/>
-        QU_DELETED,
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class asynchroniousMessageSentRequest1 {
+    public partial class asynchroniousMessageSent {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
         public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentRequest asynchroniousMessageSentRequest;
         
-        public asynchroniousMessageSentRequest1() {
+        public asynchroniousMessageSent() {
         }
         
-        public asynchroniousMessageSentRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentRequest asynchroniousMessageSentRequest) {
+        public asynchroniousMessageSent(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentRequest asynchroniousMessageSentRequest) {
             this.asynchroniousMessageSentRequest = asynchroniousMessageSentRequest;
         }
     }
@@ -2506,26 +2173,12 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class receiveMessageRequest : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string userIDField;
+    public partial class retryQuarantineMessageRequest : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageIDField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string userID {
-            get {
-                return this.userIDField;
-            }
-            set {
-                this.userIDField = value;
-                this.RaisePropertyChanged("userID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public string messageID {
             get {
                 return this.messageIDField;
@@ -2552,265 +2205,15 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class receiveMessageResponse : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class retryQuarantineMessageResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string messageIDField;
-        
-        private byte[] messageZIPField;
-        
-        private ReceiveReturnCodeType returnCodeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string messageID {
-            get {
-                return this.messageIDField;
-            }
-            set {
-                this.messageIDField = value;
-                this.RaisePropertyChanged("messageID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=1)]
-        public byte[] messageZIP {
-            get {
-                return this.messageZIPField;
-            }
-            set {
-                this.messageZIPField = value;
-                this.RaisePropertyChanged("messageZIP");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public ReceiveReturnCodeType returnCode {
-            get {
-                return this.returnCodeField;
-            }
-            set {
-                this.returnCodeField = value;
-                this.RaisePropertyChanged("returnCode");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum ReceiveReturnCodeType {
-        
-        /// <remarks/>
-        OK,
-        
-        /// <remarks/>
-        NO_SUCH_ACCOUNT,
-        
-        /// <remarks/>
-        NO_SUCH_MESSAGE,
-        
-        /// <remarks/>
-        USERID_REQUIRED,
-        
-        /// <remarks/>
-        NO_MESSAGES_TO_RECEIVE,
-        
-        /// <remarks/>
-        GENERAL_SQL_ERROR,
-        
-        /// <remarks/>
-        GENERAL_ERROR,
-        
-        /// <remarks/>
-        WEBSERVICE_DISABLED,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class receiveMessageRequest1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageRequest receiveMessageRequest;
-        
-        public receiveMessageRequest1() {
-        }
-        
-        public receiveMessageRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageRequest receiveMessageRequest) {
-            this.receiveMessageRequest = receiveMessageRequest;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class receiveMessageResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse receiveMessageResponse;
-        
-        public receiveMessageResponse1() {
-        }
-        
-        public receiveMessageResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse receiveMessageResponse) {
-            this.receiveMessageResponse = receiveMessageResponse;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class loadMessageReportRequest : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private loadMessageReportRequestPeriod periodField;
-        
-        private bool onlyDeltaField;
-        
-        private string userIdField;
-        
-        public loadMessageReportRequest() {
-            this.onlyDeltaField = false;
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public loadMessageReportRequestPeriod period {
-            get {
-                return this.periodField;
-            }
-            set {
-                this.periodField = value;
-                this.RaisePropertyChanged("period");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        [System.ComponentModel.DefaultValueAttribute(false)]
-        public bool onlyDelta {
-            get {
-                return this.onlyDeltaField;
-            }
-            set {
-                this.onlyDeltaField = value;
-                this.RaisePropertyChanged("onlyDelta");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string userId {
-            get {
-                return this.userIdField;
-            }
-            set {
-                this.userIdField = value;
-                this.RaisePropertyChanged("userId");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class loadMessageReportRequestPeriod : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.DateTime startField;
-        
-        private System.DateTime endField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=0)]
-        public System.DateTime start {
-            get {
-                return this.startField;
-            }
-            set {
-                this.startField = value;
-                this.RaisePropertyChanged("start");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=1)]
-        public System.DateTime end {
-            get {
-                return this.endField;
-            }
-            set {
-                this.endField = value;
-                this.RaisePropertyChanged("end");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class loadMessageReportResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private byte[] messageReportXmlField;
-        
-        private LoadReportReturnCodeType returnCodeField;
+        private RetryQuarantineMessageReturnCodeType returnCodeField;
         
         private string returnCodeDetailsField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=0)]
-        public byte[] messageReportXml {
-            get {
-                return this.messageReportXmlField;
-            }
-            set {
-                this.messageReportXmlField = value;
-                this.RaisePropertyChanged("messageReportXml");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public LoadReportReturnCodeType returnCode {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public RetryQuarantineMessageReturnCodeType returnCode {
             get {
                 return this.returnCodeField;
             }
@@ -2821,7 +2224,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public string returnCodeDetails {
             get {
                 return this.returnCodeDetailsField;
@@ -2846,224 +2249,38 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum LoadReportReturnCodeType {
+    public enum RetryQuarantineMessageReturnCodeType {
         
         /// <remarks/>
         OK,
-        
-        /// <remarks/>
-        ILLEGAL_TIMESPAN,
-        
-        /// <remarks/>
-        GENERAL_SQL_ERROR,
-        
-        /// <remarks/>
-        GENERAL_ERROR,
-        
-        /// <remarks/>
-        WEBSERVICE_DISABLED,
-        
-        /// <remarks/>
-        JOB_DISABLED,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class loadMessageReportRequest1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportRequest loadMessageReportRequest;
-        
-        public loadMessageReportRequest1() {
-        }
-        
-        public loadMessageReportRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportRequest loadMessageReportRequest) {
-            this.loadMessageReportRequest = loadMessageReportRequest;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class loadMessageReportResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse loadMessageReportResponse;
-        
-        public loadMessageReportResponse1() {
-        }
-        
-        public loadMessageReportResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse loadMessageReportResponse) {
-            this.loadMessageReportResponse = loadMessageReportResponse;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class commitReceivedMessageRequest : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string userIDField;
-        
-        private string messageIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string userID {
-            get {
-                return this.userIDField;
-            }
-            set {
-                this.userIDField = value;
-                this.RaisePropertyChanged("userID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string messageID {
-            get {
-                return this.messageIDField;
-            }
-            set {
-                this.messageIDField = value;
-                this.RaisePropertyChanged("messageID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class commitReceivedMessageResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string userIDField;
-        
-        private string messageIDField;
-        
-        private CommitReturnCodeType returnCodeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string userID {
-            get {
-                return this.userIDField;
-            }
-            set {
-                this.userIDField = value;
-                this.RaisePropertyChanged("userID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string messageID {
-            get {
-                return this.messageIDField;
-            }
-            set {
-                this.messageIDField = value;
-                this.RaisePropertyChanged("messageID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public CommitReturnCodeType returnCode {
-            get {
-                return this.returnCodeField;
-            }
-            set {
-                this.returnCodeField = value;
-                this.RaisePropertyChanged("returnCode");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum CommitReturnCodeType {
-        
-        /// <remarks/>
-        OK,
-        
-        /// <remarks/>
-        USERID_REQUIRED,
         
         /// <remarks/>
         MESSAGEID_REQUIRED,
         
         /// <remarks/>
-        NO_SUCH_ACCOUNT,
-        
-        /// <remarks/>
         NO_SUCH_MESSAGE,
         
         /// <remarks/>
-        MESSAGE_NOT_PROCESSED,
-        
-        /// <remarks/>
-        MESSAGE_ALREADY_COMMITTED,
-        
-        /// <remarks/>
-        MESSAGE_ALREADY_SENT,
-        
-        /// <remarks/>
-        MESSAGE_IS_SENDING,
+        GENERAL_ERROR,
         
         /// <remarks/>
         GENERAL_SQL_ERROR,
-        
-        /// <remarks/>
-        WEBSERVICE_DISABLED,
-        
-        /// <remarks/>
-        GENERAL_ERROR,
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class commitReceivedMessageRequest1 {
+    public partial class retryQuarantineMessage {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageRequest commitReceivedMessageRequest;
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessageRequest retryQuarantineMessageRequest;
         
-        public commitReceivedMessageRequest1() {
+        public retryQuarantineMessage() {
         }
         
-        public commitReceivedMessageRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageRequest commitReceivedMessageRequest) {
-            this.commitReceivedMessageRequest = commitReceivedMessageRequest;
+        public retryQuarantineMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessageRequest retryQuarantineMessageRequest) {
+            this.retryQuarantineMessageRequest = retryQuarantineMessageRequest;
         }
     }
     
@@ -3071,240 +2288,16 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class commitReceivedMessageResponse1 {
+    public partial class retryQuarantineMessageResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageResponse commitReceivedMessageResponse;
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessageResponse retryQuarantineMessageResponse;
         
-        public commitReceivedMessageResponse1() {
+        public retryQuarantineMessageResponse1() {
         }
         
-        public commitReceivedMessageResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageResponse commitReceivedMessageResponse) {
-            this.commitReceivedMessageResponse = commitReceivedMessageResponse;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class commitSentMessageRequest : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string userIDField;
-        
-        private string messageIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string userID {
-            get {
-                return this.userIDField;
-            }
-            set {
-                this.userIDField = value;
-                this.RaisePropertyChanged("userID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string messageID {
-            get {
-                return this.messageIDField;
-            }
-            set {
-                this.messageIDField = value;
-                this.RaisePropertyChanged("messageID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class commitSentMessageResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private CommitReturnCodeType returnCodeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public CommitReturnCodeType returnCode {
-            get {
-                return this.returnCodeField;
-            }
-            set {
-                this.returnCodeField = value;
-                this.RaisePropertyChanged("returnCode");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class commitSentMessageRequest1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageRequest commitSentMessageRequest;
-        
-        public commitSentMessageRequest1() {
-        }
-        
-        public commitSentMessageRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageRequest commitSentMessageRequest) {
-            this.commitSentMessageRequest = commitSentMessageRequest;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class commitSentMessageResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageResponse commitSentMessageResponse;
-        
-        public commitSentMessageResponse1() {
-        }
-        
-        public commitSentMessageResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageResponse commitSentMessageResponse) {
-            this.commitSentMessageResponse = commitSentMessageResponse;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class cancelSentMessageRequest : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string userIDField;
-        
-        private string customIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string userID {
-            get {
-                return this.userIDField;
-            }
-            set {
-                this.userIDField = value;
-                this.RaisePropertyChanged("userID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string customID {
-            get {
-                return this.customIDField;
-            }
-            set {
-                this.customIDField = value;
-                this.RaisePropertyChanged("customID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class cancelSentMessageResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private CommitReturnCodeType returnCodeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public CommitReturnCodeType returnCode {
-            get {
-                return this.returnCodeField;
-            }
-            set {
-                this.returnCodeField = value;
-                this.RaisePropertyChanged("returnCode");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class cancelSentMessageRequest1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageRequest cancelSentMessageRequest;
-        
-        public cancelSentMessageRequest1() {
-        }
-        
-        public cancelSentMessageRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageRequest cancelSentMessageRequest) {
-            this.cancelSentMessageRequest = cancelSentMessageRequest;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class cancelSentMessageResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageResponse cancelSentMessageResponse;
-        
-        public cancelSentMessageResponse1() {
-        }
-        
-        public cancelSentMessageResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageResponse cancelSentMessageResponse) {
-            this.cancelSentMessageResponse = cancelSentMessageResponse;
+        public retryQuarantineMessageResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessageResponse retryQuarantineMessageResponse) {
+            this.retryQuarantineMessageResponse = retryQuarantineMessageResponse;
         }
     }
     
@@ -3449,15 +2442,15 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class verifyMessageRequest1 {
+    public partial class verifyMessage {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
         public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageRequest verifyMessageRequest;
         
-        public verifyMessageRequest1() {
+        public verifyMessage() {
         }
         
-        public verifyMessageRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageRequest verifyMessageRequest) {
+        public verifyMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageRequest verifyMessageRequest) {
             this.verifyMessageRequest = verifyMessageRequest;
         }
     }
@@ -3485,35 +2478,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class registerNotificationCallbackRequest : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string userIDField;
-        
-        private string endpointAddressField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string userID {
-            get {
-                return this.userIDField;
-            }
-            set {
-                this.userIDField = value;
-                this.RaisePropertyChanged("userID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string endpointAddress {
-            get {
-                return this.endpointAddressField;
-            }
-            set {
-                this.endpointAddressField = value;
-                this.RaisePropertyChanged("endpointAddress");
-            }
-        }
+    public partial class getQuarantineCountsRequest : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -3531,559 +2496,17 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class registerNotificationCallbackResponse : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class getQuarantineCountsResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private NotificationCallbackReturnCodeType returnCodeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public NotificationCallbackReturnCodeType returnCode {
-            get {
-                return this.returnCodeField;
-            }
-            set {
-                this.returnCodeField = value;
-                this.RaisePropertyChanged("returnCode");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum NotificationCallbackReturnCodeType {
-        
-        /// <remarks/>
-        OK,
-        
-        /// <remarks/>
-        NO_SUCH_ACCOUNT,
-        
-        /// <remarks/>
-        USERID_REQUIRED,
-        
-        /// <remarks/>
-        ENDPOINT_ADDRESS_REQUIRED,
-        
-        /// <remarks/>
-        ENDPOINT_ADDRESS_UNREACHABLE,
-        
-        /// <remarks/>
-        ENDPOINT_ADDRESS_INVALID,
-        
-        /// <remarks/>
-        NO_NOTIFICATION_REGISTERED,
-        
-        /// <remarks/>
-        GENERAL_ERROR,
-        
-        /// <remarks/>
-        GENERAL_SQL_ERROR,
-        
-        /// <remarks/>
-        WEBSERVICE_DISABLED,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class registerNotificationCallbackRequest1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackRequest registerNotificationCallbackRequest;
-        
-        public registerNotificationCallbackRequest1() {
-        }
-        
-        public registerNotificationCallbackRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackRequest registerNotificationCallbackRequest) {
-            this.registerNotificationCallbackRequest = registerNotificationCallbackRequest;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class registerNotificationCallbackResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackResponse registerNotificationCallbackResponse;
-        
-        public registerNotificationCallbackResponse1() {
-        }
-        
-        public registerNotificationCallbackResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackResponse registerNotificationCallbackResponse) {
-            this.registerNotificationCallbackResponse = registerNotificationCallbackResponse;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class deregisterNotificationCallbackRequest : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string userIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string userID {
-            get {
-                return this.userIDField;
-            }
-            set {
-                this.userIDField = value;
-                this.RaisePropertyChanged("userID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class deregisterNotificationCallbackResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private NotificationCallbackReturnCodeType returnCodeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public NotificationCallbackReturnCodeType returnCode {
-            get {
-                return this.returnCodeField;
-            }
-            set {
-                this.returnCodeField = value;
-                this.RaisePropertyChanged("returnCode");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class deregisterNotificationCallbackRequest1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackRequest deregisterNotificationCallbackRequest;
-        
-        public deregisterNotificationCallbackRequest1() {
-        }
-        
-        public deregisterNotificationCallbackRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackRequest deregisterNotificationCallbackRequest) {
-            this.deregisterNotificationCallbackRequest = deregisterNotificationCallbackRequest;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class deregisterNotificationCallbackResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse deregisterNotificationCallbackResponse;
-        
-        public deregisterNotificationCallbackResponse1() {
-        }
-        
-        public deregisterNotificationCallbackResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse deregisterNotificationCallbackResponse) {
-            this.deregisterNotificationCallbackResponse = deregisterNotificationCallbackResponse;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class getStateRequest : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string userIDField;
-        
-        private string customOrMessageIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string userID {
-            get {
-                return this.userIDField;
-            }
-            set {
-                this.userIDField = value;
-                this.RaisePropertyChanged("userID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string customOrMessageID {
-            get {
-                return this.customOrMessageIDField;
-            }
-            set {
-                this.customOrMessageIDField = value;
-                this.RaisePropertyChanged("customOrMessageID");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class getStateResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string customIDField;
-        
-        private string messageIDField;
-        
-        private string senderIDField;
-        
-        private string receiverIDField;
-        
-        private JEntryTypeType stateField;
-        
-        private bool stateFieldSpecified;
-        
-        private System.DateTime timeField;
-        
-        private bool timeFieldSpecified;
-        
-        private GetStateReturnCodeType returnCodeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string customID {
-            get {
-                return this.customIDField;
-            }
-            set {
-                this.customIDField = value;
-                this.RaisePropertyChanged("customID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string messageID {
-            get {
-                return this.messageIDField;
-            }
-            set {
-                this.messageIDField = value;
-                this.RaisePropertyChanged("messageID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string senderID {
-            get {
-                return this.senderIDField;
-            }
-            set {
-                this.senderIDField = value;
-                this.RaisePropertyChanged("senderID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string receiverID {
-            get {
-                return this.receiverIDField;
-            }
-            set {
-                this.receiverIDField = value;
-                this.RaisePropertyChanged("receiverID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public JEntryTypeType state {
-            get {
-                return this.stateField;
-            }
-            set {
-                this.stateField = value;
-                this.RaisePropertyChanged("state");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool stateSpecified {
-            get {
-                return this.stateFieldSpecified;
-            }
-            set {
-                this.stateFieldSpecified = value;
-                this.RaisePropertyChanged("stateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public System.DateTime time {
-            get {
-                return this.timeField;
-            }
-            set {
-                this.timeField = value;
-                this.RaisePropertyChanged("time");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool timeSpecified {
-            get {
-                return this.timeFieldSpecified;
-            }
-            set {
-                this.timeFieldSpecified = value;
-                this.RaisePropertyChanged("timeSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public GetStateReturnCodeType returnCode {
-            get {
-                return this.returnCodeField;
-            }
-            set {
-                this.returnCodeField = value;
-                this.RaisePropertyChanged("returnCode");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum JEntryTypeType {
-        
-        /// <remarks/>
-        AU_RETRY,
-        
-        /// <remarks/>
-        WS_ASEND,
-        
-        /// <remarks/>
-        OSCI_SENT,
-        
-        /// <remarks/>
-        WS_ASENT,
-        
-        /// <remarks/>
-        WS_UNSENDABLE,
-        
-        /// <remarks/>
-        WS_CANCELLED,
-        
-        /// <remarks/>
-        OSCI_RECEIVED,
-        
-        /// <remarks/>
-        OSCI_DELIVERED,
-        
-        /// <remarks/>
-        WS_RECEIVED,
-        
-        /// <remarks/>
-        WS_UNPROCESSABLE,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum GetStateReturnCodeType {
-        
-        /// <remarks/>
-        OK,
-        
-        /// <remarks/>
-        NO_SUCH_ACCOUNT,
-        
-        /// <remarks/>
-        USERID_INVALID,
-        
-        /// <remarks/>
-        NO_SUCH_MESSAGE_OR_CUSTOM_ID,
-        
-        /// <remarks/>
-        USERID_REQUIRED,
-        
-        /// <remarks/>
-        MESSAGE_OR_CUSTOM_ID_REQUIRED,
-        
-        /// <remarks/>
-        GENERAL_SQL_ERROR,
-        
-        /// <remarks/>
-        GENERAL_ERROR,
-        
-        /// <remarks/>
-        WEBSERVICE_DISABLED,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getStateRequest1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateRequest getStateRequest;
-        
-        public getStateRequest1() {
-        }
-        
-        public getStateRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateRequest getStateRequest) {
-            this.getStateRequest = getStateRequest;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getStateResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse getStateResponse;
-        
-        public getStateResponse1() {
-        }
-        
-        public getStateResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse getStateResponse) {
-            this.getStateResponse = getStateResponse;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class getAllStatesRequest : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string userIdField;
-        
-        private string customOrMessageIdField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string userId {
-            get {
-                return this.userIdField;
-            }
-            set {
-                this.userIdField = value;
-                this.RaisePropertyChanged("userId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string customOrMessageId {
-            get {
-                return this.customOrMessageIdField;
-            }
-            set {
-                this.customOrMessageIdField = value;
-                this.RaisePropertyChanged("customOrMessageId");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class getAllStatesResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private GetAllStatesReturnCodeType returnCodeField;
+        private GetQuarantineCountsReturnCodeType returnCodeField;
         
         private string returnCodeDetailsField;
         
-        private StateItem[] statesField;
+        private QuarantineCountsItem[] quarantineCountsField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public GetAllStatesReturnCodeType returnCode {
+        public GetQuarantineCountsReturnCodeType returnCode {
             get {
                 return this.returnCodeField;
             }
@@ -4106,14 +2529,14 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("states", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public StateItem[] states {
+        [System.Xml.Serialization.XmlElementAttribute("quarantineCounts", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+        public QuarantineCountsItem[] quarantineCounts {
             get {
-                return this.statesField;
+                return this.quarantineCountsField;
             }
             set {
-                this.statesField = value;
-                this.RaisePropertyChanged("states");
+                this.quarantineCountsField = value;
+                this.RaisePropertyChanged("quarantineCounts");
             }
         }
         
@@ -4131,25 +2554,158 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum GetAllStatesReturnCodeType {
+    public enum GetQuarantineCountsReturnCodeType {
         
         /// <remarks/>
         OK,
         
         /// <remarks/>
-        USERID_REQUIRED,
-        
-        /// <remarks/>
-        MESSAGE_OR_CUSTOM_ID_REQUIRED,
-        
-        /// <remarks/>
-        NO_SUCH_ACCOUNT,
-        
-        /// <remarks/>
-        NO_STATES_FOR_MESSAGE_OR_CUSTOM_ID,
-        
-        /// <remarks/>
         GENERAL_SQL_ERROR,
+        
+        /// <remarks/>
+        GENERAL_ERROR,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getQuarantineCounts {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCountsRequest getQuarantineCountsRequest;
+        
+        public getQuarantineCounts() {
+        }
+        
+        public getQuarantineCounts(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCountsRequest getQuarantineCountsRequest) {
+            this.getQuarantineCountsRequest = getQuarantineCountsRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getQuarantineCountsResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCountsResponse getQuarantineCountsResponse;
+        
+        public getQuarantineCountsResponse1() {
+        }
+        
+        public getQuarantineCountsResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCountsResponse getQuarantineCountsResponse) {
+            this.getQuarantineCountsResponse = getQuarantineCountsResponse;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class getQuarantineMessageRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string messageIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string messageID {
+            get {
+                return this.messageIDField;
+            }
+            set {
+                this.messageIDField = value;
+                this.RaisePropertyChanged("messageID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class getQuarantineMessageResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private byte[] messageZIPField;
+        
+        private GetQuarantineMessageReturnCodeType returnCodeField;
+        
+        private string returnCodeDetailsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=0)]
+        public byte[] messageZIP {
+            get {
+                return this.messageZIPField;
+            }
+            set {
+                this.messageZIPField = value;
+                this.RaisePropertyChanged("messageZIP");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public GetQuarantineMessageReturnCodeType returnCode {
+            get {
+                return this.returnCodeField;
+            }
+            set {
+                this.returnCodeField = value;
+                this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string returnCodeDetails {
+            get {
+                return this.returnCodeDetailsField;
+            }
+            set {
+                this.returnCodeDetailsField = value;
+                this.RaisePropertyChanged("returnCodeDetails");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum GetQuarantineMessageReturnCodeType {
+        
+        /// <remarks/>
+        OK,
+        
+        /// <remarks/>
+        MESSAGEID_REQUIRED,
+        
+        /// <remarks/>
+        NO_CONTENT_DATA,
         
         /// <remarks/>
         GENERAL_ERROR,
@@ -4162,16 +2718,16 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getAllStatesRequest1 {
+    public partial class getQuarantineMessage {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesRequest getAllStatesRequest;
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessageRequest getQuarantineMessageRequest;
         
-        public getAllStatesRequest1() {
+        public getQuarantineMessage() {
         }
         
-        public getAllStatesRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesRequest getAllStatesRequest) {
-            this.getAllStatesRequest = getAllStatesRequest;
+        public getQuarantineMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessageRequest getQuarantineMessageRequest) {
+            this.getQuarantineMessageRequest = getQuarantineMessageRequest;
         }
     }
     
@@ -4179,16 +2735,16 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getAllStatesResponse1 {
+    public partial class getQuarantineMessageResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse getAllStatesResponse;
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessageResponse getQuarantineMessageResponse;
         
-        public getAllStatesResponse1() {
+        public getQuarantineMessageResponse1() {
         }
         
-        public getAllStatesResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse getAllStatesResponse) {
-            this.getAllStatesResponse = getAllStatesResponse;
+        public getQuarantineMessageResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessageResponse getQuarantineMessageResponse) {
+            this.getQuarantineMessageResponse = getQuarantineMessageResponse;
         }
     }
     
@@ -4198,19 +2754,47 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class getUncommittedMessageIDsRequest : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class deleteAccountRequest : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string userIDField;
+        private string userIdField;
+        
+        private bool doDeleteFromQuarantineField;
+        
+        private bool doDeleteFromQuarantineFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string userID {
+        public string userId {
             get {
-                return this.userIDField;
+                return this.userIdField;
             }
             set {
-                this.userIDField = value;
-                this.RaisePropertyChanged("userID");
+                this.userIdField = value;
+                this.RaisePropertyChanged("userId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public bool doDeleteFromQuarantine {
+            get {
+                return this.doDeleteFromQuarantineField;
+            }
+            set {
+                this.doDeleteFromQuarantineField = value;
+                this.RaisePropertyChanged("doDeleteFromQuarantine");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool doDeleteFromQuarantineSpecified {
+            get {
+                return this.doDeleteFromQuarantineFieldSpecified;
+            }
+            set {
+                this.doDeleteFromQuarantineFieldSpecified = value;
+                this.RaisePropertyChanged("doDeleteFromQuarantineSpecified");
             }
         }
         
@@ -4230,61 +2814,33 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class getUncommittedMessageIDsResponse : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class deleteAccountResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private int countField;
+        private DeleteReturnCodeType returnCodeField;
         
-        private bool countFieldSpecified;
-        
-        private UncommittedMessageType[] uncommittedMessagesField;
-        
-        private GetUncommittedMessageIDsReturnCodeType returnCodeField;
+        private string returnCodeDetailsField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int count {
-            get {
-                return this.countField;
-            }
-            set {
-                this.countField = value;
-                this.RaisePropertyChanged("count");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool countSpecified {
-            get {
-                return this.countFieldSpecified;
-            }
-            set {
-                this.countFieldSpecified = value;
-                this.RaisePropertyChanged("countSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("uncommittedMessages", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public UncommittedMessageType[] uncommittedMessages {
-            get {
-                return this.uncommittedMessagesField;
-            }
-            set {
-                this.uncommittedMessagesField = value;
-                this.RaisePropertyChanged("uncommittedMessages");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public GetUncommittedMessageIDsReturnCodeType returnCode {
+        public DeleteReturnCodeType returnCode {
             get {
                 return this.returnCodeField;
             }
             set {
                 this.returnCodeField = value;
                 this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string returnCodeDetails {
+            get {
+                return this.returnCodeDetailsField;
+            }
+            set {
+                this.returnCodeDetailsField = value;
+                this.RaisePropertyChanged("returnCodeDetails");
             }
         }
         
@@ -4302,16 +2858,31 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum GetUncommittedMessageIDsReturnCodeType {
+    public enum DeleteReturnCodeType {
         
         /// <remarks/>
         OK,
         
         /// <remarks/>
-        NO_SUCH_ACCOUNT,
+        WEBSERVICE_DISABLED,
         
         /// <remarks/>
         USERID_REQUIRED,
+        
+        /// <remarks/>
+        NO_SUCH_ACCOUNT,
+        
+        /// <remarks/>
+        DIRECTORY_NOT_AVAILABLE,
+        
+        /// <remarks/>
+        USER_NOT_FOUND_IN_DIRECTORY,
+        
+        /// <remarks/>
+        DIRECTORY_ERROR,
+        
+        /// <remarks/>
+        CRYPT_ERROR,
         
         /// <remarks/>
         GENERAL_SQL_ERROR,
@@ -4324,16 +2895,16 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getUncommittedMessageIDsRequest1 {
+    public partial class deleteAccount {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsRequest getUncommittedMessageIDsRequest;
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountRequest deleteAccountRequest;
         
-        public getUncommittedMessageIDsRequest1() {
+        public deleteAccount() {
         }
         
-        public getUncommittedMessageIDsRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsRequest getUncommittedMessageIDsRequest) {
-            this.getUncommittedMessageIDsRequest = getUncommittedMessageIDsRequest;
+        public deleteAccount(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountRequest deleteAccountRequest) {
+            this.deleteAccountRequest = deleteAccountRequest;
         }
     }
     
@@ -4341,16 +2912,454 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getUncommittedMessageIDsResponse1 {
+    public partial class deleteAccountResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsResponse getUncommittedMessageIDsResponse;
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountResponse deleteAccountResponse;
         
-        public getUncommittedMessageIDsResponse1() {
+        public deleteAccountResponse1() {
         }
         
-        public getUncommittedMessageIDsResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsResponse getUncommittedMessageIDsResponse) {
-            this.getUncommittedMessageIDsResponse = getUncommittedMessageIDsResponse;
+        public deleteAccountResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountResponse deleteAccountResponse) {
+            this.deleteAccountResponse = deleteAccountResponse;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class editAccountRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string userIdField;
+        
+        private string addressField;
+        
+        private string titleField;
+        
+        private string nameField;
+        
+        private string christianNameField;
+        
+        private string organisationField;
+        
+        private string organisationalUnitField;
+        
+        private string streetField;
+        
+        private string streetNumberField;
+        
+        private string zipCodeField;
+        
+        private string cityField;
+        
+        private string federalStateField;
+        
+        private string countryField;
+        
+        private string emailField;
+        
+        private string cellphoneField;
+        
+        private string phoneField;
+        
+        private string faxField;
+        
+        private string externalIdField;
+        
+        private byte[] signatureField;
+        
+        private string signaturePinField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string userId {
+            get {
+                return this.userIdField;
+            }
+            set {
+                this.userIdField = value;
+                this.RaisePropertyChanged("userId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string Address {
+            get {
+                return this.addressField;
+            }
+            set {
+                this.addressField = value;
+                this.RaisePropertyChanged("Address");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string Title {
+            get {
+                return this.titleField;
+            }
+            set {
+                this.titleField = value;
+                this.RaisePropertyChanged("Title");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string ChristianName {
+            get {
+                return this.christianNameField;
+            }
+            set {
+                this.christianNameField = value;
+                this.RaisePropertyChanged("ChristianName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string Organisation {
+            get {
+                return this.organisationField;
+            }
+            set {
+                this.organisationField = value;
+                this.RaisePropertyChanged("Organisation");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string OrganisationalUnit {
+            get {
+                return this.organisationalUnitField;
+            }
+            set {
+                this.organisationalUnitField = value;
+                this.RaisePropertyChanged("OrganisationalUnit");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string Street {
+            get {
+                return this.streetField;
+            }
+            set {
+                this.streetField = value;
+                this.RaisePropertyChanged("Street");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string StreetNumber {
+            get {
+                return this.streetNumberField;
+            }
+            set {
+                this.streetNumberField = value;
+                this.RaisePropertyChanged("StreetNumber");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string ZipCode {
+            get {
+                return this.zipCodeField;
+            }
+            set {
+                this.zipCodeField = value;
+                this.RaisePropertyChanged("ZipCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public string City {
+            get {
+                return this.cityField;
+            }
+            set {
+                this.cityField = value;
+                this.RaisePropertyChanged("City");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public string FederalState {
+            get {
+                return this.federalStateField;
+            }
+            set {
+                this.federalStateField = value;
+                this.RaisePropertyChanged("FederalState");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public string Country {
+            get {
+                return this.countryField;
+            }
+            set {
+                this.countryField = value;
+                this.RaisePropertyChanged("Country");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        public string Email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("Email");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
+        public string Cellphone {
+            get {
+                return this.cellphoneField;
+            }
+            set {
+                this.cellphoneField = value;
+                this.RaisePropertyChanged("Cellphone");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
+        public string Phone {
+            get {
+                return this.phoneField;
+            }
+            set {
+                this.phoneField = value;
+                this.RaisePropertyChanged("Phone");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
+        public string Fax {
+            get {
+                return this.faxField;
+            }
+            set {
+                this.faxField = value;
+                this.RaisePropertyChanged("Fax");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
+        public string ExternalId {
+            get {
+                return this.externalIdField;
+            }
+            set {
+                this.externalIdField = value;
+                this.RaisePropertyChanged("ExternalId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=18)]
+        public byte[] signature {
+            get {
+                return this.signatureField;
+            }
+            set {
+                this.signatureField = value;
+                this.RaisePropertyChanged("signature");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=19)]
+        public string signaturePin {
+            get {
+                return this.signaturePinField;
+            }
+            set {
+                this.signaturePinField = value;
+                this.RaisePropertyChanged("signaturePin");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class editAccountResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private EditReturnCodeType returnCodeField;
+        
+        private string returnCodeDetailsField;
+        
+        private AccountBusinessCard changedBusinessCardField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public EditReturnCodeType returnCode {
+            get {
+                return this.returnCodeField;
+            }
+            set {
+                this.returnCodeField = value;
+                this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string returnCodeDetails {
+            get {
+                return this.returnCodeDetailsField;
+            }
+            set {
+                this.returnCodeDetailsField = value;
+                this.RaisePropertyChanged("returnCodeDetails");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public AccountBusinessCard changedBusinessCard {
+            get {
+                return this.changedBusinessCardField;
+            }
+            set {
+                this.changedBusinessCardField = value;
+                this.RaisePropertyChanged("changedBusinessCard");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum EditReturnCodeType {
+        
+        /// <remarks/>
+        OK,
+        
+        /// <remarks/>
+        WEBSERVICE_DISABLED,
+        
+        /// <remarks/>
+        USERID_REQUIRED,
+        
+        /// <remarks/>
+        NO_SUCH_ACCOUNT,
+        
+        /// <remarks/>
+        ENCRYPT_CERTIFICATE_INVALID,
+        
+        /// <remarks/>
+        FIELD_NOT_DELETEABLE,
+        
+        /// <remarks/>
+        FIELD_VALUE_INVALID,
+        
+        /// <remarks/>
+        DIRECTORY_NOT_AVAILABLE,
+        
+        /// <remarks/>
+        USER_NOT_FOUND_IN_DIRECTORY,
+        
+        /// <remarks/>
+        DIRECTORY_ERROR,
+        
+        /// <remarks/>
+        GENERAL_SQL_ERROR,
+        
+        /// <remarks/>
+        GENERAL_ERROR,
+        
+        /// <remarks/>
+        CRYPT_ERROR,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class editAccount {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountRequest editAccountRequest;
+        
+        public editAccount() {
+        }
+        
+        public editAccount(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountRequest editAccountRequest) {
+            this.editAccountRequest = editAccountRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class editAccountResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountResponse editAccountResponse;
+        
+        public editAccountResponse1() {
+        }
+        
+        public editAccountResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountResponse editAccountResponse) {
+            this.editAccountResponse = editAccountResponse;
         }
     }
     
@@ -4715,6 +3724,9 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         GENERAL_SQL_ERROR,
         
         /// <remarks/>
+        CRYPT_ERROR,
+        
+        /// <remarks/>
         GENERAL_ERROR,
     }
     
@@ -4722,15 +3734,15 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class createAccountRequest1 {
+    public partial class createAccount {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
         public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountRequest createAccountRequest;
         
-        public createAccountRequest1() {
+        public createAccount() {
         }
         
-        public createAccountRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountRequest createAccountRequest) {
+        public createAccount(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountRequest createAccountRequest) {
             this.createAccountRequest = createAccountRequest;
         }
     }
@@ -4758,47 +3770,19 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class deleteAccountRequest : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class markAsFetchQuarantineMessageRequest : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string userIdField;
-        
-        private bool doDeleteFromQuarantineField;
-        
-        private bool doDeleteFromQuarantineFieldSpecified;
+        private string messageIDField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string userId {
+        public string messageID {
             get {
-                return this.userIdField;
+                return this.messageIDField;
             }
             set {
-                this.userIdField = value;
-                this.RaisePropertyChanged("userId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public bool doDeleteFromQuarantine {
-            get {
-                return this.doDeleteFromQuarantineField;
-            }
-            set {
-                this.doDeleteFromQuarantineField = value;
-                this.RaisePropertyChanged("doDeleteFromQuarantine");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool doDeleteFromQuarantineSpecified {
-            get {
-                return this.doDeleteFromQuarantineFieldSpecified;
-            }
-            set {
-                this.doDeleteFromQuarantineFieldSpecified = value;
-                this.RaisePropertyChanged("doDeleteFromQuarantineSpecified");
+                this.messageIDField = value;
+                this.RaisePropertyChanged("messageID");
             }
         }
         
@@ -4818,15 +3802,15 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class deleteAccountResponse : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class markAsFetchQuarantineMessageResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private DeleteReturnCodeType returnCodeField;
+        private MarkAsFetchQuarantineMessageReturnCodeType returnCodeField;
         
         private string returnCodeDetailsField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public DeleteReturnCodeType returnCode {
+        public MarkAsFetchQuarantineMessageReturnCodeType returnCode {
             get {
                 return this.returnCodeField;
             }
@@ -4862,50 +3846,38 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum DeleteReturnCodeType {
+    public enum MarkAsFetchQuarantineMessageReturnCodeType {
         
         /// <remarks/>
         OK,
         
         /// <remarks/>
-        WEBSERVICE_DISABLED,
+        MESSAGEID_REQUIRED,
         
         /// <remarks/>
-        USERID_REQUIRED,
-        
-        /// <remarks/>
-        NO_SUCH_ACCOUNT,
-        
-        /// <remarks/>
-        DIRECTORY_NOT_AVAILABLE,
-        
-        /// <remarks/>
-        USER_NOT_FOUND_IN_DIRECTORY,
-        
-        /// <remarks/>
-        DIRECTORY_ERROR,
-        
-        /// <remarks/>
-        GENERAL_SQL_ERROR,
+        NO_SUCH_MESSAGE,
         
         /// <remarks/>
         GENERAL_ERROR,
+        
+        /// <remarks/>
+        GENERAL_SQL_ERROR,
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class deleteAccountRequest1 {
+    public partial class markAsFetchQuarantineMessage {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountRequest deleteAccountRequest;
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessageRequest markAsFetchQuarantineMessageRequest;
         
-        public deleteAccountRequest1() {
+        public markAsFetchQuarantineMessage() {
         }
         
-        public deleteAccountRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountRequest deleteAccountRequest) {
-            this.deleteAccountRequest = deleteAccountRequest;
+        public markAsFetchQuarantineMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessageRequest markAsFetchQuarantineMessageRequest) {
+            this.markAsFetchQuarantineMessageRequest = markAsFetchQuarantineMessageRequest;
         }
     }
     
@@ -4913,16 +3885,16 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class deleteAccountResponse1 {
+    public partial class markAsFetchQuarantineMessageResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountResponse deleteAccountResponse;
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessageResponse markAsFetchQuarantineMessageResponse;
         
-        public deleteAccountResponse1() {
+        public markAsFetchQuarantineMessageResponse1() {
         }
         
-        public deleteAccountResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountResponse deleteAccountResponse) {
-            this.deleteAccountResponse = deleteAccountResponse;
+        public markAsFetchQuarantineMessageResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessageResponse markAsFetchQuarantineMessageResponse) {
+            this.markAsFetchQuarantineMessageResponse = markAsFetchQuarantineMessageResponse;
         }
     }
     
@@ -4932,285 +3904,33 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class editAccountRequest : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class registerNotificationCallbackRequest : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string userIdField;
+        private string userIDField;
         
-        private string addressField;
-        
-        private string titleField;
-        
-        private string nameField;
-        
-        private string christianNameField;
-        
-        private string organisationField;
-        
-        private string organisationalUnitField;
-        
-        private string streetField;
-        
-        private string streetNumberField;
-        
-        private string zipCodeField;
-        
-        private string cityField;
-        
-        private string federalStateField;
-        
-        private string countryField;
-        
-        private string emailField;
-        
-        private string cellphoneField;
-        
-        private string phoneField;
-        
-        private string faxField;
-        
-        private string externalIdField;
-        
-        private byte[] signatureField;
-        
-        private string signaturePinField;
+        private string endpointAddressField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string userId {
+        public string userID {
             get {
-                return this.userIdField;
+                return this.userIDField;
             }
             set {
-                this.userIdField = value;
-                this.RaisePropertyChanged("userId");
+                this.userIDField = value;
+                this.RaisePropertyChanged("userID");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string Address {
+        public string endpointAddress {
             get {
-                return this.addressField;
+                return this.endpointAddressField;
             }
             set {
-                this.addressField = value;
-                this.RaisePropertyChanged("Address");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
-        public string Title {
-            get {
-                return this.titleField;
-            }
-            set {
-                this.titleField = value;
-                this.RaisePropertyChanged("Title");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string Name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-                this.RaisePropertyChanged("Name");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
-        public string ChristianName {
-            get {
-                return this.christianNameField;
-            }
-            set {
-                this.christianNameField = value;
-                this.RaisePropertyChanged("ChristianName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string Organisation {
-            get {
-                return this.organisationField;
-            }
-            set {
-                this.organisationField = value;
-                this.RaisePropertyChanged("Organisation");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=6)]
-        public string OrganisationalUnit {
-            get {
-                return this.organisationalUnitField;
-            }
-            set {
-                this.organisationalUnitField = value;
-                this.RaisePropertyChanged("OrganisationalUnit");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string Street {
-            get {
-                return this.streetField;
-            }
-            set {
-                this.streetField = value;
-                this.RaisePropertyChanged("Street");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string StreetNumber {
-            get {
-                return this.streetNumberField;
-            }
-            set {
-                this.streetNumberField = value;
-                this.RaisePropertyChanged("StreetNumber");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string ZipCode {
-            get {
-                return this.zipCodeField;
-            }
-            set {
-                this.zipCodeField = value;
-                this.RaisePropertyChanged("ZipCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public string City {
-            get {
-                return this.cityField;
-            }
-            set {
-                this.cityField = value;
-                this.RaisePropertyChanged("City");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public string FederalState {
-            get {
-                return this.federalStateField;
-            }
-            set {
-                this.federalStateField = value;
-                this.RaisePropertyChanged("FederalState");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
-        public string Country {
-            get {
-                return this.countryField;
-            }
-            set {
-                this.countryField = value;
-                this.RaisePropertyChanged("Country");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=13)]
-        public string Email {
-            get {
-                return this.emailField;
-            }
-            set {
-                this.emailField = value;
-                this.RaisePropertyChanged("Email");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=14)]
-        public string Cellphone {
-            get {
-                return this.cellphoneField;
-            }
-            set {
-                this.cellphoneField = value;
-                this.RaisePropertyChanged("Cellphone");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=15)]
-        public string Phone {
-            get {
-                return this.phoneField;
-            }
-            set {
-                this.phoneField = value;
-                this.RaisePropertyChanged("Phone");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=16)]
-        public string Fax {
-            get {
-                return this.faxField;
-            }
-            set {
-                this.faxField = value;
-                this.RaisePropertyChanged("Fax");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=17)]
-        public string ExternalId {
-            get {
-                return this.externalIdField;
-            }
-            set {
-                this.externalIdField = value;
-                this.RaisePropertyChanged("ExternalId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=18)]
-        public byte[] signature {
-            get {
-                return this.signatureField;
-            }
-            set {
-                this.signatureField = value;
-                this.RaisePropertyChanged("signature");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=19)]
-        public string signaturePin {
-            get {
-                return this.signaturePinField;
-            }
-            set {
-                this.signaturePinField = value;
-                this.RaisePropertyChanged("signaturePin");
+                this.endpointAddressField = value;
+                this.RaisePropertyChanged("endpointAddress");
             }
         }
         
@@ -5230,17 +3950,321 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class editAccountResponse : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class registerNotificationCallbackResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private EditReturnCodeType returnCodeField;
-        
-        private string returnCodeDetailsField;
-        
-        private AccountBusinessCard changedBusinessCardField;
+        private NotificationCallbackReturnCodeType returnCodeField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public EditReturnCodeType returnCode {
+        public NotificationCallbackReturnCodeType returnCode {
+            get {
+                return this.returnCodeField;
+            }
+            set {
+                this.returnCodeField = value;
+                this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum NotificationCallbackReturnCodeType {
+        
+        /// <remarks/>
+        OK,
+        
+        /// <remarks/>
+        NO_SUCH_ACCOUNT,
+        
+        /// <remarks/>
+        USERID_REQUIRED,
+        
+        /// <remarks/>
+        ENDPOINT_ADDRESS_REQUIRED,
+        
+        /// <remarks/>
+        ENDPOINT_ADDRESS_UNREACHABLE,
+        
+        /// <remarks/>
+        ENDPOINT_ADDRESS_INVALID,
+        
+        /// <remarks/>
+        NO_NOTIFICATION_REGISTERED,
+        
+        /// <remarks/>
+        GENERAL_ERROR,
+        
+        /// <remarks/>
+        GENERAL_SQL_ERROR,
+        
+        /// <remarks/>
+        WEBSERVICE_DISABLED,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class registerNotificationCallback {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackRequest registerNotificationCallbackRequest;
+        
+        public registerNotificationCallback() {
+        }
+        
+        public registerNotificationCallback(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackRequest registerNotificationCallbackRequest) {
+            this.registerNotificationCallbackRequest = registerNotificationCallbackRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class registerNotificationCallbackResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackResponse registerNotificationCallbackResponse;
+        
+        public registerNotificationCallbackResponse1() {
+        }
+        
+        public registerNotificationCallbackResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackResponse registerNotificationCallbackResponse) {
+            this.registerNotificationCallbackResponse = registerNotificationCallbackResponse;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class cancelSentMessageRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string userIDField;
+        
+        private string customIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string userID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                this.userIDField = value;
+                this.RaisePropertyChanged("userID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string customID {
+            get {
+                return this.customIDField;
+            }
+            set {
+                this.customIDField = value;
+                this.RaisePropertyChanged("customID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class cancelSentMessageResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private CommitReturnCodeType returnCodeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public CommitReturnCodeType returnCode {
+            get {
+                return this.returnCodeField;
+            }
+            set {
+                this.returnCodeField = value;
+                this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum CommitReturnCodeType {
+        
+        /// <remarks/>
+        OK,
+        
+        /// <remarks/>
+        USERID_REQUIRED,
+        
+        /// <remarks/>
+        MESSAGEID_REQUIRED,
+        
+        /// <remarks/>
+        NO_SUCH_ACCOUNT,
+        
+        /// <remarks/>
+        NO_SUCH_MESSAGE,
+        
+        /// <remarks/>
+        MESSAGE_NOT_PROCESSED,
+        
+        /// <remarks/>
+        MESSAGE_ALREADY_COMMITTED,
+        
+        /// <remarks/>
+        MESSAGE_ALREADY_SENT,
+        
+        /// <remarks/>
+        MESSAGE_IS_SENDING,
+        
+        /// <remarks/>
+        GENERAL_SQL_ERROR,
+        
+        /// <remarks/>
+        WEBSERVICE_DISABLED,
+        
+        /// <remarks/>
+        GENERAL_ERROR,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class cancelSentMessage {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageRequest cancelSentMessageRequest;
+        
+        public cancelSentMessage() {
+        }
+        
+        public cancelSentMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageRequest cancelSentMessageRequest) {
+            this.cancelSentMessageRequest = cancelSentMessageRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class cancelSentMessageResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageResponse cancelSentMessageResponse;
+        
+        public cancelSentMessageResponse1() {
+        }
+        
+        public cancelSentMessageResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageResponse cancelSentMessageResponse) {
+            this.cancelSentMessageResponse = cancelSentMessageResponse;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class getAllStatesRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string userIdField;
+        
+        private string customOrMessageIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string userId {
+            get {
+                return this.userIdField;
+            }
+            set {
+                this.userIdField = value;
+                this.RaisePropertyChanged("userId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string customOrMessageId {
+            get {
+                return this.customOrMessageIdField;
+            }
+            set {
+                this.customOrMessageIdField = value;
+                this.RaisePropertyChanged("customOrMessageId");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class getAllStatesResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string returnCodeField;
+        
+        private string returnCodeDetailsField;
+        
+        private StateItem[] statesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string returnCode {
             get {
                 return this.returnCodeField;
             }
@@ -5259,18 +4283,172 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
             set {
                 this.returnCodeDetailsField = value;
                 this.RaisePropertyChanged("returnCodeDetails");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("states", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public StateItem[] states {
+            get {
+                return this.statesField;
+            }
+            set {
+                this.statesField = value;
+                this.RaisePropertyChanged("states");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getAllStates {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesRequest getAllStatesRequest;
+        
+        public getAllStates() {
+        }
+        
+        public getAllStates(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesRequest getAllStatesRequest) {
+            this.getAllStatesRequest = getAllStatesRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getAllStatesResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse getAllStatesResponse;
+        
+        public getAllStatesResponse1() {
+        }
+        
+        public getAllStatesResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse getAllStatesResponse) {
+            this.getAllStatesResponse = getAllStatesResponse;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class receiveMessageRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string userIDField;
+        
+        private string messageIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string userID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                this.userIDField = value;
+                this.RaisePropertyChanged("userID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string messageID {
+            get {
+                return this.messageIDField;
+            }
+            set {
+                this.messageIDField = value;
+                this.RaisePropertyChanged("messageID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class receiveMessageResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string messageIDField;
+        
+        private byte[] messageZIPField;
+        
+        private ReceiveReturnCodeType returnCodeField;
+        
+        private string returnCodeDetailsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string messageID {
+            get {
+                return this.messageIDField;
+            }
+            set {
+                this.messageIDField = value;
+                this.RaisePropertyChanged("messageID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=1)]
+        public byte[] messageZIP {
+            get {
+                return this.messageZIPField;
+            }
+            set {
+                this.messageZIPField = value;
+                this.RaisePropertyChanged("messageZIP");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public AccountBusinessCard changedBusinessCard {
+        public ReceiveReturnCodeType returnCode {
             get {
-                return this.changedBusinessCardField;
+                return this.returnCodeField;
             }
             set {
-                this.changedBusinessCardField = value;
-                this.RaisePropertyChanged("changedBusinessCard");
+                this.returnCodeField = value;
+                this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string returnCodeDetails {
+            get {
+                return this.returnCodeDetailsField;
+            }
+            set {
+                this.returnCodeDetailsField = value;
+                this.RaisePropertyChanged("returnCodeDetails");
             }
         }
         
@@ -5288,37 +4466,571 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum EditReturnCodeType {
+    public enum ReceiveReturnCodeType {
+        
+        /// <remarks/>
+        OK,
+        
+        /// <remarks/>
+        NO_SUCH_ACCOUNT,
+        
+        /// <remarks/>
+        NO_SUCH_MESSAGE,
+        
+        /// <remarks/>
+        USERID_REQUIRED,
+        
+        /// <remarks/>
+        NO_MESSAGES_TO_RECEIVE,
+        
+        /// <remarks/>
+        RECEIVE_IN_PROGRESS,
+        
+        /// <remarks/>
+        MESSAGE_IN_QUARANTINE,
+        
+        /// <remarks/>
+        MESSAGE_WILL_BE_RECEIVED,
+        
+        /// <remarks/>
+        GENERAL_SQL_ERROR,
+        
+        /// <remarks/>
+        GENERAL_ERROR,
+        
+        /// <remarks/>
+        WEBSERVICE_DISABLED,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class receiveMessage {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageRequest receiveMessageRequest;
+        
+        public receiveMessage() {
+        }
+        
+        public receiveMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageRequest receiveMessageRequest) {
+            this.receiveMessageRequest = receiveMessageRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class receiveMessageResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse receiveMessageResponse;
+        
+        public receiveMessageResponse1() {
+        }
+        
+        public receiveMessageResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse receiveMessageResponse) {
+            this.receiveMessageResponse = receiveMessageResponse;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class searchReceiverRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string userIDField;
+        
+        private BusinessCardType searchCriteriaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string userID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                this.userIDField = value;
+                this.RaisePropertyChanged("userID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public BusinessCardType searchCriteria {
+            get {
+                return this.searchCriteriaField;
+            }
+            set {
+                this.searchCriteriaField = value;
+                this.RaisePropertyChanged("searchCriteria");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class searchReceiverResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int countField;
+        
+        private bool countFieldSpecified;
+        
+        private BusinessCardType[] receiverResultsField;
+        
+        private SearchReturnCodeType returnCodeField;
+        
+        private string returnCodeDetailsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int count {
+            get {
+                return this.countField;
+            }
+            set {
+                this.countField = value;
+                this.RaisePropertyChanged("count");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool countSpecified {
+            get {
+                return this.countFieldSpecified;
+            }
+            set {
+                this.countFieldSpecified = value;
+                this.RaisePropertyChanged("countSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("receiverResults", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+        public BusinessCardType[] receiverResults {
+            get {
+                return this.receiverResultsField;
+            }
+            set {
+                this.receiverResultsField = value;
+                this.RaisePropertyChanged("receiverResults");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public SearchReturnCodeType returnCode {
+            get {
+                return this.returnCodeField;
+            }
+            set {
+                this.returnCodeField = value;
+                this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string returnCodeDetails {
+            get {
+                return this.returnCodeDetailsField;
+            }
+            set {
+                this.returnCodeDetailsField = value;
+                this.RaisePropertyChanged("returnCodeDetails");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum SearchReturnCodeType {
+        
+        /// <remarks/>
+        OK,
+        
+        /// <remarks/>
+        NO_SUCH_ACCOUNT,
+        
+        /// <remarks/>
+        NO_SEARCH_CRITERIA,
+        
+        /// <remarks/>
+        MIXED_SEARCH_CRITERIA,
+        
+        /// <remarks/>
+        USERID_REQUIRED,
+        
+        /// <remarks/>
+        TOO_MANY_RESULTS,
+        
+        /// <remarks/>
+        GENERAL_ERROR,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class searchReceiver {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverRequest searchReceiverRequest;
+        
+        public searchReceiver() {
+        }
+        
+        public searchReceiver(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverRequest searchReceiverRequest) {
+            this.searchReceiverRequest = searchReceiverRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class searchReceiverResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverResponse searchReceiverResponse;
+        
+        public searchReceiverResponse1() {
+        }
+        
+        public searchReceiverResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverResponse searchReceiverResponse) {
+            this.searchReceiverResponse = searchReceiverResponse;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class commitSentMessageRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string userIDField;
+        
+        private string messageIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string userID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                this.userIDField = value;
+                this.RaisePropertyChanged("userID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string messageID {
+            get {
+                return this.messageIDField;
+            }
+            set {
+                this.messageIDField = value;
+                this.RaisePropertyChanged("messageID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class commitSentMessageResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private CommitReturnCodeType returnCodeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public CommitReturnCodeType returnCode {
+            get {
+                return this.returnCodeField;
+            }
+            set {
+                this.returnCodeField = value;
+                this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class commitSentMessage {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageRequest commitSentMessageRequest;
+        
+        public commitSentMessage() {
+        }
+        
+        public commitSentMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageRequest commitSentMessageRequest) {
+            this.commitSentMessageRequest = commitSentMessageRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class commitSentMessageResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageResponse commitSentMessageResponse;
+        
+        public commitSentMessageResponse1() {
+        }
+        
+        public commitSentMessageResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageResponse commitSentMessageResponse) {
+            this.commitSentMessageResponse = commitSentMessageResponse;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class deregisterNotificationCallbackRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string userIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string userID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                this.userIDField = value;
+                this.RaisePropertyChanged("userID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class deregisterNotificationCallbackResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private NotificationCallbackReturnCodeType returnCodeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public NotificationCallbackReturnCodeType returnCode {
+            get {
+                return this.returnCodeField;
+            }
+            set {
+                this.returnCodeField = value;
+                this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class deregisterNotificationCallback {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackRequest deregisterNotificationCallbackRequest;
+        
+        public deregisterNotificationCallback() {
+        }
+        
+        public deregisterNotificationCallback(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackRequest deregisterNotificationCallbackRequest) {
+            this.deregisterNotificationCallbackRequest = deregisterNotificationCallbackRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class deregisterNotificationCallbackResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse deregisterNotificationCallbackResponse;
+        
+        public deregisterNotificationCallbackResponse1() {
+        }
+        
+        public deregisterNotificationCallbackResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse deregisterNotificationCallbackResponse) {
+            this.deregisterNotificationCallbackResponse = deregisterNotificationCallbackResponse;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class getAllAccountsRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class getAllAccountsResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private GetAllAccountsReturnCodeType returnCodeField;
+        
+        private string returnCodeDetailsField;
+        
+        private AccountInfoItem[] accountInfosField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public GetAllAccountsReturnCodeType returnCode {
+            get {
+                return this.returnCodeField;
+            }
+            set {
+                this.returnCodeField = value;
+                this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string returnCodeDetails {
+            get {
+                return this.returnCodeDetailsField;
+            }
+            set {
+                this.returnCodeDetailsField = value;
+                this.RaisePropertyChanged("returnCodeDetails");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("accountInfos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+        public AccountInfoItem[] accountInfos {
+            get {
+                return this.accountInfosField;
+            }
+            set {
+                this.accountInfosField = value;
+                this.RaisePropertyChanged("accountInfos");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum GetAllAccountsReturnCodeType {
         
         /// <remarks/>
         OK,
         
         /// <remarks/>
         WEBSERVICE_DISABLED,
-        
-        /// <remarks/>
-        USERID_REQUIRED,
-        
-        /// <remarks/>
-        NO_SUCH_ACCOUNT,
-        
-        /// <remarks/>
-        ENCRYPT_CERTIFICATE_INVALID,
-        
-        /// <remarks/>
-        FIELD_NOT_DELETEABLE,
-        
-        /// <remarks/>
-        FIELD_VALUE_INVALID,
-        
-        /// <remarks/>
-        DIRECTORY_NOT_AVAILABLE,
-        
-        /// <remarks/>
-        USER_NOT_FOUND_IN_DIRECTORY,
-        
-        /// <remarks/>
-        DIRECTORY_ERROR,
         
         /// <remarks/>
         GENERAL_SQL_ERROR,
@@ -5331,16 +5043,16 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class editAccountRequest1 {
+    public partial class getAllAccounts {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountRequest editAccountRequest;
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsRequest getAllAccountsRequest;
         
-        public editAccountRequest1() {
+        public getAllAccounts() {
         }
         
-        public editAccountRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountRequest editAccountRequest) {
-            this.editAccountRequest = editAccountRequest;
+        public getAllAccounts(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsRequest getAllAccountsRequest) {
+            this.getAllAccountsRequest = getAllAccountsRequest;
         }
     }
     
@@ -5348,16 +5060,478 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class editAccountResponse1 {
+    public partial class getAllAccountsResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountResponse editAccountResponse;
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsResponse getAllAccountsResponse;
         
-        public editAccountResponse1() {
+        public getAllAccountsResponse1() {
         }
         
-        public editAccountResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountResponse editAccountResponse) {
-            this.editAccountResponse = editAccountResponse;
+        public getAllAccountsResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsResponse getAllAccountsResponse) {
+            this.getAllAccountsResponse = getAllAccountsResponse;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class sendSynchroniousMessageRequest : SendMessageRequestType {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class sendSynchroniousMessageResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string messageIDField;
+        
+        private byte[] messageZIPField;
+        
+        private SendReturnCodeType returnCodeField;
+        
+        private SendErrorCodeType errorDetailsField;
+        
+        private bool errorDetailsFieldSpecified;
+        
+        private string errorDescriptionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string messageID {
+            get {
+                return this.messageIDField;
+            }
+            set {
+                this.messageIDField = value;
+                this.RaisePropertyChanged("messageID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=1)]
+        public byte[] messageZIP {
+            get {
+                return this.messageZIPField;
+            }
+            set {
+                this.messageZIPField = value;
+                this.RaisePropertyChanged("messageZIP");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public SendReturnCodeType returnCode {
+            get {
+                return this.returnCodeField;
+            }
+            set {
+                this.returnCodeField = value;
+                this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public SendErrorCodeType errorDetails {
+            get {
+                return this.errorDetailsField;
+            }
+            set {
+                this.errorDetailsField = value;
+                this.RaisePropertyChanged("errorDetails");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool errorDetailsSpecified {
+            get {
+                return this.errorDetailsFieldSpecified;
+            }
+            set {
+                this.errorDetailsFieldSpecified = value;
+                this.RaisePropertyChanged("errorDetailsSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string errorDescription {
+            get {
+                return this.errorDescriptionField;
+            }
+            set {
+                this.errorDescriptionField = value;
+                this.RaisePropertyChanged("errorDescription");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum SendReturnCodeType {
+        
+        /// <remarks/>
+        OK,
+        
+        /// <remarks/>
+        NO_SUCH_ACCOUNT,
+        
+        /// <remarks/>
+        NO_SUCH_MESSAGE,
+        
+        /// <remarks/>
+        PENDING,
+        
+        /// <remarks/>
+        USERID_REQUIRED,
+        
+        /// <remarks/>
+        RECEIVER_REQUIRED,
+        
+        /// <remarks/>
+        CUSTOMID_REQUIRED,
+        
+        /// <remarks/>
+        RECEIVER_NOT_FOUND,
+        
+        /// <remarks/>
+        UNSUPPORTED_RECEIVER_TYPE,
+        
+        /// <remarks/>
+        MESSAGE_TYPE_REQUIRED,
+        
+        /// <remarks/>
+        UNSUPPORTED_MESSAGE_TYPE,
+        
+        /// <remarks/>
+        SUBJECT_REQUIRED,
+        
+        /// <remarks/>
+        ATTACHMENT_NAME_NOT_FOUND,
+        
+        /// <remarks/>
+        TOO_MANY_ATTACHMENTS,
+        
+        /// <remarks/>
+        ATTACHMENTS_TOO_LARGE,
+        
+        /// <remarks/>
+        GENERAL_SQL_ERROR,
+        
+        /// <remarks/>
+        GENERAL_ERROR,
+        
+        /// <remarks/>
+        WEBSERVICE_DISABLED,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum SendErrorCodeType {
+        
+        /// <remarks/>
+        SEND_FAILED,
+        
+        /// <remarks/>
+        REGISTER_GENERAL_ERROR,
+        
+        /// <remarks/>
+        INTERNET_CONNECT,
+        
+        /// <remarks/>
+        HTTP_ERROR,
+        
+        /// <remarks/>
+        MESSAGE_TYPE_UNSUPPORTED,
+        
+        /// <remarks/>
+        ATTACHMENT_ERROR,
+        
+        /// <remarks/>
+        MESSAGE_SIGN_FAILED,
+        
+        /// <remarks/>
+        FILE_NOT_FOUND,
+        
+        /// <remarks/>
+        OSCI_MANAGER_WRONG_CERTIFICATE,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class sendSynchroniousMessage {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest sendSynchroniousMessageRequest;
+        
+        public sendSynchroniousMessage() {
+        }
+        
+        public sendSynchroniousMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest sendSynchroniousMessageRequest) {
+            this.sendSynchroniousMessageRequest = sendSynchroniousMessageRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class sendSynchroniousMessageResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse sendSynchroniousMessageResponse;
+        
+        public sendSynchroniousMessageResponse1() {
+        }
+        
+        public sendSynchroniousMessageResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse sendSynchroniousMessageResponse) {
+            this.sendSynchroniousMessageResponse = sendSynchroniousMessageResponse;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class verifyDocumentsRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string userIDField;
+        
+        private byte[] vhnxmlField;
+        
+        private byte[] xmlp7sField;
+        
+        private AttachmentType[] attachmentsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string userID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                this.userIDField = value;
+                this.RaisePropertyChanged("userID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("vhn.xml", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=1)]
+        public byte[] vhnxml {
+            get {
+                return this.vhnxmlField;
+            }
+            set {
+                this.vhnxmlField = value;
+                this.RaisePropertyChanged("vhnxml");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("xml.p7s", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=2)]
+        public byte[] xmlp7s {
+            get {
+                return this.xmlp7sField;
+            }
+            set {
+                this.xmlp7sField = value;
+                this.RaisePropertyChanged("xmlp7s");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("attachments", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public AttachmentType[] attachments {
+            get {
+                return this.attachmentsField;
+            }
+            set {
+                this.attachmentsField = value;
+                this.RaisePropertyChanged("attachments");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class verifyDocumentsResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private VerifyDocumentsReturnCodeType returnCodeField;
+        
+        private string errorDetailsField;
+        
+        private byte[] pruefdokumentXMLField;
+        
+        private byte[] pruefdokumentPDFField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public VerifyDocumentsReturnCodeType returnCode {
+            get {
+                return this.returnCodeField;
+            }
+            set {
+                this.returnCodeField = value;
+                this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string errorDetails {
+            get {
+                return this.errorDetailsField;
+            }
+            set {
+                this.errorDetailsField = value;
+                this.RaisePropertyChanged("errorDetails");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=2)]
+        public byte[] pruefdokumentXML {
+            get {
+                return this.pruefdokumentXMLField;
+            }
+            set {
+                this.pruefdokumentXMLField = value;
+                this.RaisePropertyChanged("pruefdokumentXML");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=3)]
+        public byte[] pruefdokumentPDF {
+            get {
+                return this.pruefdokumentPDFField;
+            }
+            set {
+                this.pruefdokumentPDFField = value;
+                this.RaisePropertyChanged("pruefdokumentPDF");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum VerifyDocumentsReturnCodeType {
+        
+        /// <remarks/>
+        OK,
+        
+        /// <remarks/>
+        USERID_REQUIRED,
+        
+        /// <remarks/>
+        NO_SUCH_ACCOUNT,
+        
+        /// <remarks/>
+        VHN_REQUIRED,
+        
+        /// <remarks/>
+        VHN_SIGNATURE_INCORRECT,
+        
+        /// <remarks/>
+        DOCUMENTS_NOT_IN_VHN,
+        
+        /// <remarks/>
+        DOCUMENT_VERIFY_ERROR,
+        
+        /// <remarks/>
+        CONNECT_ERROR,
+        
+        /// <remarks/>
+        GENERAL_ERROR,
+        
+        /// <remarks/>
+        WEBSERVICE_DISABLED,
+        
+        /// <remarks/>
+        NO_ATTACHMENTS,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class verifyDocuments {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocumentsRequest verifyDocumentsRequest;
+        
+        public verifyDocuments() {
+        }
+        
+        public verifyDocuments(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocumentsRequest verifyDocumentsRequest) {
+            this.verifyDocumentsRequest = verifyDocumentsRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class verifyDocumentsResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocumentsResponse verifyDocumentsResponse;
+        
+        public verifyDocumentsResponse1() {
+        }
+        
+        public verifyDocumentsResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocumentsResponse verifyDocumentsResponse) {
+            this.verifyDocumentsResponse = verifyDocumentsResponse;
         }
     }
     
@@ -5445,15 +5619,15 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getVersionRequest1 {
+    public partial class getVersion {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
         public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionRequest getVersionRequest;
         
-        public getVersionRequest1() {
+        public getVersion() {
         }
         
-        public getVersionRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionRequest getVersionRequest) {
+        public getVersion(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionRequest getVersionRequest) {
             this.getVersionRequest = getVersionRequest;
         }
     }
@@ -5481,7 +5655,54 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class getAllAccountsRequest : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class loadMessageReportRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private loadMessageReportRequestPeriod periodField;
+        
+        private bool onlyDeltaField;
+        
+        private string userIdField;
+        
+        public loadMessageReportRequest() {
+            this.onlyDeltaField = false;
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public loadMessageReportRequestPeriod period {
+            get {
+                return this.periodField;
+            }
+            set {
+                this.periodField = value;
+                this.RaisePropertyChanged("period");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        [System.ComponentModel.DefaultValueAttribute(false)]
+        public bool onlyDelta {
+            get {
+                return this.onlyDeltaField;
+            }
+            set {
+                this.onlyDeltaField = value;
+                this.RaisePropertyChanged("onlyDelta");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string userId {
+            get {
+                return this.userIdField;
+            }
+            set {
+                this.userIdField = value;
+                this.RaisePropertyChanged("userId");
+            }
+        }
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -5499,17 +5720,576 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class getAllAccountsResponse : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class loadMessageReportRequestPeriod : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private GetAllAccountsReturnCodeType returnCodeField;
+        private System.DateTime startField;
+        
+        private System.DateTime endField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=0)]
+        public System.DateTime start {
+            get {
+                return this.startField;
+            }
+            set {
+                this.startField = value;
+                this.RaisePropertyChanged("start");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=1)]
+        public System.DateTime end {
+            get {
+                return this.endField;
+            }
+            set {
+                this.endField = value;
+                this.RaisePropertyChanged("end");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class loadMessageReportResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private byte[] messageReportXmlField;
+        
+        private LoadReportReturnCodeType returnCodeField;
         
         private string returnCodeDetailsField;
         
-        private AccountInfoItem[] accountInfosField;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=0)]
+        public byte[] messageReportXml {
+            get {
+                return this.messageReportXmlField;
+            }
+            set {
+                this.messageReportXmlField = value;
+                this.RaisePropertyChanged("messageReportXml");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public LoadReportReturnCodeType returnCode {
+            get {
+                return this.returnCodeField;
+            }
+            set {
+                this.returnCodeField = value;
+                this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string returnCodeDetails {
+            get {
+                return this.returnCodeDetailsField;
+            }
+            set {
+                this.returnCodeDetailsField = value;
+                this.RaisePropertyChanged("returnCodeDetails");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum LoadReportReturnCodeType {
+        
+        /// <remarks/>
+        OK,
+        
+        /// <remarks/>
+        ILLEGAL_TIMESPAN,
+        
+        /// <remarks/>
+        GENERAL_SQL_ERROR,
+        
+        /// <remarks/>
+        GENERAL_ERROR,
+        
+        /// <remarks/>
+        WEBSERVICE_DISABLED,
+        
+        /// <remarks/>
+        JOB_DISABLED,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class loadMessageReport {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportRequest loadMessageReportRequest;
+        
+        public loadMessageReport() {
+        }
+        
+        public loadMessageReport(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportRequest loadMessageReportRequest) {
+            this.loadMessageReportRequest = loadMessageReportRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class loadMessageReportResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse loadMessageReportResponse;
+        
+        public loadMessageReportResponse1() {
+        }
+        
+        public loadMessageReportResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse loadMessageReportResponse) {
+            this.loadMessageReportResponse = loadMessageReportResponse;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class commitReceivedMessageRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string userIDField;
+        
+        private string messageIDField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public GetAllAccountsReturnCodeType returnCode {
+        public string userID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                this.userIDField = value;
+                this.RaisePropertyChanged("userID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string messageID {
+            get {
+                return this.messageIDField;
+            }
+            set {
+                this.messageIDField = value;
+                this.RaisePropertyChanged("messageID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class commitReceivedMessageResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string userIDField;
+        
+        private string messageIDField;
+        
+        private CommitReturnCodeType returnCodeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string userID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                this.userIDField = value;
+                this.RaisePropertyChanged("userID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string messageID {
+            get {
+                return this.messageIDField;
+            }
+            set {
+                this.messageIDField = value;
+                this.RaisePropertyChanged("messageID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public CommitReturnCodeType returnCode {
+            get {
+                return this.returnCodeField;
+            }
+            set {
+                this.returnCodeField = value;
+                this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class commitReceivedMessage {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageRequest commitReceivedMessageRequest;
+        
+        public commitReceivedMessage() {
+        }
+        
+        public commitReceivedMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageRequest commitReceivedMessageRequest) {
+            this.commitReceivedMessageRequest = commitReceivedMessageRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class commitReceivedMessageResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageResponse commitReceivedMessageResponse;
+        
+        public commitReceivedMessageResponse1() {
+        }
+        
+        public commitReceivedMessageResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageResponse commitReceivedMessageResponse) {
+            this.commitReceivedMessageResponse = commitReceivedMessageResponse;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class getUncommittedMessageIDsRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string userIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string userID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                this.userIDField = value;
+                this.RaisePropertyChanged("userID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class getUncommittedMessageIDsResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int countField;
+        
+        private bool countFieldSpecified;
+        
+        private UncommittedMessageType[] uncommittedMessagesField;
+        
+        private GetUncommittedMessageIDsReturnCodeType returnCodeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int count {
+            get {
+                return this.countField;
+            }
+            set {
+                this.countField = value;
+                this.RaisePropertyChanged("count");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool countSpecified {
+            get {
+                return this.countFieldSpecified;
+            }
+            set {
+                this.countFieldSpecified = value;
+                this.RaisePropertyChanged("countSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("uncommittedMessages", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+        public UncommittedMessageType[] uncommittedMessages {
+            get {
+                return this.uncommittedMessagesField;
+            }
+            set {
+                this.uncommittedMessagesField = value;
+                this.RaisePropertyChanged("uncommittedMessages");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public GetUncommittedMessageIDsReturnCodeType returnCode {
+            get {
+                return this.returnCodeField;
+            }
+            set {
+                this.returnCodeField = value;
+                this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum GetUncommittedMessageIDsReturnCodeType {
+        
+        /// <remarks/>
+        OK,
+        
+        /// <remarks/>
+        NO_SUCH_ACCOUNT,
+        
+        /// <remarks/>
+        USERID_REQUIRED,
+        
+        /// <remarks/>
+        GENERAL_SQL_ERROR,
+        
+        /// <remarks/>
+        GENERAL_ERROR,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getUncommittedMessageIDs {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsRequest getUncommittedMessageIDsRequest;
+        
+        public getUncommittedMessageIDs() {
+        }
+        
+        public getUncommittedMessageIDs(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsRequest getUncommittedMessageIDsRequest) {
+            this.getUncommittedMessageIDsRequest = getUncommittedMessageIDsRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getUncommittedMessageIDsResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsResponse getUncommittedMessageIDsResponse;
+        
+        public getUncommittedMessageIDsResponse1() {
+        }
+        
+        public getUncommittedMessageIDsResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsResponse getUncommittedMessageIDsResponse) {
+            this.getUncommittedMessageIDsResponse = getUncommittedMessageIDsResponse;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class getQuarantineOverviewRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private getQuarantineOverviewRequestPeriod periodField;
+        
+        private string[] userIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public getQuarantineOverviewRequestPeriod period {
+            get {
+                return this.periodField;
+            }
+            set {
+                this.periodField = value;
+                this.RaisePropertyChanged("period");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("userId", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+        public string[] userId {
+            get {
+                return this.userIdField;
+            }
+            set {
+                this.userIdField = value;
+                this.RaisePropertyChanged("userId");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class getQuarantineOverviewRequestPeriod : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private System.DateTime startField;
+        
+        private System.DateTime endField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=0)]
+        public System.DateTime start {
+            get {
+                return this.startField;
+            }
+            set {
+                this.startField = value;
+                this.RaisePropertyChanged("start");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=1)]
+        public System.DateTime end {
+            get {
+                return this.endField;
+            }
+            set {
+                this.endField = value;
+                this.RaisePropertyChanged("end");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class getQuarantineOverviewResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private GetQuarantineOverviewReturnCodeType returnCodeField;
+        
+        private string returnCodeDetailsField;
+        
+        private QuarantineItem[] quarantinesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public GetQuarantineOverviewReturnCodeType returnCode {
             get {
                 return this.returnCodeField;
             }
@@ -5532,14 +6312,14 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("accountInfos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public AccountInfoItem[] accountInfos {
+        [System.Xml.Serialization.XmlElementAttribute("quarantines", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+        public QuarantineItem[] quarantines {
             get {
-                return this.accountInfosField;
+                return this.quarantinesField;
             }
             set {
-                this.accountInfosField = value;
-                this.RaisePropertyChanged("accountInfos");
+                this.quarantinesField = value;
+                this.RaisePropertyChanged("quarantines");
             }
         }
         
@@ -5557,13 +6337,13 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum GetAllAccountsReturnCodeType {
+    public enum GetQuarantineOverviewReturnCodeType {
         
         /// <remarks/>
         OK,
         
         /// <remarks/>
-        WEBSERVICE_DISABLED,
+        ILLEGAL_TIMESPAN,
         
         /// <remarks/>
         GENERAL_SQL_ERROR,
@@ -5576,16 +6356,16 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getAllAccountsRequest1 {
+    public partial class getQuarantineOverview {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsRequest getAllAccountsRequest;
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverviewRequest getQuarantineOverviewRequest;
         
-        public getAllAccountsRequest1() {
+        public getQuarantineOverview() {
         }
         
-        public getAllAccountsRequest1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsRequest getAllAccountsRequest) {
-            this.getAllAccountsRequest = getAllAccountsRequest;
+        public getQuarantineOverview(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverviewRequest getQuarantineOverviewRequest) {
+            this.getQuarantineOverviewRequest = getQuarantineOverviewRequest;
         }
     }
     
@@ -5593,16 +6373,628 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getAllAccountsResponse1 {
+    public partial class getQuarantineOverviewResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsResponse getAllAccountsResponse;
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverviewResponse getQuarantineOverviewResponse;
         
-        public getAllAccountsResponse1() {
+        public getQuarantineOverviewResponse1() {
         }
         
-        public getAllAccountsResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsResponse getAllAccountsResponse) {
-            this.getAllAccountsResponse = getAllAccountsResponse;
+        public getQuarantineOverviewResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverviewResponse getQuarantineOverviewResponse) {
+            this.getQuarantineOverviewResponse = getQuarantineOverviewResponse;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class sendAsynchroniousMessageRequest : SendMessageRequestType {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class sendAsynchroniousMessageResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string customIDField;
+        
+        private SendReturnCodeType returnCodeField;
+        
+        private SendErrorCodeType errorDetailsField;
+        
+        private bool errorDetailsFieldSpecified;
+        
+        private string errorDescriptionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string customID {
+            get {
+                return this.customIDField;
+            }
+            set {
+                this.customIDField = value;
+                this.RaisePropertyChanged("customID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public SendReturnCodeType returnCode {
+            get {
+                return this.returnCodeField;
+            }
+            set {
+                this.returnCodeField = value;
+                this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public SendErrorCodeType errorDetails {
+            get {
+                return this.errorDetailsField;
+            }
+            set {
+                this.errorDetailsField = value;
+                this.RaisePropertyChanged("errorDetails");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool errorDetailsSpecified {
+            get {
+                return this.errorDetailsFieldSpecified;
+            }
+            set {
+                this.errorDetailsFieldSpecified = value;
+                this.RaisePropertyChanged("errorDetailsSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string errorDescription {
+            get {
+                return this.errorDescriptionField;
+            }
+            set {
+                this.errorDescriptionField = value;
+                this.RaisePropertyChanged("errorDescription");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class sendAsynchroniousMessage {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageRequest sendAsynchroniousMessageRequest;
+        
+        public sendAsynchroniousMessage() {
+        }
+        
+        public sendAsynchroniousMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageRequest sendAsynchroniousMessageRequest) {
+            this.sendAsynchroniousMessageRequest = sendAsynchroniousMessageRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class sendAsynchroniousMessageResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageResponse sendAsynchroniousMessageResponse;
+        
+        public sendAsynchroniousMessageResponse1() {
+        }
+        
+        public sendAsynchroniousMessageResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageResponse sendAsynchroniousMessageResponse) {
+            this.sendAsynchroniousMessageResponse = sendAsynchroniousMessageResponse;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class deleteQuarantineMessageRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string messageIDField;
+        
+        private string userIDField;
+        
+        private string reasonField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string messageID {
+            get {
+                return this.messageIDField;
+            }
+            set {
+                this.messageIDField = value;
+                this.RaisePropertyChanged("messageID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string userID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                this.userIDField = value;
+                this.RaisePropertyChanged("userID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string reason {
+            get {
+                return this.reasonField;
+            }
+            set {
+                this.reasonField = value;
+                this.RaisePropertyChanged("reason");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class deleteQuarantineMessageResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private DeleteQuarantineMessageReturnCodeType returnCodeField;
+        
+        private string returnCodeDetailsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public DeleteQuarantineMessageReturnCodeType returnCode {
+            get {
+                return this.returnCodeField;
+            }
+            set {
+                this.returnCodeField = value;
+                this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string returnCodeDetails {
+            get {
+                return this.returnCodeDetailsField;
+            }
+            set {
+                this.returnCodeDetailsField = value;
+                this.RaisePropertyChanged("returnCodeDetails");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum DeleteQuarantineMessageReturnCodeType {
+        
+        /// <remarks/>
+        OK,
+        
+        /// <remarks/>
+        USERID_REQUIRED,
+        
+        /// <remarks/>
+        NO_SUCH_ACCOUNT,
+        
+        /// <remarks/>
+        MESSAGEID_REQUIRED,
+        
+        /// <remarks/>
+        REASON_REQUIRED,
+        
+        /// <remarks/>
+        NO_SUCH_MESSAGE,
+        
+        /// <remarks/>
+        GENERAL_ERROR,
+        
+        /// <remarks/>
+        GENERAL_SQL_ERROR,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class deleteQuarantineMessage {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessageRequest deleteQuarantineMessageRequest;
+        
+        public deleteQuarantineMessage() {
+        }
+        
+        public deleteQuarantineMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessageRequest deleteQuarantineMessageRequest) {
+            this.deleteQuarantineMessageRequest = deleteQuarantineMessageRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class deleteQuarantineMessageResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessageResponse deleteQuarantineMessageResponse;
+        
+        public deleteQuarantineMessageResponse1() {
+        }
+        
+        public deleteQuarantineMessageResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessageResponse deleteQuarantineMessageResponse) {
+            this.deleteQuarantineMessageResponse = deleteQuarantineMessageResponse;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class getStateRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string userIDField;
+        
+        private string customOrMessageIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string userID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                this.userIDField = value;
+                this.RaisePropertyChanged("userID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string customOrMessageID {
+            get {
+                return this.customOrMessageIDField;
+            }
+            set {
+                this.customOrMessageIDField = value;
+                this.RaisePropertyChanged("customOrMessageID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class getStateResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string customIDField;
+        
+        private string messageIDField;
+        
+        private string senderIDField;
+        
+        private string receiverIDField;
+        
+        private JEntryTypeType stateField;
+        
+        private bool stateFieldSpecified;
+        
+        private System.DateTime timeField;
+        
+        private bool timeFieldSpecified;
+        
+        private GetStateReturnCodeType returnCodeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string customID {
+            get {
+                return this.customIDField;
+            }
+            set {
+                this.customIDField = value;
+                this.RaisePropertyChanged("customID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string messageID {
+            get {
+                return this.messageIDField;
+            }
+            set {
+                this.messageIDField = value;
+                this.RaisePropertyChanged("messageID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string senderID {
+            get {
+                return this.senderIDField;
+            }
+            set {
+                this.senderIDField = value;
+                this.RaisePropertyChanged("senderID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string receiverID {
+            get {
+                return this.receiverIDField;
+            }
+            set {
+                this.receiverIDField = value;
+                this.RaisePropertyChanged("receiverID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public JEntryTypeType state {
+            get {
+                return this.stateField;
+            }
+            set {
+                this.stateField = value;
+                this.RaisePropertyChanged("state");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool stateSpecified {
+            get {
+                return this.stateFieldSpecified;
+            }
+            set {
+                this.stateFieldSpecified = value;
+                this.RaisePropertyChanged("stateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public System.DateTime time {
+            get {
+                return this.timeField;
+            }
+            set {
+                this.timeField = value;
+                this.RaisePropertyChanged("time");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool timeSpecified {
+            get {
+                return this.timeFieldSpecified;
+            }
+            set {
+                this.timeFieldSpecified = value;
+                this.RaisePropertyChanged("timeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public GetStateReturnCodeType returnCode {
+            get {
+                return this.returnCodeField;
+            }
+            set {
+                this.returnCodeField = value;
+                this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum JEntryTypeType {
+        
+        /// <remarks/>
+        AU_RETRY,
+        
+        /// <remarks/>
+        WS_ASEND,
+        
+        /// <remarks/>
+        OSCI_SENT,
+        
+        /// <remarks/>
+        WS_ASENT,
+        
+        /// <remarks/>
+        WS_UNSENDABLE,
+        
+        /// <remarks/>
+        WS_CANCELLED,
+        
+        /// <remarks/>
+        OSCI_RECEIVED,
+        
+        /// <remarks/>
+        OSCI_DELIVERED,
+        
+        /// <remarks/>
+        WS_RECEIVED,
+        
+        /// <remarks/>
+        WS_UNPROCESSABLE,
+        
+        /// <remarks/>
+        OSCI_AV_IN_PROGRESS,
+        
+        /// <remarks/>
+        OSCI_AV_OK,
+        
+        /// <remarks/>
+        OSCI_AV_INFECTED,
+        
+        /// <remarks/>
+        OSCI_AV_INDETERMINATE,
+        
+        /// <remarks/>
+        OSCI_AV_NO_RETRIAL,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum GetStateReturnCodeType {
+        
+        /// <remarks/>
+        OK,
+        
+        /// <remarks/>
+        NO_SUCH_ACCOUNT,
+        
+        /// <remarks/>
+        USERID_INVALID,
+        
+        /// <remarks/>
+        NO_SUCH_MESSAGE_OR_CUSTOM_ID,
+        
+        /// <remarks/>
+        USERID_REQUIRED,
+        
+        /// <remarks/>
+        MESSAGE_OR_CUSTOM_ID_REQUIRED,
+        
+        /// <remarks/>
+        GENERAL_SQL_ERROR,
+        
+        /// <remarks/>
+        GENERAL_ERROR,
+        
+        /// <remarks/>
+        WEBSERVICE_DISABLED,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getState {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateRequest getStateRequest;
+        
+        public getState() {
+        }
+        
+        public getState(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateRequest getStateRequest) {
+            this.getStateRequest = getStateRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getStateResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse getStateResponse;
+        
+        public getStateResponse1() {
+        }
+        
+        public getStateResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse getStateResponse) {
+            this.getStateResponse = getStateResponse;
         }
     }
     
@@ -5634,463 +7026,624 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.searchReceiver(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverRequest1 request) {
-            return base.Channel.searchReceiver(request);
-        }
-        
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverResponse searchReceiver(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverRequest searchReceiverRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverRequest1();
-            inValue.searchReceiverRequest = searchReceiverRequest;
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).searchReceiver(inValue);
-            return retVal.searchReceiverResponse;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.searchReceiverAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverRequest1 request) {
-            return base.Channel.searchReceiverAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverResponse1> searchReceiverAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverRequest searchReceiverRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverRequest1();
-            inValue.searchReceiverRequest = searchReceiverRequest;
-            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).searchReceiverAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.sendSynchroniousMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest1 request) {
-            return base.Channel.sendSynchroniousMessage(request);
-        }
-        
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse sendSynchroniousMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest sendSynchroniousMessageRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest1();
-            inValue.sendSynchroniousMessageRequest = sendSynchroniousMessageRequest;
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).sendSynchroniousMessage(inValue);
-            return retVal.sendSynchroniousMessageResponse;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.sendSynchroniousMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest1 request) {
-            return base.Channel.sendSynchroniousMessageAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1> sendSynchroniousMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest sendSynchroniousMessageRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest1();
-            inValue.sendSynchroniousMessageRequest = sendSynchroniousMessageRequest;
-            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).sendSynchroniousMessageAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.sendAsynchroniousMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageRequest1 request) {
-            return base.Channel.sendAsynchroniousMessage(request);
-        }
-        
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageResponse sendAsynchroniousMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageRequest sendAsynchroniousMessageRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageRequest1();
-            inValue.sendAsynchroniousMessageRequest = sendAsynchroniousMessageRequest;
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).sendAsynchroniousMessage(inValue);
-            return retVal.sendAsynchroniousMessageResponse;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.sendAsynchroniousMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageRequest1 request) {
-            return base.Channel.sendAsynchroniousMessageAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageResponse1> sendAsynchroniousMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageRequest sendAsynchroniousMessageRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageRequest1();
-            inValue.sendAsynchroniousMessageRequest = sendAsynchroniousMessageRequest;
-            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).sendAsynchroniousMessageAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.asynchroniousMessageSent(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentRequest1 request) {
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.asynchroniousMessageSent(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSent request) {
             return base.Channel.asynchroniousMessageSent(request);
         }
         
         public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentResponse asynchroniousMessageSent(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentRequest asynchroniousMessageSentRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentRequest1();
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSent inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSent();
             inValue.asynchroniousMessageSentRequest = asynchroniousMessageSentRequest;
             OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).asynchroniousMessageSent(inValue);
             return retVal.asynchroniousMessageSentResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.asynchroniousMessageSentAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentRequest1 request) {
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.asynchroniousMessageSentAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSent request) {
             return base.Channel.asynchroniousMessageSentAsync(request);
         }
         
         public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentResponse1> asynchroniousMessageSentAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentRequest asynchroniousMessageSentRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentRequest1();
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSent inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSent();
             inValue.asynchroniousMessageSentRequest = asynchroniousMessageSentRequest;
             return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).asynchroniousMessageSentAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.receiveMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageRequest1 request) {
-            return base.Channel.receiveMessage(request);
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.retryQuarantineMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessage request) {
+            return base.Channel.retryQuarantineMessage(request);
         }
         
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse receiveMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageRequest receiveMessageRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageRequest1();
-            inValue.receiveMessageRequest = receiveMessageRequest;
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).receiveMessage(inValue);
-            return retVal.receiveMessageResponse;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.receiveMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageRequest1 request) {
-            return base.Channel.receiveMessageAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse1> receiveMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageRequest receiveMessageRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageRequest1();
-            inValue.receiveMessageRequest = receiveMessageRequest;
-            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).receiveMessageAsync(inValue);
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessageResponse retryQuarantineMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessageRequest retryQuarantineMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessage();
+            inValue.retryQuarantineMessageRequest = retryQuarantineMessageRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessageResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).retryQuarantineMessage(inValue);
+            return retVal.retryQuarantineMessageResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.loadMessageReport(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportRequest1 request) {
-            return base.Channel.loadMessageReport(request);
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.retryQuarantineMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessage request) {
+            return base.Channel.retryQuarantineMessageAsync(request);
         }
         
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse loadMessageReport(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportRequest loadMessageReportRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportRequest1();
-            inValue.loadMessageReportRequest = loadMessageReportRequest;
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).loadMessageReport(inValue);
-            return retVal.loadMessageReportResponse;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.loadMessageReportAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportRequest1 request) {
-            return base.Channel.loadMessageReportAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse1> loadMessageReportAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportRequest loadMessageReportRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportRequest1();
-            inValue.loadMessageReportRequest = loadMessageReportRequest;
-            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).loadMessageReportAsync(inValue);
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessageResponse1> retryQuarantineMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessageRequest retryQuarantineMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessage();
+            inValue.retryQuarantineMessageRequest = retryQuarantineMessageRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).retryQuarantineMessageAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.commitReceivedMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageRequest1 request) {
-            return base.Channel.commitReceivedMessage(request);
-        }
-        
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageResponse commitReceivedMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageRequest commitReceivedMessageRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageRequest1();
-            inValue.commitReceivedMessageRequest = commitReceivedMessageRequest;
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).commitReceivedMessage(inValue);
-            return retVal.commitReceivedMessageResponse;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.commitReceivedMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageRequest1 request) {
-            return base.Channel.commitReceivedMessageAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageResponse1> commitReceivedMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageRequest commitReceivedMessageRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageRequest1();
-            inValue.commitReceivedMessageRequest = commitReceivedMessageRequest;
-            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).commitReceivedMessageAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.commitSentMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageRequest1 request) {
-            return base.Channel.commitSentMessage(request);
-        }
-        
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageResponse commitSentMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageRequest commitSentMessageRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageRequest1();
-            inValue.commitSentMessageRequest = commitSentMessageRequest;
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).commitSentMessage(inValue);
-            return retVal.commitSentMessageResponse;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.commitSentMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageRequest1 request) {
-            return base.Channel.commitSentMessageAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageResponse1> commitSentMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageRequest commitSentMessageRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageRequest1();
-            inValue.commitSentMessageRequest = commitSentMessageRequest;
-            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).commitSentMessageAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.cancelSentMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageRequest1 request) {
-            return base.Channel.cancelSentMessage(request);
-        }
-        
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageResponse cancelSentMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageRequest cancelSentMessageRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageRequest1();
-            inValue.cancelSentMessageRequest = cancelSentMessageRequest;
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).cancelSentMessage(inValue);
-            return retVal.cancelSentMessageResponse;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.cancelSentMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageRequest1 request) {
-            return base.Channel.cancelSentMessageAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageResponse1> cancelSentMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageRequest cancelSentMessageRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageRequest1();
-            inValue.cancelSentMessageRequest = cancelSentMessageRequest;
-            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).cancelSentMessageAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.verifyMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageRequest1 request) {
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.verifyMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessage request) {
             return base.Channel.verifyMessage(request);
         }
         
         public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse verifyMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageRequest verifyMessageRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageRequest1();
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessage();
             inValue.verifyMessageRequest = verifyMessageRequest;
             OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).verifyMessage(inValue);
             return retVal.verifyMessageResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.verifyMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageRequest1 request) {
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.verifyMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessage request) {
             return base.Channel.verifyMessageAsync(request);
         }
         
         public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse1> verifyMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageRequest verifyMessageRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageRequest1();
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessage();
             inValue.verifyMessageRequest = verifyMessageRequest;
             return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).verifyMessageAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.registerNotificationCallback(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackRequest1 request) {
-            return base.Channel.registerNotificationCallback(request);
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCountsResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getQuarantineCounts(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCounts request) {
+            return base.Channel.getQuarantineCounts(request);
         }
         
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackResponse registerNotificationCallback(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackRequest registerNotificationCallbackRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackRequest1();
-            inValue.registerNotificationCallbackRequest = registerNotificationCallbackRequest;
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).registerNotificationCallback(inValue);
-            return retVal.registerNotificationCallbackResponse;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.registerNotificationCallbackAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackRequest1 request) {
-            return base.Channel.registerNotificationCallbackAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackResponse1> registerNotificationCallbackAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackRequest registerNotificationCallbackRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackRequest1();
-            inValue.registerNotificationCallbackRequest = registerNotificationCallbackRequest;
-            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).registerNotificationCallbackAsync(inValue);
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCountsResponse getQuarantineCounts(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCountsRequest getQuarantineCountsRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCounts inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCounts();
+            inValue.getQuarantineCountsRequest = getQuarantineCountsRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCountsResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getQuarantineCounts(inValue);
+            return retVal.getQuarantineCountsResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.deregisterNotificationCallback(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackRequest1 request) {
-            return base.Channel.deregisterNotificationCallback(request);
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCountsResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getQuarantineCountsAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCounts request) {
+            return base.Channel.getQuarantineCountsAsync(request);
         }
         
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse deregisterNotificationCallback(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackRequest deregisterNotificationCallbackRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackRequest1();
-            inValue.deregisterNotificationCallbackRequest = deregisterNotificationCallbackRequest;
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).deregisterNotificationCallback(inValue);
-            return retVal.deregisterNotificationCallbackResponse;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.deregisterNotificationCallbackAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackRequest1 request) {
-            return base.Channel.deregisterNotificationCallbackAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse1> deregisterNotificationCallbackAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackRequest deregisterNotificationCallbackRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackRequest1();
-            inValue.deregisterNotificationCallbackRequest = deregisterNotificationCallbackRequest;
-            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).deregisterNotificationCallbackAsync(inValue);
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCountsResponse1> getQuarantineCountsAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCountsRequest getQuarantineCountsRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCounts inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCounts();
+            inValue.getQuarantineCountsRequest = getQuarantineCountsRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getQuarantineCountsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getState(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateRequest1 request) {
-            return base.Channel.getState(request);
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getQuarantineMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessage request) {
+            return base.Channel.getQuarantineMessage(request);
         }
         
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse getState(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateRequest getStateRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateRequest1();
-            inValue.getStateRequest = getStateRequest;
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getState(inValue);
-            return retVal.getStateResponse;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getStateAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateRequest1 request) {
-            return base.Channel.getStateAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse1> getStateAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateRequest getStateRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateRequest1();
-            inValue.getStateRequest = getStateRequest;
-            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getStateAsync(inValue);
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessageResponse getQuarantineMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessageRequest getQuarantineMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessage();
+            inValue.getQuarantineMessageRequest = getQuarantineMessageRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessageResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getQuarantineMessage(inValue);
+            return retVal.getQuarantineMessageResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getAllStates(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesRequest1 request) {
-            return base.Channel.getAllStates(request);
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getQuarantineMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessage request) {
+            return base.Channel.getQuarantineMessageAsync(request);
         }
         
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse getAllStates(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesRequest getAllStatesRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesRequest1();
-            inValue.getAllStatesRequest = getAllStatesRequest;
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getAllStates(inValue);
-            return retVal.getAllStatesResponse;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getAllStatesAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesRequest1 request) {
-            return base.Channel.getAllStatesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse1> getAllStatesAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesRequest getAllStatesRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesRequest1();
-            inValue.getAllStatesRequest = getAllStatesRequest;
-            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getAllStatesAsync(inValue);
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessageResponse1> getQuarantineMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessageRequest getQuarantineMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineMessage();
+            inValue.getQuarantineMessageRequest = getQuarantineMessageRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getQuarantineMessageAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getUncommittedMessageIDs(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsRequest1 request) {
-            return base.Channel.getUncommittedMessageIDs(request);
-        }
-        
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsResponse getUncommittedMessageIDs(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsRequest getUncommittedMessageIDsRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsRequest1();
-            inValue.getUncommittedMessageIDsRequest = getUncommittedMessageIDsRequest;
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getUncommittedMessageIDs(inValue);
-            return retVal.getUncommittedMessageIDsResponse;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getUncommittedMessageIDsAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsRequest1 request) {
-            return base.Channel.getUncommittedMessageIDsAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsResponse1> getUncommittedMessageIDsAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsRequest getUncommittedMessageIDsRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsRequest1();
-            inValue.getUncommittedMessageIDsRequest = getUncommittedMessageIDsRequest;
-            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getUncommittedMessageIDsAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.createAccount(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountRequest1 request) {
-            return base.Channel.createAccount(request);
-        }
-        
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountResponse createAccount(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountRequest createAccountRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountRequest1();
-            inValue.createAccountRequest = createAccountRequest;
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).createAccount(inValue);
-            return retVal.createAccountResponse;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.createAccountAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountRequest1 request) {
-            return base.Channel.createAccountAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountResponse1> createAccountAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountRequest createAccountRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountRequest1();
-            inValue.createAccountRequest = createAccountRequest;
-            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).createAccountAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.deleteAccount(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountRequest1 request) {
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.deleteAccount(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccount request) {
             return base.Channel.deleteAccount(request);
         }
         
         public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountResponse deleteAccount(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountRequest deleteAccountRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountRequest1();
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccount inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccount();
             inValue.deleteAccountRequest = deleteAccountRequest;
             OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).deleteAccount(inValue);
             return retVal.deleteAccountResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.deleteAccountAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountRequest1 request) {
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.deleteAccountAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccount request) {
             return base.Channel.deleteAccountAsync(request);
         }
         
         public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountResponse1> deleteAccountAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountRequest deleteAccountRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccountRequest1();
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccount inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteAccount();
             inValue.deleteAccountRequest = deleteAccountRequest;
             return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).deleteAccountAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.editAccount(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountRequest1 request) {
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.editAccount(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccount request) {
             return base.Channel.editAccount(request);
         }
         
         public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountResponse editAccount(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountRequest editAccountRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountRequest1();
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccount inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccount();
             inValue.editAccountRequest = editAccountRequest;
             OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).editAccount(inValue);
             return retVal.editAccountResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.editAccountAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountRequest1 request) {
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.editAccountAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccount request) {
             return base.Channel.editAccountAsync(request);
         }
         
         public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountResponse1> editAccountAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountRequest editAccountRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountRequest1();
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccount inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccount();
             inValue.editAccountRequest = editAccountRequest;
             return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).editAccountAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getVersion(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionRequest1 request) {
-            return base.Channel.getVersion(request);
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.createAccount(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccount request) {
+            return base.Channel.createAccount(request);
         }
         
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionResponse getVersion(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionRequest getVersionRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionRequest1();
-            inValue.getVersionRequest = getVersionRequest;
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getVersion(inValue);
-            return retVal.getVersionResponse;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getVersionAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionRequest1 request) {
-            return base.Channel.getVersionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionResponse1> getVersionAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionRequest getVersionRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionRequest1();
-            inValue.getVersionRequest = getVersionRequest;
-            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getVersionAsync(inValue);
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountResponse createAccount(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountRequest createAccountRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccount inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccount();
+            inValue.createAccountRequest = createAccountRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).createAccount(inValue);
+            return retVal.createAccountResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getAllAccounts(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsRequest1 request) {
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.createAccountAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccount request) {
+            return base.Channel.createAccountAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountResponse1> createAccountAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccountRequest createAccountRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccount inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.createAccount();
+            inValue.createAccountRequest = createAccountRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).createAccountAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.markAsFetchQuarantineMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessage request) {
+            return base.Channel.markAsFetchQuarantineMessage(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessageResponse markAsFetchQuarantineMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessageRequest markAsFetchQuarantineMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessage();
+            inValue.markAsFetchQuarantineMessageRequest = markAsFetchQuarantineMessageRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessageResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).markAsFetchQuarantineMessage(inValue);
+            return retVal.markAsFetchQuarantineMessageResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.markAsFetchQuarantineMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessage request) {
+            return base.Channel.markAsFetchQuarantineMessageAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessageResponse1> markAsFetchQuarantineMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessageRequest markAsFetchQuarantineMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessage();
+            inValue.markAsFetchQuarantineMessageRequest = markAsFetchQuarantineMessageRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).markAsFetchQuarantineMessageAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.registerNotificationCallback(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallback request) {
+            return base.Channel.registerNotificationCallback(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackResponse registerNotificationCallback(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackRequest registerNotificationCallbackRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallback inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallback();
+            inValue.registerNotificationCallbackRequest = registerNotificationCallbackRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).registerNotificationCallback(inValue);
+            return retVal.registerNotificationCallbackResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.registerNotificationCallbackAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallback request) {
+            return base.Channel.registerNotificationCallbackAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackResponse1> registerNotificationCallbackAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallbackRequest registerNotificationCallbackRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallback inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.registerNotificationCallback();
+            inValue.registerNotificationCallbackRequest = registerNotificationCallbackRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).registerNotificationCallbackAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.cancelSentMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessage request) {
+            return base.Channel.cancelSentMessage(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageResponse cancelSentMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageRequest cancelSentMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessage();
+            inValue.cancelSentMessageRequest = cancelSentMessageRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).cancelSentMessage(inValue);
+            return retVal.cancelSentMessageResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.cancelSentMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessage request) {
+            return base.Channel.cancelSentMessageAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageResponse1> cancelSentMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessageRequest cancelSentMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.cancelSentMessage();
+            inValue.cancelSentMessageRequest = cancelSentMessageRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).cancelSentMessageAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getAllStates(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStates request) {
+            return base.Channel.getAllStates(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse getAllStates(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesRequest getAllStatesRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStates inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStates();
+            inValue.getAllStatesRequest = getAllStatesRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getAllStates(inValue);
+            return retVal.getAllStatesResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getAllStatesAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStates request) {
+            return base.Channel.getAllStatesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesResponse1> getAllStatesAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStatesRequest getAllStatesRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStates inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllStates();
+            inValue.getAllStatesRequest = getAllStatesRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getAllStatesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.receiveMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessage request) {
+            return base.Channel.receiveMessage(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse receiveMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageRequest receiveMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessage();
+            inValue.receiveMessageRequest = receiveMessageRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).receiveMessage(inValue);
+            return retVal.receiveMessageResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.receiveMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessage request) {
+            return base.Channel.receiveMessageAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse1> receiveMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageRequest receiveMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessage();
+            inValue.receiveMessageRequest = receiveMessageRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).receiveMessageAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.searchReceiver(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiver request) {
+            return base.Channel.searchReceiver(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverResponse searchReceiver(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverRequest searchReceiverRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiver inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiver();
+            inValue.searchReceiverRequest = searchReceiverRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).searchReceiver(inValue);
+            return retVal.searchReceiverResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.searchReceiverAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiver request) {
+            return base.Channel.searchReceiverAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverResponse1> searchReceiverAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiverRequest searchReceiverRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiver inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.searchReceiver();
+            inValue.searchReceiverRequest = searchReceiverRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).searchReceiverAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.commitSentMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessage request) {
+            return base.Channel.commitSentMessage(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageResponse commitSentMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageRequest commitSentMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessage();
+            inValue.commitSentMessageRequest = commitSentMessageRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).commitSentMessage(inValue);
+            return retVal.commitSentMessageResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.commitSentMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessage request) {
+            return base.Channel.commitSentMessageAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageResponse1> commitSentMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessageRequest commitSentMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitSentMessage();
+            inValue.commitSentMessageRequest = commitSentMessageRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).commitSentMessageAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.deregisterNotificationCallback(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallback request) {
+            return base.Channel.deregisterNotificationCallback(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse deregisterNotificationCallback(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackRequest deregisterNotificationCallbackRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallback inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallback();
+            inValue.deregisterNotificationCallbackRequest = deregisterNotificationCallbackRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).deregisterNotificationCallback(inValue);
+            return retVal.deregisterNotificationCallbackResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.deregisterNotificationCallbackAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallback request) {
+            return base.Channel.deregisterNotificationCallbackAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackResponse1> deregisterNotificationCallbackAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallbackRequest deregisterNotificationCallbackRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallback inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deregisterNotificationCallback();
+            inValue.deregisterNotificationCallbackRequest = deregisterNotificationCallbackRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).deregisterNotificationCallbackAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getAllAccounts(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccounts request) {
             return base.Channel.getAllAccounts(request);
         }
         
         public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsResponse getAllAccounts(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsRequest getAllAccountsRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsRequest1();
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccounts inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccounts();
             inValue.getAllAccountsRequest = getAllAccountsRequest;
             OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getAllAccounts(inValue);
             return retVal.getAllAccountsResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getAllAccountsAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsRequest1 request) {
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getAllAccountsAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccounts request) {
             return base.Channel.getAllAccountsAsync(request);
         }
         
         public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsResponse1> getAllAccountsAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsRequest getAllAccountsRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsRequest1 inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsRequest1();
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccounts inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccounts();
             inValue.getAllAccountsRequest = getAllAccountsRequest;
             return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getAllAccountsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.sendSynchroniousMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessage request) {
+            return base.Channel.sendSynchroniousMessage(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse sendSynchroniousMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest sendSynchroniousMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessage();
+            inValue.sendSynchroniousMessageRequest = sendSynchroniousMessageRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).sendSynchroniousMessage(inValue);
+            return retVal.sendSynchroniousMessageResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.sendSynchroniousMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessage request) {
+            return base.Channel.sendSynchroniousMessageAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1> sendSynchroniousMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest sendSynchroniousMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessage();
+            inValue.sendSynchroniousMessageRequest = sendSynchroniousMessageRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).sendSynchroniousMessageAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocumentsResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.verifyDocuments(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocuments request) {
+            return base.Channel.verifyDocuments(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocumentsResponse verifyDocuments(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocumentsRequest verifyDocumentsRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocuments inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocuments();
+            inValue.verifyDocumentsRequest = verifyDocumentsRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocumentsResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).verifyDocuments(inValue);
+            return retVal.verifyDocumentsResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocumentsResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.verifyDocumentsAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocuments request) {
+            return base.Channel.verifyDocumentsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocumentsResponse1> verifyDocumentsAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocumentsRequest verifyDocumentsRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocuments inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocuments();
+            inValue.verifyDocumentsRequest = verifyDocumentsRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).verifyDocumentsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getVersion(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersion request) {
+            return base.Channel.getVersion(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionResponse getVersion(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionRequest getVersionRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersion inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersion();
+            inValue.getVersionRequest = getVersionRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getVersion(inValue);
+            return retVal.getVersionResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getVersionAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersion request) {
+            return base.Channel.getVersionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionResponse1> getVersionAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersionRequest getVersionRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersion inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getVersion();
+            inValue.getVersionRequest = getVersionRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getVersionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.loadMessageReport(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReport request) {
+            return base.Channel.loadMessageReport(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse loadMessageReport(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportRequest loadMessageReportRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReport inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReport();
+            inValue.loadMessageReportRequest = loadMessageReportRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).loadMessageReport(inValue);
+            return retVal.loadMessageReportResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.loadMessageReportAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReport request) {
+            return base.Channel.loadMessageReportAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportResponse1> loadMessageReportAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReportRequest loadMessageReportRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReport inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.loadMessageReport();
+            inValue.loadMessageReportRequest = loadMessageReportRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).loadMessageReportAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.commitReceivedMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessage request) {
+            return base.Channel.commitReceivedMessage(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageResponse commitReceivedMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageRequest commitReceivedMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessage();
+            inValue.commitReceivedMessageRequest = commitReceivedMessageRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).commitReceivedMessage(inValue);
+            return retVal.commitReceivedMessageResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.commitReceivedMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessage request) {
+            return base.Channel.commitReceivedMessageAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageResponse1> commitReceivedMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessageRequest commitReceivedMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.commitReceivedMessage();
+            inValue.commitReceivedMessageRequest = commitReceivedMessageRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).commitReceivedMessageAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getUncommittedMessageIDs(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDs request) {
+            return base.Channel.getUncommittedMessageIDs(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsResponse getUncommittedMessageIDs(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsRequest getUncommittedMessageIDsRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDs inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDs();
+            inValue.getUncommittedMessageIDsRequest = getUncommittedMessageIDsRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getUncommittedMessageIDs(inValue);
+            return retVal.getUncommittedMessageIDsResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getUncommittedMessageIDsAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDs request) {
+            return base.Channel.getUncommittedMessageIDsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsResponse1> getUncommittedMessageIDsAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDsRequest getUncommittedMessageIDsRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDs inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getUncommittedMessageIDs();
+            inValue.getUncommittedMessageIDsRequest = getUncommittedMessageIDsRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getUncommittedMessageIDsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverviewResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getQuarantineOverview(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverview request) {
+            return base.Channel.getQuarantineOverview(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverviewResponse getQuarantineOverview(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverviewRequest getQuarantineOverviewRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverview inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverview();
+            inValue.getQuarantineOverviewRequest = getQuarantineOverviewRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverviewResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getQuarantineOverview(inValue);
+            return retVal.getQuarantineOverviewResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverviewResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getQuarantineOverviewAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverview request) {
+            return base.Channel.getQuarantineOverviewAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverviewResponse1> getQuarantineOverviewAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverviewRequest getQuarantineOverviewRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverview inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverview();
+            inValue.getQuarantineOverviewRequest = getQuarantineOverviewRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getQuarantineOverviewAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.sendAsynchroniousMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessage request) {
+            return base.Channel.sendAsynchroniousMessage(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageResponse sendAsynchroniousMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageRequest sendAsynchroniousMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessage();
+            inValue.sendAsynchroniousMessageRequest = sendAsynchroniousMessageRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).sendAsynchroniousMessage(inValue);
+            return retVal.sendAsynchroniousMessageResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.sendAsynchroniousMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessage request) {
+            return base.Channel.sendAsynchroniousMessageAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageResponse1> sendAsynchroniousMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageRequest sendAsynchroniousMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessage();
+            inValue.sendAsynchroniousMessageRequest = sendAsynchroniousMessageRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).sendAsynchroniousMessageAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.deleteQuarantineMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessage request) {
+            return base.Channel.deleteQuarantineMessage(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessageResponse deleteQuarantineMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessageRequest deleteQuarantineMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessage();
+            inValue.deleteQuarantineMessageRequest = deleteQuarantineMessageRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessageResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).deleteQuarantineMessage(inValue);
+            return retVal.deleteQuarantineMessageResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.deleteQuarantineMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessage request) {
+            return base.Channel.deleteQuarantineMessageAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessageResponse1> deleteQuarantineMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessageRequest deleteQuarantineMessageRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.deleteQuarantineMessage();
+            inValue.deleteQuarantineMessageRequest = deleteQuarantineMessageRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).deleteQuarantineMessageAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getState(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getState request) {
+            return base.Channel.getState(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse getState(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateRequest getStateRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getState inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getState();
+            inValue.getStateRequest = getStateRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getState(inValue);
+            return retVal.getStateResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getStateAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getState request) {
+            return base.Channel.getStateAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse1> getStateAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateRequest getStateRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getState inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getState();
+            inValue.getStateRequest = getStateRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getStateAsync(inValue);
         }
     }
 }

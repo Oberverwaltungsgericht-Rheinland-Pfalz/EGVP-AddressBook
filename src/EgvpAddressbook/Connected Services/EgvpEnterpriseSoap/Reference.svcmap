@@ -22,22 +22,7 @@
     <MetadataSource Address="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EGVP-WebService8.xsd" MetadataType="Schema" ID="67107fca-0259-4d84-9200-93e4d73c6a37" SourceId="1" SourceUrl="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?xsd=9" />
-    <MetadataFile FileName="EGVP-WebService81.xsd" MetadataType="Schema" ID="4b7b240e-ea39-4a1a-9ba4-e49c94008bb5" SourceId="1" SourceUrl="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?xsd=15" />
-    <MetadataFile FileName="EGVP-WebService82.xsd" MetadataType="Schema" ID="cd02d64d-433e-458e-902a-079a5b17b13b" SourceId="1" SourceUrl="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?xsd=7" />
-    <MetadataFile FileName="EGVP-WebService83.xsd" MetadataType="Schema" ID="6f0e1be0-af18-4161-aef6-808b2a73746e" SourceId="1" SourceUrl="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?xsd=1" />
-    <MetadataFile FileName="EGVP-WebService84.xsd" MetadataType="Schema" ID="1916c04c-1a6c-4dc6-b4b2-9525e99ac8e7" SourceId="1" SourceUrl="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?xsd=13" />
-    <MetadataFile FileName="EGVP-WebService85.xsd" MetadataType="Schema" ID="da08ac1a-f35a-4ab7-82a9-f8bf483a702e" SourceId="1" SourceUrl="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?xsd=11" />
-    <MetadataFile FileName="EGVP-WebService86.xsd" MetadataType="Schema" ID="21f03d83-c147-48ee-82bd-9a00ba8e0e17" SourceId="1" SourceUrl="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?xsd=3" />
-    <MetadataFile FileName="EGVP-WebService87.xsd" MetadataType="Schema" ID="84fbc461-9736-44ee-bf7e-edb966074dac" SourceId="1" SourceUrl="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?xsd=4" />
-    <MetadataFile FileName="EGVP-WebService88.xsd" MetadataType="Schema" ID="04d64f38-5c5d-407f-94e8-ac1aea5221ff" SourceId="1" SourceUrl="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?xsd=8" />
-    <MetadataFile FileName="EGVP-WebService89.xsd" MetadataType="Schema" ID="a959efc2-136a-4796-8e8b-ac12da84c504" SourceId="1" SourceUrl="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?xsd=6" />
-    <MetadataFile FileName="EGVP-WebService810.xsd" MetadataType="Schema" ID="982a93e7-9df3-4545-a1cb-50995283f7c7" SourceId="1" SourceUrl="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?xsd=14" />
-    <MetadataFile FileName="EGVP-WebService811.xsd" MetadataType="Schema" ID="1c09d978-2433-4de7-9a15-76fc17f21fca" SourceId="1" SourceUrl="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?xsd=12" />
-    <MetadataFile FileName="EGVP-WebService812.xsd" MetadataType="Schema" ID="1f7e9f47-27ad-43f2-b88c-ff588f902134" SourceId="1" SourceUrl="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?xsd=10" />
-    <MetadataFile FileName="EGVP-WebService813.xsd" MetadataType="Schema" ID="f1fe867e-afb7-4c65-b16b-99fcc6da3c27" SourceId="1" SourceUrl="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?xsd=2" />
-    <MetadataFile FileName="egvp1.wsdl" MetadataType="Wsdl" ID="5772d308-1591-45ad-a0bf-20998db1d7d6" SourceId="1" SourceUrl="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?wsdl" />
-    <MetadataFile FileName="EGVP-WebService814.xsd" MetadataType="Schema" ID="47b5b478-bba2-481c-a413-830e333d5793" SourceId="1" SourceUrl="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?xsd=5" />
+    <MetadataFile FileName="EgvpService.wsdl" MetadataType="Wsdl" ID="27c27c37-3148-4df7-a34e-aae059d5d012" SourceId="1" SourceUrl="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
