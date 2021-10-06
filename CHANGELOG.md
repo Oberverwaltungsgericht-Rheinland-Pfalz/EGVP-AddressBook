@@ -1,4 +1,12 @@
 
+### 1.9.0.2140 (06.10.2021)
+
+#### &Auml;nderungen
+
+* FOSS Lizenz hinzugefügt
+* Repository für OpenSource vorbereitet (#4)
+* Update Egvp-Enterprise Webservice auf Version 4.1.1 (#3)
+* fix: Nullwerte beim Kopieren in die Zwischenablage als Leerstrings behandeln
 
 ### 1.8.1.2112 (26.03.2021)
 
