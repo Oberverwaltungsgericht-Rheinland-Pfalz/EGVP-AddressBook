@@ -1,5 +1,7 @@
 
 # EGVP-AddressBook
+![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)![](https://img.shields.io/badge/license-EUPL--1.2-blue)
+
 Bei diesem Projekt handelt es sich um eine .NET WPF Anwendung, welche eine Suche nach Postfächern mithilfe des Egvp-Enterprise Webservices (von der Firma Governikus) ermöglicht.
 
 ![Grafische Benutzerschnittstelle](Screenshot.png)
