@@ -50,7 +50,6 @@ Um das Projekt aus der Entwicklungsumgebung zu erstellen/starten sind folgende S
 # Kontakt
 
 Oberverwaltungsgericht Rheinland-Pfalz, Deinhardpassage 1, 56068 Koblenz 
-Telefon: 0261 1307 - 0
 poststelle(at)ovg.jm.rlp.de
 
 # Lizenz
