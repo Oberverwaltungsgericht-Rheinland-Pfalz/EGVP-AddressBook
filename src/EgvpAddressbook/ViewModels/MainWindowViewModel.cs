@@ -7,9 +7,11 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
@@ -374,6 +376,9 @@ namespace OvgRlp.Tools.EgvpAddressbook.ViewModels
 
     private List<EgvpAdressEntry> SearchInEgvpEnterprise()
     {
+      // hack für spezielle Dinge, wie bspw. Zahlen für bestimmte Postfacharten über verschiedene PLZ zu ermitteln
+      //return SpecialSearch();
+
       var searchResults = new List<EgvpAdressEntry>();
 
       try
@@ -389,6 +394,59 @@ namespace OvgRlp.Tools.EgvpAddressbook.ViewModels
           city: new EgvpSearchItem(this.City, this.CitySearchModeType),
           userId: new EgvpSearchItem(this.UserId, this.UserIdSearchModeType)
           );
+
+        if (searchResults.Count == 0)
+        {
+          this.InformationBackroundColor = Brushes.Yellow;
+          this.Infotext = "Zu dieser Selektion konnte kein Postfach ermittelt werden!";
+        }
+        else
+        {
+          this.InformationBackroundColor = Brushes.Transparent;
+          this.Infotext = "Anzahl Suchergebnisse: " + searchResults.Count;
+        }
+      }
+      catch (Exception ex)
+      {
+        this.InformationBackroundColor = Brushes.Red;
+        this.Infotext = "Fehler bei der Suche aufgetreten: " + ex.Message;
+      }
+
+      return searchResults;
+    }
+
+    private List<EgvpAdressEntry> SpecialSearch()
+    {
+      var searchResults = new List<EgvpAdressEntry>();
+
+      try
+      {
+        var egvpService = new EgvpEpService(EgvpClient);
+        var customSearch = new SpecialSearchService();
+
+        customSearch.LoadPostcodesFromFile(@"C:\dev\repos\EGVP-Enterprise-Receiver\testing\tmp\PLZ_RLP.csv");
+        var postcodes = customSearch.postcodes;
+
+        foreach (var postcode in postcodes)
+        {
+          this.Infotext = "Frage PLZ " + postcode + " ab...";
+
+          var results = egvpService.SearchInEgvpEnterprise(
+          name: new EgvpSearchItem(this.Name, this.NameSearchModeType),
+          firstname: new EgvpSearchItem(this.Firstname, this.FirstnameSearchModeType),
+          organization: new EgvpSearchItem(this.Organization, this.OrganizationSearchModeType),
+          street: new EgvpSearchItem(this.Street, this.StreetSearchModeType),
+          postcode: new EgvpSearchItem(postcode, this.PostcodeSearchModeType),
+          city: new EgvpSearchItem(this.City, this.CitySearchModeType),
+          userId: new EgvpSearchItem(this.UserId, this.UserIdSearchModeType),
+          filterID: new EgvpSearchItem("ozg_postfach", SearchModeType.CONTAINS)
+          );
+          searchResults.AddRange(results);
+
+          customSearch.AddLineToFile(@"C:\dev\repos\EGVP-Enterprise-Receiver\testing\tmp\OZG_Postfaecher.csv", postcode + ";" + results.Count);
+
+          Thread.Sleep(50);
+        }
 
         if (searchResults.Count == 0)
         {
