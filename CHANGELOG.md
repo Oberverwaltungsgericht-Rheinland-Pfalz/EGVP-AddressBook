@@ -1,4 +1,11 @@
 
+### 1.10.0.2340 (06.10.2023)
+
+#### &Auml;nderungen
+
+* Zielframework auf .NET Framework 4.7.2 geändert 
+* Verwendete Packete (Prism.\*, WpfAnimatedGif und Microsoft.\*) aktualisiert
+
 ### 1.9.0.2140 (06.10.2021)
 
 #### &Auml;nderungen

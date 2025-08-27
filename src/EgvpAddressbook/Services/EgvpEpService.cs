@@ -36,7 +36,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.Services
 
     public List<EgvpAdressEntry> SearchInEgvpEnterprise(EgvpSearchItem name, EgvpSearchItem firstname, EgvpSearchItem organization,
                                                         EgvpSearchItem street, EgvpSearchItem postcode, EgvpSearchItem city,
-                                                        EgvpSearchItem userId)
+                                                        EgvpSearchItem userId, EgvpSearchItem filterID = null)
     {
       var searchResults = new List<EgvpAdressEntry>();
       var requ = new searchReceiverRequest();
@@ -58,6 +58,8 @@ namespace OvgRlp.Tools.EgvpAddressbook.Services
         requ.searchCriteria.city = new BCItem() { Value = city.Value, searchMode = city.SearchModeType };
       if (!string.IsNullOrEmpty(userId.Value))
         requ.searchCriteria.userID = new BCItem() { Value = userId.Value, searchMode = userId.SearchModeType };
+      if (null != filterID && !string.IsNullOrEmpty(filterID.Value))
+        requ.searchCriteria.filterID = new BCItem() { Value = filterID.Value, searchMode = filterID.SearchModeType };
 
       resp = m_EgvpClient.searchReceiver(requ);
       if (resp.returnCode != SearchReturnCodeType.OK)
