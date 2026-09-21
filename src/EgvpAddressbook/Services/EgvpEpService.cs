@@ -45,21 +45,21 @@ namespace OvgRlp.Tools.EgvpAddressbook.Services
       requ.userID = Properties.Settings.Default.EgvpEnterpriseUserId;
       requ.searchCriteria = new EgvpEnterpriseSoap.BusinessCardType();
       if (!string.IsNullOrEmpty(name.Value))
-        requ.searchCriteria.name = new BCItem() { Value = name.Value, searchMode = name.SearchModeType };
+        requ.searchCriteria.name = new BCItem() { Value = name.Value, searchMode = name.SearchModeType, searchModeSpecified = true };
       if (!string.IsNullOrEmpty(firstname.Value))
-        requ.searchCriteria.christianName = new BCItem() { Value = firstname.Value, searchMode = firstname.SearchModeType };
+        requ.searchCriteria.christianName = new BCItem() { Value = firstname.Value, searchMode = firstname.SearchModeType, searchModeSpecified = true };
       if (!string.IsNullOrEmpty(organization.Value))
-        requ.searchCriteria.organization = new BCItem() { Value = organization.Value, searchMode = organization.SearchModeType };
+        requ.searchCriteria.organization = new BCItem() { Value = organization.Value, searchMode = organization.SearchModeType, searchModeSpecified = true };
       if (!string.IsNullOrEmpty(street.Value))
-        requ.searchCriteria.street = new BCItem() { Value = street.Value, searchMode = street.SearchModeType };
+        requ.searchCriteria.street = new BCItem() { Value = street.Value, searchMode = street.SearchModeType, searchModeSpecified = true };
       if (!string.IsNullOrEmpty(postcode.Value))
-        requ.searchCriteria.zipCode = new BCItem() { Value = postcode.Value, searchMode = postcode.SearchModeType };
+        requ.searchCriteria.zipCode = new BCItem() { Value = postcode.Value, searchMode = postcode.SearchModeType, searchModeSpecified = true };
       if (!string.IsNullOrEmpty(city.Value))
-        requ.searchCriteria.city = new BCItem() { Value = city.Value, searchMode = city.SearchModeType };
+        requ.searchCriteria.city = new BCItem() { Value = city.Value, searchMode = city.SearchModeType, searchModeSpecified = true };
       if (!string.IsNullOrEmpty(userId.Value))
         requ.searchCriteria.userID = new BCItem() { Value = userId.Value, searchMode = userId.SearchModeType, searchModeSpecified = true };
       if (null != filterID && !string.IsNullOrEmpty(filterID.Value))
-        requ.searchCriteria.filterID = new BCItem() { Value = filterID.Value, searchMode = filterID.SearchModeType };
+        requ.searchCriteria.filterID = new BCItem() { Value = filterID.Value, searchMode = filterID.SearchModeType, searchModeSpecified = true };
 
       resp = m_EgvpClient.searchReceiver(requ);
       if (resp.returnCode != SearchReturnCodeType.OK)
