@@ -57,7 +57,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.Services
       if (!string.IsNullOrEmpty(city.Value))
         requ.searchCriteria.city = new BCItem() { Value = city.Value, searchMode = city.SearchModeType };
       if (!string.IsNullOrEmpty(userId.Value))
-        requ.searchCriteria.userID = new BCItem() { Value = userId.Value, searchMode = userId.SearchModeType };
+        requ.searchCriteria.userID = new BCItem() { Value = userId.Value, searchMode = userId.SearchModeType, searchModeSpecified = true };
       if (null != filterID && !string.IsNullOrEmpty(filterID.Value))
         requ.searchCriteria.filterID = new BCItem() { Value = filterID.Value, searchMode = filterID.SearchModeType };
 
