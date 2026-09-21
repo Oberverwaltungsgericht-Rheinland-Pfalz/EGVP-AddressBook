@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="uc1Cu6X3JoQ6ckxZPhXqT0bGiUixCw45y2Vjr1sErCc=">
+<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="Pna659rn2dBm+S7A58ciNth+Pg/v3KArmlPtTeAJDe4=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="EgvpServiceSoapBinding">
       <properties>
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="EgvpPort" contract="EgvpEnterpriseSoap.EgvpPortType" bindingType="basicHttpBinding" address="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService" bindingConfiguration="EgvpServiceSoapBinding">
+    <endpoint name="EgvpPort1" contract="EgvpEnterpriseSoap.EgvpPortType" bindingType="basicHttpBinding" address="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService" bindingConfiguration="EgvpServiceSoapBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://127.0.0.1:8080/EGVP-WS/EGVP-WebService</serializedValue>
@@ -187,7 +187,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>EgvpPort</serializedValue>
+          <serializedValue>EgvpPort1</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

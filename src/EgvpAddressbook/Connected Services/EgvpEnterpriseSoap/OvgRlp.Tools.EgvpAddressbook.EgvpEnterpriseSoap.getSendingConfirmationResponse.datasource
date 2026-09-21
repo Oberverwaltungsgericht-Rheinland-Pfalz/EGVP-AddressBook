@@ -5,6 +5,6 @@
     Renaming the file extension or editing the content of this file may   
     cause the file to be unrecognizable by the program.
 -->
-<GenericObjectDataSource DisplayName="verifyMessageResponse" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse, Connected Services.EgvpEnterpriseSoap.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+<GenericObjectDataSource DisplayName="getSendingConfirmationResponse" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+   <TypeInfo>OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmationResponse, Connected Services.EgvpEnterpriseSoap.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>

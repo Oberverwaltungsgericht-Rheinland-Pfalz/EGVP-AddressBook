@@ -33,15 +33,6 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:retryQuarantineMessage", ReplyAction="*")]
         System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessageResponse1> retryQuarantineMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.retryQuarantineMessage request);
         
-        // CODEGEN: Generating message contract since the operation verifyMessage is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:verifyMessage", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse1 verifyMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessage request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:verifyMessage", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse1> verifyMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessage request);
-        
         // CODEGEN: Generating message contract since the operation getQuarantineCounts is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getQuarantineCounts", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -50,6 +41,15 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getQuarantineCounts", ReplyAction="*")]
         System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCountsResponse1> getQuarantineCountsAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCounts request);
+        
+        // CODEGEN: Generating message contract since the operation notifySender is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:notifySender", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySenderResponse1 notifySender(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySender request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:notifySender", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySenderResponse1> notifySenderAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySender request);
         
         // CODEGEN: Generating message contract since the operation getQuarantineMessage is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getQuarantineMessage", ReplyAction="*")]
@@ -77,6 +77,15 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:editAccount", ReplyAction="*")]
         System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccountResponse1> editAccountAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccount request);
+        
+        // CODEGEN: Generating message contract since the operation getSendingConfirmation is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getSendingConfirmation", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmationResponse1 getSendingConfirmation(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmation request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getSendingConfirmation", ReplyAction="*")]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmationResponse1> getSendingConfirmationAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmation request);
         
         // CODEGEN: Generating message contract since the operation createAccount is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:createAccount", ReplyAction="*")]
@@ -168,15 +177,6 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:getAllAccounts", ReplyAction="*")]
         System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccountsResponse1> getAllAccountsAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccounts request);
         
-        // CODEGEN: Generating message contract since the operation sendSynchroniousMessage is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:sendSynchroniousMessage", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SendMessageRequestType))]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1 sendSynchroniousMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessage request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:sendSynchroniousMessage", ReplyAction="*")]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1> sendSynchroniousMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessage request);
-        
         // CODEGEN: Generating message contract since the operation verifyDocuments is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="urn:de:bos-bremen:egvp:ws:verifyDocuments", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -260,7 +260,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -306,7 +306,220 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class SendMessageRequestType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string userIDField;
+        
+        private MessageTypeType messageTypeField;
+        
+        private bool messageTypeFieldSpecified;
+        
+        private string receiverIDField;
+        
+        private ReceiverKeyType receiverKeyField;
+        
+        private string subjectField;
+        
+        private AttachmentType[] attachmentsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string userID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                this.userIDField = value;
+                this.RaisePropertyChanged("userID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public MessageTypeType messageType {
+            get {
+                return this.messageTypeField;
+            }
+            set {
+                this.messageTypeField = value;
+                this.RaisePropertyChanged("messageType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool messageTypeSpecified {
+            get {
+                return this.messageTypeFieldSpecified;
+            }
+            set {
+                this.messageTypeFieldSpecified = value;
+                this.RaisePropertyChanged("messageTypeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string receiverID {
+            get {
+                return this.receiverIDField;
+            }
+            set {
+                this.receiverIDField = value;
+                this.RaisePropertyChanged("receiverID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public ReceiverKeyType receiverKey {
+            get {
+                return this.receiverKeyField;
+            }
+            set {
+                this.receiverKeyField = value;
+                this.RaisePropertyChanged("receiverKey");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string subject {
+            get {
+                return this.subjectField;
+            }
+            set {
+                this.subjectField = value;
+                this.RaisePropertyChanged("subject");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("attachments", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=5)]
+        public AttachmentType[] attachments {
+            get {
+                return this.attachmentsField;
+            }
+            set {
+                this.attachmentsField = value;
+                this.RaisePropertyChanged("attachments");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum MessageTypeType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Allgemeine Nachricht")]
+        AllgemeineNachricht,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("HR-Beteiligter")]
+        HRBeteiligter,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("HR-Gericht")]
+        HRGericht,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mahn-Antrag")]
+        MahnAntrag,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mahn-Nachricht")]
+        MahnNachricht,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mahn-Abgabe")]
+        MahnAbgabe,
+        
+        /// <remarks/>
+        Testnachricht,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Ubest-Mahn")]
+        UbestMahn,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum ReceiverKeyType {
+        
+        /// <remarks/>
+        USER_ID,
+        
+        /// <remarks/>
+        ROLE,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class AttachmentType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private byte[] dataField;
+        
+        private string nameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=0)]
+        public byte[] data {
+            get {
+                return this.dataField;
+            }
+            set {
+                this.dataField = value;
+                this.RaisePropertyChanged("data");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("name");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -534,7 +747,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -580,262 +793,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class AttachmentType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private byte[] dataField;
-        
-        private string nameField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=0)]
-        public byte[] data {
-            get {
-                return this.dataField;
-            }
-            set {
-                this.dataField = value;
-                this.RaisePropertyChanged("data");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-                this.RaisePropertyChanged("name");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class SendMessageRequestType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string userIDField;
-        
-        private MessageTypeType messageTypeField;
-        
-        private string receiverIDField;
-        
-        private ReceiverKeyType receiverKeyField;
-        
-        private string subjectField;
-        
-        private bool signMessageField;
-        
-        private bool signMessageFieldSpecified;
-        
-        private byte[] visualXMLField;
-        
-        private byte[] visualXSLField;
-        
-        private AttachmentType[] attachmentsField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string userID {
-            get {
-                return this.userIDField;
-            }
-            set {
-                this.userIDField = value;
-                this.RaisePropertyChanged("userID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public MessageTypeType messageType {
-            get {
-                return this.messageTypeField;
-            }
-            set {
-                this.messageTypeField = value;
-                this.RaisePropertyChanged("messageType");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string receiverID {
-            get {
-                return this.receiverIDField;
-            }
-            set {
-                this.receiverIDField = value;
-                this.RaisePropertyChanged("receiverID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public ReceiverKeyType receiverKey {
-            get {
-                return this.receiverKeyField;
-            }
-            set {
-                this.receiverKeyField = value;
-                this.RaisePropertyChanged("receiverKey");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string subject {
-            get {
-                return this.subjectField;
-            }
-            set {
-                this.subjectField = value;
-                this.RaisePropertyChanged("subject");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public bool signMessage {
-            get {
-                return this.signMessageField;
-            }
-            set {
-                this.signMessageField = value;
-                this.RaisePropertyChanged("signMessage");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool signMessageSpecified {
-            get {
-                return this.signMessageFieldSpecified;
-            }
-            set {
-                this.signMessageFieldSpecified = value;
-                this.RaisePropertyChanged("signMessageSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=6)]
-        public byte[] visualXML {
-            get {
-                return this.visualXMLField;
-            }
-            set {
-                this.visualXMLField = value;
-                this.RaisePropertyChanged("visualXML");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=7)]
-        public byte[] visualXSL {
-            get {
-                return this.visualXSLField;
-            }
-            set {
-                this.visualXSLField = value;
-                this.RaisePropertyChanged("visualXSL");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("attachments", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=8)]
-        public AttachmentType[] attachments {
-            get {
-                return this.attachmentsField;
-            }
-            set {
-                this.attachmentsField = value;
-                this.RaisePropertyChanged("attachments");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum MessageTypeType {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Allgemeine Nachricht")]
-        AllgemeineNachricht,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("HR-Beteiligter")]
-        HRBeteiligter,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("HR-Gericht")]
-        HRGericht,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Mahn-Antrag")]
-        MahnAntrag,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Mahn-Nachricht")]
-        MahnNachricht,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Mahn-Abgabe")]
-        MahnAbgabe,
-        
-        /// <remarks/>
-        Testnachricht,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Ubest-Mahn")]
-        UbestMahn,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum ReceiverKeyType {
-        
-        /// <remarks/>
-        USER_ID,
-        
-        /// <remarks/>
-        ROLE,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1175,7 +1133,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1183,6 +1141,8 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     public partial class BCItem : object, System.ComponentModel.INotifyPropertyChanged {
         
         private SearchModeType searchModeField;
+        
+        private bool searchModeFieldSpecified;
         
         private string valueField;
         
@@ -1195,6 +1155,18 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
             set {
                 this.searchModeField = value;
                 this.RaisePropertyChanged("searchMode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool searchModeSpecified {
+            get {
+                return this.searchModeFieldSpecified;
+            }
+            set {
+                this.searchModeFieldSpecified = value;
+                this.RaisePropertyChanged("searchModeSpecified");
             }
         }
         
@@ -1221,7 +1193,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum SearchModeType {
@@ -1234,7 +1206,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1278,6 +1250,8 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         private BCItem filterIDField;
         
         private BCItem roleField;
+        
+        private BCItem professionPropertyField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -1507,6 +1481,18 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
             }
         }
         
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=19)]
+        public BCItem professionProperty {
+            get {
+                return this.professionPropertyField;
+            }
+            set {
+                this.professionPropertyField = value;
+                this.RaisePropertyChanged("professionProperty");
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -1518,7 +1504,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1634,7 +1620,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum MessageStateType {
@@ -1646,7 +1632,16 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         QU_DELETED,
         
         /// <remarks/>
+        WS_ACREATE,
+        
+        /// <remarks/>
+        WS_ASEND_CREATION_ERROR,
+        
+        /// <remarks/>
         WS_ASEND,
+        
+        /// <remarks/>
+        CHECK_FILENAMES,
         
         /// <remarks/>
         WS_UNSENDABLE,
@@ -1698,7 +1693,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1968,7 +1963,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2028,39 +2023,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class OSCIContainerType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private byte[] dataField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=0)]
-        public byte[] data {
-            get {
-                return this.dataField;
-            }
-            set {
-                this.dataField = value;
-                this.RaisePropertyChanged("data");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2168,7 +2131,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2200,7 +2163,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2246,7 +2209,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum RetryQuarantineMessageReturnCodeType {
@@ -2302,178 +2265,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class verifyMessageRequest : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string userIDField;
-        
-        private OSCIContainerType osciField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string userID {
-            get {
-                return this.userIDField;
-            }
-            set {
-                this.userIDField = value;
-                this.RaisePropertyChanged("userID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public OSCIContainerType osci {
-            get {
-                return this.osciField;
-            }
-            set {
-                this.osciField = value;
-                this.RaisePropertyChanged("osci");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class verifyMessageResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string messageIDField;
-        
-        private byte[] messageZIPField;
-        
-        private VerifyReturnCodeType returnCodeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string messageID {
-            get {
-                return this.messageIDField;
-            }
-            set {
-                this.messageIDField = value;
-                this.RaisePropertyChanged("messageID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=1)]
-        public byte[] messageZIP {
-            get {
-                return this.messageZIPField;
-            }
-            set {
-                this.messageZIPField = value;
-                this.RaisePropertyChanged("messageZIP");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public VerifyReturnCodeType returnCode {
-            get {
-                return this.returnCodeField;
-            }
-            set {
-                this.returnCodeField = value;
-                this.RaisePropertyChanged("returnCode");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum VerifyReturnCodeType {
-        
-        /// <remarks/>
-        OK,
-        
-        /// <remarks/>
-        USERID_REQUIRED,
-        
-        /// <remarks/>
-        OSCIDATA_REQUIRED,
-        
-        /// <remarks/>
-        NO_SUCH_ACCOUNT,
-        
-        /// <remarks/>
-        INVALID_MESSAGE,
-        
-        /// <remarks/>
-        GENERAL_ERROR,
-        
-        /// <remarks/>
-        GENERAL_SQL_ERROR,
-        
-        /// <remarks/>
-        WEBSERVICE_DISABLED,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class verifyMessage {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageRequest verifyMessageRequest;
-        
-        public verifyMessage() {
-        }
-        
-        public verifyMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageRequest verifyMessageRequest) {
-            this.verifyMessageRequest = verifyMessageRequest;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class verifyMessageResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse verifyMessageResponse;
-        
-        public verifyMessageResponse1() {
-        }
-        
-        public verifyMessageResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse verifyMessageResponse) {
-            this.verifyMessageResponse = verifyMessageResponse;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2491,7 +2283,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2551,7 +2343,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum GetQuarantineCountsReturnCodeType {
@@ -2601,7 +2393,167 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class notifySenderRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string userIDField;
+        
+        private string messageIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string userID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                this.userIDField = value;
+                this.RaisePropertyChanged("userID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string messageID {
+            get {
+                return this.messageIDField;
+            }
+            set {
+                this.messageIDField = value;
+                this.RaisePropertyChanged("messageID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class notifySenderResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private NotifySenderReturnCodeType returnCodeField;
+        
+        private string returnCodeDetailsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public NotifySenderReturnCodeType returnCode {
+            get {
+                return this.returnCodeField;
+            }
+            set {
+                this.returnCodeField = value;
+                this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string returnCodeDetails {
+            get {
+                return this.returnCodeDetailsField;
+            }
+            set {
+                this.returnCodeDetailsField = value;
+                this.RaisePropertyChanged("returnCodeDetails");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum NotifySenderReturnCodeType {
+        
+        /// <remarks/>
+        OK,
+        
+        /// <remarks/>
+        USERID_REQUIRED,
+        
+        /// <remarks/>
+        MESSAGEID_REQUIRED,
+        
+        /// <remarks/>
+        MESSAGE_NOT_FOUND,
+        
+        /// <remarks/>
+        USER_ALREADY_INFORMED,
+        
+        /// <remarks/>
+        RECEIVER_NOT_FOUND,
+        
+        /// <remarks/>
+        CONNECTION_ERROR,
+        
+        /// <remarks/>
+        GENERAL_ERROR,
+        
+        /// <remarks/>
+        WEBSERVICE_DISABLED,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class notifySender {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySenderRequest notifySenderRequest;
+        
+        public notifySender() {
+        }
+        
+        public notifySender(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySenderRequest notifySenderRequest) {
+            this.notifySenderRequest = notifySenderRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class notifySenderResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySenderResponse notifySenderResponse;
+        
+        public notifySenderResponse1() {
+        }
+        
+        public notifySenderResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySenderResponse notifySenderResponse) {
+            this.notifySenderResponse = notifySenderResponse;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2633,7 +2585,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2693,7 +2645,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum GetQuarantineMessageReturnCodeType {
@@ -2749,7 +2701,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2809,7 +2761,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2855,7 +2807,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum DeleteReturnCodeType {
@@ -2926,7 +2878,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3224,7 +3176,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3284,7 +3236,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum EditReturnCodeType {
@@ -3364,7 +3316,195 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class getSendingConfirmationRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string userIDField;
+        
+        private string messageIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string userID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                this.userIDField = value;
+                this.RaisePropertyChanged("userID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string messageID {
+            get {
+                return this.messageIDField;
+            }
+            set {
+                this.messageIDField = value;
+                this.RaisePropertyChanged("messageID");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
+    public partial class getSendingConfirmationResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private GetSendingConfirmationReturnCodeType returnCodeField;
+        
+        private string returnCodeDetailsField;
+        
+        private string errorDetailsField;
+        
+        private byte[] abholbestaetigungXMLField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public GetSendingConfirmationReturnCodeType returnCode {
+            get {
+                return this.returnCodeField;
+            }
+            set {
+                this.returnCodeField = value;
+                this.RaisePropertyChanged("returnCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string returnCodeDetails {
+            get {
+                return this.returnCodeDetailsField;
+            }
+            set {
+                this.returnCodeDetailsField = value;
+                this.RaisePropertyChanged("returnCodeDetails");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string errorDetails {
+            get {
+                return this.errorDetailsField;
+            }
+            set {
+                this.errorDetailsField = value;
+                this.RaisePropertyChanged("errorDetails");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=3)]
+        public byte[] abholbestaetigungXML {
+            get {
+                return this.abholbestaetigungXMLField;
+            }
+            set {
+                this.abholbestaetigungXMLField = value;
+                this.RaisePropertyChanged("abholbestaetigungXML");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum GetSendingConfirmationReturnCodeType {
+        
+        /// <remarks/>
+        OK,
+        
+        /// <remarks/>
+        USERID_REQUIRED,
+        
+        /// <remarks/>
+        MESSAGEID_REQUIRED,
+        
+        /// <remarks/>
+        NO_SUCH_ACCOUNT,
+        
+        /// <remarks/>
+        NO_SUCH_MESSAGE,
+        
+        /// <remarks/>
+        CONNECT_ERROR,
+        
+        /// <remarks/>
+        GENERAL_ERROR,
+        
+        /// <remarks/>
+        GENERAL_SQL_ERROR,
+        
+        /// <remarks/>
+        WEBSERVICE_DISABLED,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getSendingConfirmation {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmationRequest getSendingConfirmationRequest;
+        
+        public getSendingConfirmation() {
+        }
+        
+        public getSendingConfirmation(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmationRequest getSendingConfirmationRequest) {
+            this.getSendingConfirmationRequest = getSendingConfirmationRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getSendingConfirmationResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmationResponse getSendingConfirmationResponse;
+        
+        public getSendingConfirmationResponse1() {
+        }
+        
+        public getSendingConfirmationResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmationResponse getSendingConfirmationResponse) {
+            this.getSendingConfirmationResponse = getSendingConfirmationResponse;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3648,7 +3788,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3694,7 +3834,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum CreateReturnCodeType {
@@ -3765,7 +3905,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3797,7 +3937,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3843,7 +3983,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum MarkAsFetchQuarantineMessageReturnCodeType {
@@ -3899,7 +4039,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3945,7 +4085,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3977,7 +4117,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum NotificationCallbackReturnCodeType {
@@ -4048,7 +4188,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4094,7 +4234,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4126,7 +4266,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum CommitReturnCodeType {
@@ -4203,7 +4343,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4249,7 +4389,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4343,7 +4483,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4389,7 +4529,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4463,7 +4603,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum ReceiveReturnCodeType {
@@ -4537,7 +4677,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4583,7 +4723,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4671,7 +4811,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum SearchReturnCodeType {
@@ -4693,6 +4833,9 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         
         /// <remarks/>
         TOO_MANY_RESULTS,
+        
+        /// <remarks/>
+        DIRECTORY_SERVICE_MISSING,
         
         /// <remarks/>
         GENERAL_ERROR,
@@ -4733,7 +4876,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4779,7 +4922,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4845,7 +4988,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4877,7 +5020,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4943,7 +5086,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4961,7 +5104,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5021,7 +5164,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum GetAllAccountsReturnCodeType {
@@ -5074,247 +5217,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class sendSynchroniousMessageRequest : SendMessageRequestType {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:de:bos-bremen:egvp:ws")]
-    public partial class sendSynchroniousMessageResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string messageIDField;
-        
-        private byte[] messageZIPField;
-        
-        private SendReturnCodeType returnCodeField;
-        
-        private SendErrorCodeType errorDetailsField;
-        
-        private bool errorDetailsFieldSpecified;
-        
-        private string errorDescriptionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string messageID {
-            get {
-                return this.messageIDField;
-            }
-            set {
-                this.messageIDField = value;
-                this.RaisePropertyChanged("messageID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=1)]
-        public byte[] messageZIP {
-            get {
-                return this.messageZIPField;
-            }
-            set {
-                this.messageZIPField = value;
-                this.RaisePropertyChanged("messageZIP");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public SendReturnCodeType returnCode {
-            get {
-                return this.returnCodeField;
-            }
-            set {
-                this.returnCodeField = value;
-                this.RaisePropertyChanged("returnCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public SendErrorCodeType errorDetails {
-            get {
-                return this.errorDetailsField;
-            }
-            set {
-                this.errorDetailsField = value;
-                this.RaisePropertyChanged("errorDetails");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool errorDetailsSpecified {
-            get {
-                return this.errorDetailsFieldSpecified;
-            }
-            set {
-                this.errorDetailsFieldSpecified = value;
-                this.RaisePropertyChanged("errorDetailsSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string errorDescription {
-            get {
-                return this.errorDescriptionField;
-            }
-            set {
-                this.errorDescriptionField = value;
-                this.RaisePropertyChanged("errorDescription");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum SendReturnCodeType {
-        
-        /// <remarks/>
-        OK,
-        
-        /// <remarks/>
-        NO_SUCH_ACCOUNT,
-        
-        /// <remarks/>
-        NO_SUCH_MESSAGE,
-        
-        /// <remarks/>
-        PENDING,
-        
-        /// <remarks/>
-        USERID_REQUIRED,
-        
-        /// <remarks/>
-        RECEIVER_REQUIRED,
-        
-        /// <remarks/>
-        CUSTOMID_REQUIRED,
-        
-        /// <remarks/>
-        RECEIVER_NOT_FOUND,
-        
-        /// <remarks/>
-        UNSUPPORTED_RECEIVER_TYPE,
-        
-        /// <remarks/>
-        MESSAGE_TYPE_REQUIRED,
-        
-        /// <remarks/>
-        UNSUPPORTED_MESSAGE_TYPE,
-        
-        /// <remarks/>
-        SUBJECT_REQUIRED,
-        
-        /// <remarks/>
-        ATTACHMENT_NAME_NOT_FOUND,
-        
-        /// <remarks/>
-        TOO_MANY_ATTACHMENTS,
-        
-        /// <remarks/>
-        ATTACHMENTS_TOO_LARGE,
-        
-        /// <remarks/>
-        GENERAL_SQL_ERROR,
-        
-        /// <remarks/>
-        GENERAL_ERROR,
-        
-        /// <remarks/>
-        WEBSERVICE_DISABLED,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
-    public enum SendErrorCodeType {
-        
-        /// <remarks/>
-        SEND_FAILED,
-        
-        /// <remarks/>
-        REGISTER_GENERAL_ERROR,
-        
-        /// <remarks/>
-        INTERNET_CONNECT,
-        
-        /// <remarks/>
-        HTTP_ERROR,
-        
-        /// <remarks/>
-        MESSAGE_TYPE_UNSUPPORTED,
-        
-        /// <remarks/>
-        ATTACHMENT_ERROR,
-        
-        /// <remarks/>
-        MESSAGE_SIGN_FAILED,
-        
-        /// <remarks/>
-        FILE_NOT_FOUND,
-        
-        /// <remarks/>
-        OSCI_MANAGER_WRONG_CERTIFICATE,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class sendSynchroniousMessage {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest sendSynchroniousMessageRequest;
-        
-        public sendSynchroniousMessage() {
-        }
-        
-        public sendSynchroniousMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest sendSynchroniousMessageRequest) {
-            this.sendSynchroniousMessageRequest = sendSynchroniousMessageRequest;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class sendSynchroniousMessageResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:de:bos-bremen:egvp:ws", Order=0)]
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse sendSynchroniousMessageResponse;
-        
-        public sendSynchroniousMessageResponse1() {
-        }
-        
-        public sendSynchroniousMessageResponse1(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse sendSynchroniousMessageResponse) {
-            this.sendSynchroniousMessageResponse = sendSynchroniousMessageResponse;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5388,7 +5291,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5462,7 +5365,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum VerifyDocumentsReturnCodeType {
@@ -5536,7 +5439,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5554,7 +5457,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5600,7 +5503,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum GetVersionReturnCodeType {
@@ -5650,7 +5553,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5715,7 +5618,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5761,7 +5664,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5821,7 +5724,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum LoadReportReturnCodeType {
@@ -5880,7 +5783,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5926,7 +5829,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6020,7 +5923,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6052,7 +5955,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6126,7 +6029,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum GetUncommittedMessageIDsReturnCodeType {
@@ -6182,7 +6085,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6228,7 +6131,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6274,7 +6177,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6334,7 +6237,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum GetQuarantineOverviewReturnCodeType {
@@ -6387,7 +6290,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6396,7 +6299,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6483,6 +6386,113 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum SendReturnCodeType {
+        
+        /// <remarks/>
+        OK,
+        
+        /// <remarks/>
+        NO_SUCH_ACCOUNT,
+        
+        /// <remarks/>
+        NO_SUCH_MESSAGE,
+        
+        /// <remarks/>
+        PENDING,
+        
+        /// <remarks/>
+        USERID_REQUIRED,
+        
+        /// <remarks/>
+        RECEIVER_REQUIRED,
+        
+        /// <remarks/>
+        CUSTOMID_REQUIRED,
+        
+        /// <remarks/>
+        RECEIVER_NOT_FOUND,
+        
+        /// <remarks/>
+        UNSUPPORTED_RECEIVER_TYPE,
+        
+        /// <remarks/>
+        UNSUPPORTED_MESSAGE_TYPE,
+        
+        /// <remarks/>
+        ATTACHMENT_NAME_NOT_FOUND,
+        
+        /// <remarks/>
+        TOO_MANY_ATTACHMENTS,
+        
+        /// <remarks/>
+        ATTACHMENTS_TOO_LARGE,
+        
+        /// <remarks/>
+        ZERO_SIZE_ATTACHMENT,
+        
+        /// <remarks/>
+        GENERAL_SQL_ERROR,
+        
+        /// <remarks/>
+        GENERAL_ERROR,
+        
+        /// <remarks/>
+        WEBSERVICE_DISABLED,
+        
+        /// <remarks/>
+        XJUSTIZ_MISSING,
+        
+        /// <remarks/>
+        MESSAGETEXT_NOT_ALLOWED,
+        
+        /// <remarks/>
+        CHECK_FILENAMES,
+        
+        /// <remarks/>
+        CREATION_IN_PROGRESS,
+        
+        /// <remarks/>
+        CREATION_ERROR,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
+    public enum SendErrorCodeType {
+        
+        /// <remarks/>
+        SEND_FAILED,
+        
+        /// <remarks/>
+        REGISTER_GENERAL_ERROR,
+        
+        /// <remarks/>
+        INTERNET_CONNECT,
+        
+        /// <remarks/>
+        HTTP_ERROR,
+        
+        /// <remarks/>
+        MESSAGE_TYPE_UNSUPPORTED,
+        
+        /// <remarks/>
+        ATTACHMENT_ERROR,
+        
+        /// <remarks/>
+        MESSAGE_SIGN_FAILED,
+        
+        /// <remarks/>
+        FILE_NOT_FOUND,
+        
+        /// <remarks/>
+        OSCI_MANAGER_WRONG_CERTIFICATE,
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6518,7 +6528,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6578,7 +6588,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6624,7 +6634,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum DeleteQuarantineMessageReturnCodeType {
@@ -6689,7 +6699,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6735,7 +6745,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6879,7 +6889,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum JEntryTypeType {
@@ -6889,6 +6899,9 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         
         /// <remarks/>
         WS_ASEND,
+        
+        /// <remarks/>
+        CHECK_FILENAMES,
         
         /// <remarks/>
         OSCI_SENT,
@@ -6931,7 +6944,7 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:de:bos-bremen:egvp:ws")]
     public enum GetStateReturnCodeType {
@@ -7072,29 +7085,6 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.verifyMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessage request) {
-            return base.Channel.verifyMessage(request);
-        }
-        
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse verifyMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageRequest verifyMessageRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessage();
-            inValue.verifyMessageRequest = verifyMessageRequest;
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).verifyMessage(inValue);
-            return retVal.verifyMessageResponse;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.verifyMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessage request) {
-            return base.Channel.verifyMessageAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse1> verifyMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageRequest verifyMessageRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessage();
-            inValue.verifyMessageRequest = verifyMessageRequest;
-            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).verifyMessageAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCountsResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getQuarantineCounts(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCounts request) {
             return base.Channel.getQuarantineCounts(request);
         }
@@ -7115,6 +7105,29 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
             OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCounts inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineCounts();
             inValue.getQuarantineCountsRequest = getQuarantineCountsRequest;
             return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getQuarantineCountsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySenderResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.notifySender(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySender request) {
+            return base.Channel.notifySender(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySenderResponse notifySender(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySenderRequest notifySenderRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySender inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySender();
+            inValue.notifySenderRequest = notifySenderRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySenderResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).notifySender(inValue);
+            return retVal.notifySenderResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySenderResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.notifySenderAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySender request) {
+            return base.Channel.notifySenderAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySenderResponse1> notifySenderAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySenderRequest notifySenderRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySender inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySender();
+            inValue.notifySenderRequest = notifySenderRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).notifySenderAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7184,6 +7197,29 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
             OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccount inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.editAccount();
             inValue.editAccountRequest = editAccountRequest;
             return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).editAccountAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmationResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getSendingConfirmation(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmation request) {
+            return base.Channel.getSendingConfirmation(request);
+        }
+        
+        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmationResponse getSendingConfirmation(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmationRequest getSendingConfirmationRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmation inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmation();
+            inValue.getSendingConfirmationRequest = getSendingConfirmationRequest;
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmationResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getSendingConfirmation(inValue);
+            return retVal.getSendingConfirmationResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmationResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.getSendingConfirmationAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmation request) {
+            return base.Channel.getSendingConfirmationAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmationResponse1> getSendingConfirmationAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmationRequest getSendingConfirmationRequest) {
+            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmation inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmation();
+            inValue.getSendingConfirmationRequest = getSendingConfirmationRequest;
+            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getSendingConfirmationAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7414,29 +7450,6 @@ namespace OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap {
             OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccounts inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getAllAccounts();
             inValue.getAllAccountsRequest = getAllAccountsRequest;
             return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).getAllAccountsAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1 OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.sendSynchroniousMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessage request) {
-            return base.Channel.sendSynchroniousMessage(request);
-        }
-        
-        public OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse sendSynchroniousMessage(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest sendSynchroniousMessageRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessage();
-            inValue.sendSynchroniousMessageRequest = sendSynchroniousMessageRequest;
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1 retVal = ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).sendSynchroniousMessage(inValue);
-            return retVal.sendSynchroniousMessageResponse;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1> OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType.sendSynchroniousMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessage request) {
-            return base.Channel.sendSynchroniousMessageAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1> sendSynchroniousMessageAsync(OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageRequest sendSynchroniousMessageRequest) {
-            OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessage inValue = new OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessage();
-            inValue.sendSynchroniousMessageRequest = sendSynchroniousMessageRequest;
-            return ((OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.EgvpPortType)(this)).sendSynchroniousMessageAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

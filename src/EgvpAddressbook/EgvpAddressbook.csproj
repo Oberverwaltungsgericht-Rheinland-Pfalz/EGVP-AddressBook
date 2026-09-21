@@ -130,7 +130,7 @@
     <None Include="App.Release.config">
       <DependentUpon>App.config</DependentUpon>
     </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\EgvpService.wsdl" />
+    <None Include="Connected Services\EgvpEnterpriseSoap\EgvpService11.wsdl" />
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.asynchroniousMessageSentResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -215,6 +215,12 @@
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getQuarantineOverviewResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getSendingConfirmationResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.getStateResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -243,6 +249,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.markAsFetchQuarantineMessageResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySenderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.notifySenderResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.receiveMessageResponse.datasource">
@@ -275,22 +287,10 @@
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendAsynchroniousMessageResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.sendSynchroniousMessageResponse1.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocumentsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyDocumentsResponse1.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EgvpEnterpriseSoap\OvgRlp.Tools.EgvpAddressbook.EgvpEnterpriseSoap.verifyMessageResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="packages.config" />

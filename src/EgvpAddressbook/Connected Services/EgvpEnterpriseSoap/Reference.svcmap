@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b8db31b6-879f-41be-88d4-007ddcdca9dd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="b8db31b6-879f-41be-88d4-007ddcdca9dd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,7 +22,7 @@
     <MetadataSource Address="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EgvpService.wsdl" MetadataType="Wsdl" ID="27c27c37-3148-4df7-a34e-aae059d5d012" SourceId="1" SourceUrl="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?wsdl" />
+    <MetadataFile FileName="EgvpService11.wsdl" MetadataType="Wsdl" ID="004a39bd-cf2d-47a3-9260-6e377a345286" SourceId="1" SourceUrl="http://127.0.0.1:8080/EGVP-WS/EGVP-WebService?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
