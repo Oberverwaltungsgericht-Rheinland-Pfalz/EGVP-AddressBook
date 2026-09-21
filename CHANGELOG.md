@@ -1,3 +1,8 @@
+### 1.11.0.2639 (21.09.2026)
+
+#### &Auml;nderungen
+
+* Update Egvp-Enterprise Webservice auf Version 5.2.x (#18)
 
 ### 1.10.0.2340 (06.10.2023)
 
